@@ -1312,10 +1312,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#22-transparency-obligations-article-52" class="md-nav__link">
+  <a href="#22-transparency-obligations-article-50" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2 Transparency Obligations (Article 52)
+        2.2 Transparency Obligations (Article 50)
       
     </span>
   </a>
@@ -1323,10 +1323,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#23-deployer-obligations-article-16-applied-proportionately" class="md-nav__link">
+  <a href="#23-provider-obligations-applied-voluntarily-article-16-good-practice-at-limited-risk-tier" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.3 Deployer Obligations (Article 16 applied proportionately)
+        2.3 Provider Obligations Applied Voluntarily (Article 16 — Good Practice at Limited-Risk Tier)
       
     </span>
   </a>
@@ -1576,10 +1576,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#22-transparency-obligations-article-52" class="md-nav__link">
+  <a href="#22-transparency-obligations-article-50" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2 Transparency Obligations (Article 52)
+        2.2 Transparency Obligations (Article 50)
       
     </span>
   </a>
@@ -1587,10 +1587,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#23-deployer-obligations-article-16-applied-proportionately" class="md-nav__link">
+  <a href="#23-provider-obligations-applied-voluntarily-article-16-good-practice-at-limited-risk-tier" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.3 Deployer Obligations (Article 16 applied proportionately)
+        2.3 Provider Obligations Applied Voluntarily (Article 16 — Good Practice at Limited-Risk Tier)
       
     </span>
   </a>
@@ -1779,7 +1779,7 @@
 </tr>
 <tr>
 <td><strong>EU AI Act classification</strong></td>
-<td>Limited risk (Article 52 transparency obligations)</td>
+<td>Limited risk (Article 50 transparency obligations)</td>
 </tr>
 <tr>
 <td><strong>Pickles GmbH internal tier</strong></td>
@@ -1787,11 +1787,15 @@
 </tr>
 <tr>
 <td><strong>Pickles GmbH role</strong></td>
-<td>Deployer (Article 3(4))</td>
+<td>Provider of Vertrag.AI (Article 3(3))</td>
+</tr>
+<tr>
+<td><strong>Law firm customer role</strong></td>
+<td>Deployer of Vertrag.AI (Article 3(4))</td>
 </tr>
 <tr>
 <td><strong>Anthropic role</strong></td>
-<td>Provider of underlying GPAI model (Claude API)</td>
+<td>Provider of upstream GPAI model (Claude API) — Articles 51–55</td>
 </tr>
 <tr>
 <td><strong>Classification source document</strong></td>
@@ -1818,11 +1822,18 @@
 </thead>
 <tbody>
 <tr>
+<td>Article 3(3)</td>
+<td>Definition — provider</td>
+<td>Pickles GmbH develops Vertrag.AI and places it on the market under its own name or trademark</td>
+<td>Confirmed</td>
+<td>Pickles GmbH is the provider of Vertrag.AI. Anthropic is the provider of the upstream Claude GPAI model. Law firm clients are deployers of Vertrag.AI (Article 3(4)).</td>
+</tr>
+<tr>
 <td>Article 3(4)</td>
 <td>Definition — deployer</td>
-<td>Pickles GmbH is a deployer: a natural or legal person that uses an AI system under its authority</td>
+<td>Law firm clients who license Vertrag.AI use the system under their authority for professional contract review</td>
 <td>Confirmed</td>
-<td>Anthropic is the provider of the Claude model; Pickles GmbH deploys it within Vertrag.AI</td>
+<td>Pickles GmbH, as provider, uses the Claude API (a GPAI model) as an upstream component of Vertrag.AI — at the GPAI layer Pickles GmbH is a downstream user, but at the product layer it is the provider.</td>
 </tr>
 <tr>
 <td>Article 3(8)</td>
@@ -1841,7 +1852,7 @@
 </tbody>
 </table>
 <hr />
-<h3 id="22-transparency-obligations-article-52">2.2 Transparency Obligations (Article 52)</h3>
+<h3 id="22-transparency-obligations-article-50">2.2 Transparency Obligations (Article 50)</h3>
 <p>This is the primary regulatory article applicable to Vertrag.AI at its current risk classification.</p>
 <table>
 <thead>
@@ -1855,38 +1866,38 @@
 </thead>
 <tbody>
 <tr>
-<td>Article 52(1)</td>
-<td>Where an AI system interacts directly with natural persons, those persons must be informed they are interacting with an AI system</td>
-<td>Vertrag.AI interacts with qualified lawyers as professional users, not with natural persons who might believe they are speaking with a human. Chatbot disclosure obligation does not apply in the standard use case.</td>
-<td>Not applicable to standard use case</td>
-<td>Monitor: if a client-facing chat or advisory interface is added to the product, Article 52(1) would apply</td>
+<td>Article 50(1)</td>
+<td>Where an AI system interacts directly with natural persons, those persons must be informed they are interacting with an AI system, unless the AI nature is obvious from the context to a reasonably well-informed, observant and circumspect person</td>
+<td>Lawyers using Vertrag.AI are natural persons; Article 50(1) applies in principle. In a professional B2B tool explicitly marketed and used as an AI contract review system, the AI nature of the interaction is apparent to a reasonably informed professional user.</td>
+<td>Low risk — AI nature likely obvious from context; assess per interface</td>
+<td>Monitor: if a client-facing conversational interface is added to the product, Article 50(1) disclosure would need to be assessed interface-by-interface</td>
 </tr>
 <tr>
-<td>Article 52(2)</td>
-<td>Operators of emotion recognition or biometric categorisation systems must inform natural persons</td>
+<td>Article 50(3)</td>
+<td>Deployers of emotion recognition or biometric categorisation systems must inform natural persons exposed to the operation of the system</td>
 <td>Vertrag.AI does not perform emotion recognition or biometric categorisation</td>
 <td>Not applicable</td>
 <td>N/A</td>
 </tr>
 <tr>
-<td>Article 52(3)</td>
-<td>Persons deploying AI that generates synthetic content must disclose that content is AI-generated, except where the content has undergone human review and been significantly modified by a natural person</td>
-<td>AI-generated clause suggestions in the redlined DOCX output are labelled as AI-drafted. Lawyer review and acceptance/rejection of each suggestion is required before use.</td>
-<td>Partially addressed</td>
-<td><strong>Gap:</strong> The product design includes labelling, but the precise form of Article 52(3) disclosure — and whether the mandatory lawyer review constitutes "significant modification" — requires legal review. Disclosure language in product UI should be reviewed against Article 52(3) requirements.</td>
+<td>Article 50(4)</td>
+<td>Deployers of AI systems that generate synthetic content (deep fakes; AI-generated text for public interest) must disclose that the content has been artificially generated or manipulated</td>
+<td>Law firm clients (deployers) who share AI-drafted clause suggestions with their own clients may trigger Article 50(4) obligations. The mandatory output labelling in the product design (all AI-generated amendments marked as AI-drafted) supports deployer compliance.</td>
+<td>Partially addressed (law firm deployer obligation)</td>
+<td><strong>Gap:</strong> The precise form of Article 50(4) disclosure required of law firm deployers — and whether the mandatory lawyer review constitutes sufficient editorial control for the safe harbour — requires legal review. Pickles GmbH should document guidance for law firm deployers on compliance with this obligation.</td>
 </tr>
 <tr>
-<td>Article 52(4)</td>
-<td>Providers and deployers of AI systems generating synthetic audio, image, video, or text content must label the output in a machine-readable format</td>
-<td>Vertrag.AI produces text output (redlined DOCX). Machine-readable labelling of AI-generated text content may be required.</td>
+<td>Article 50(2)</td>
+<td>Providers of AI systems generating synthetic audio, image, video, or text content must ensure outputs are marked in a machine-readable format detectable as artificially generated</td>
+<td>Vertrag.AI produces text output (redlined DOCX). Machine-readable marking of AI-generated text content may be required as a provider obligation.</td>
 <td><strong>Gap — not yet addressed</strong></td>
-<td><strong>Action:</strong> Assess whether machine-readable labelling is technically feasible in DOCX output format. Legal review required on scope of Article 52(4) for document-based AI output.</td>
+<td><strong>Action:</strong> Assess whether machine-readable marking is technically feasible in DOCX output format. Legal review required on scope of Article 50(2) for document-based AI output.</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h3 id="23-deployer-obligations-article-16-applied-proportionately">2.3 Deployer Obligations (Article 16 applied proportionately)</h3>
-<p>Article 16 sets out obligations for providers of high-risk AI systems. Where Vertrag.AI is classified as limited risk, these obligations do not apply in full. However, several represent good governance practice that Pickles GmbH applies as deployer at the Medium-High internal tier.</p>
+<h3 id="23-provider-obligations-applied-voluntarily-article-16-good-practice-at-limited-risk-tier">2.3 Provider Obligations Applied Voluntarily (Article 16 — Good Practice at Limited-Risk Tier)</h3>
+<p>Article 16 sets out obligations for providers of high-risk AI systems. Vertrag.AI is classified as limited risk, so these obligations do not apply mandatorily. However, as provider of Vertrag.AI, Pickles GmbH applies several of these controls voluntarily at the Medium-High internal tier as a matter of good governance practice.</p>
 <table>
 <thead>
 <tr>
@@ -1912,8 +1923,8 @@
 <tr>
 <td>Transparency to deployers</td>
 <td>Article 16(d), Article 13</td>
-<td>Not applicable (Pickles GmbH is deployer, not a downstream deployer)</td>
-<td>N/A</td>
+<td>Mandatory for high-risk only; applied voluntarily at Medium-High tier. As provider, Pickles GmbH provides instructions for use to law firm deployers documenting the system's intended purpose, capabilities, limitations, and human oversight requirements.</td>
+<td>See L2-4.3-Transparency-Disclosure-Framework-v1.md</td>
 </tr>
 <tr>
 <td>Human oversight measures</td>
@@ -1931,7 +1942,7 @@
 </table>
 <hr />
 <h3 id="24-obligations-applicable-to-deployers-generally-article-26">2.4 Obligations Applicable to Deployers Generally (Article 26)</h3>
-<p>Article 26 sets out obligations specifically for deployers of AI systems (as distinct from providers). These apply to Pickles GmbH regardless of risk tier.</p>
+<p>Article 26 sets out obligations for deployers of AI systems. As provider of Vertrag.AI, Pickles GmbH is not subject to Article 26 directly — these obligations apply to law firm clients who deploy Vertrag.AI. Pickles GmbH's responsibility as provider is to document the information and controls that enable law firm deployers to fulfil their Article 26 obligations. Pickles GmbH's own obligations as provider flow from Article 16 (see Section 2.3 above).</p>
 <table>
 <thead>
 <tr>
@@ -2006,7 +2017,7 @@
 <tr>
 <td>Downstream deployer — using GPAI for specific purpose</td>
 <td>Article 28(2)</td>
-<td>Where a deployer uses a GPAI model for a specific purpose (here: contract review), and makes the system available to downstream users (law firms), the deployer takes on obligations proportionate to the specific use case. Pickles GmbH's Article 52 and Article 26 obligations are the primary expression of this.</td>
+<td>Where a deployer uses a GPAI model for a specific purpose (here: contract review), and makes the system available to downstream users (law firms), the deployer takes on obligations proportionate to the specific use case. Pickles GmbH's Article 50 transparency obligations and Article 16 provider obligations are the primary expression of this at the product layer.</td>
 </tr>
 <tr>
 <td>GPAI systemic risk</td>
@@ -2039,8 +2050,8 @@
 <td>CE marking applies to high-risk AI systems only</td>
 </tr>
 <tr>
-<td>Article 50 — Registration in EU database (provider)</td>
-<td>Registration applies to providers of high-risk systems and certain GPAI models; Pickles GmbH is a deployer at limited risk</td>
+<td>Article 49 — Registration in the EU database referred to in Article 71 (provider)</td>
+<td>Registration in the EU database applies to providers of high-risk AI systems (Article 49) and certain GPAI models; Vertrag.AI is classified as limited risk and this obligation does not currently apply. Would apply if classification is revised to high-risk.</td>
 </tr>
 <tr>
 <td>Article 26(5) — Fundamental rights impact assessment</td>
@@ -2069,18 +2080,18 @@
 <tr>
 <td>GAP-001</td>
 <td>Machine-readable labelling of AI-generated text output not yet addressed</td>
-<td>Article 52(4)</td>
+<td>Article 50(2)</td>
 <td>High</td>
 <td>Head of Engineering / Head of Product</td>
 <td>Assess technical feasibility in DOCX output; obtain legal view on scope of obligation</td>
 </tr>
 <tr>
 <td>GAP-002</td>
-<td>Article 52(3) disclosure form not legally reviewed</td>
-<td>Article 52(3)</td>
+<td>Article 50(4) deployer disclosure form not legally reviewed; law firm guidance not produced</td>
+<td>Article 50(4)</td>
 <td>High</td>
 <td>Legal Counsel</td>
-<td>Review current product UI labelling against Article 52(3) requirements; confirm whether mandatory lawyer review constitutes "significant modification"</td>
+<td>Review current product UI labelling against Article 50(4) requirements; confirm whether mandatory lawyer review constitutes editorial control for the safe harbour; document guidance for law firm deployers</td>
 </tr>
 <tr>
 <td>GAP-003</td>
@@ -2181,7 +2192,7 @@
 <h2 id="6-review-and-update-triggers">6. Review and Update Triggers</h2>
 <p>This mapping should be reviewed and updated when any of the following occur:</p>
 <ul>
-<li>[ ] EU AI Office publishes updated guidance on Article 52 obligations for document-based AI output</li>
+<li>[ ] EU AI Office publishes updated guidance on Article 50 obligations for document-based AI output</li>
 <li>[ ] Product roadmap introduces automation features that reduce or remove the mandatory lawyer review gate</li>
 <li>[ ] Legal Counsel completes review of Annex III classification (RC-001 from risk classification document)</li>
 <li>[ ] Anthropic provides GPAI compliance documentation that creates new downstream obligations</li>

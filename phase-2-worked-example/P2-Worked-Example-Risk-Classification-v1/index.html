@@ -1306,10 +1306,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#gate-4-transparency-obligations-article-52" class="md-nav__link">
+  <a href="#gate-4-transparency-obligations-article-50" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Gate 4 — Transparency Obligations (Article 52)
+        Gate 4 — Transparency Obligations (Article 50)
       
     </span>
   </a>
@@ -1626,10 +1626,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#gate-4-transparency-obligations-article-52" class="md-nav__link">
+  <a href="#gate-4-transparency-obligations-article-50" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Gate 4 — Transparency Obligations (Article 52)
+        Gate 4 — Transparency Obligations (Article 50)
       
     </span>
   </a>
@@ -1930,21 +1930,24 @@
 <h3 id="gate-3-general-purpose-ai-gpai-model-assessment-articles-5155">Gate 3 — General Purpose AI (GPAI) Model Assessment (Articles 51–55)</h3>
 <p><strong>Question:</strong> Is Vertrag.AI itself a General Purpose AI model, or does it deploy one in a way that requires specific GPAI obligations?</p>
 <p>Vertrag.AI is a <em>deployer</em> of a GPAI model (the Claude API, provided by Anthropic). Anthropic, as the provider of the underlying Claude model, holds the GPAI provider obligations under Articles 51–55 of the EU AI Act. Pickles GmbH, as deployer, is not a GPAI provider and does not trigger GPAI provider obligations.</p>
-<p>Pickles GmbH does, however, have deployer obligations under Article 16 (where applicable to the risk tier of the system as deployed) and transparency obligations under Article 52.</p>
-<p><strong>Decision:</strong> ✅ Pickles GmbH is a deployer, not a GPAI provider → GPAI provider obligations do not apply → proceed to Gate 4</p>
+<p>Pickles GmbH does, however, have provider obligations under Article 16 (as provider of Vertrag.AI — applied voluntarily at the Medium-High internal tier) and transparency obligations under Article 50. Law firm clients who license Vertrag.AI are deployers under Article 3(4) and hold obligations under Article 26.</p>
+<p><strong>Decision:</strong> ✅ Pickles GmbH is not a GPAI provider → GPAI provider obligations do not apply → proceed to Gate 4</p>
+<blockquote>
+<p><strong>Role clarification:</strong> At the GPAI layer, Pickles GmbH is a downstream user of Anthropic's Claude model. At the Vertrag.AI product layer, Pickles GmbH is the <strong>provider</strong> of Vertrag.AI under Article 3(3). Law firm clients are <strong>deployers</strong> of Vertrag.AI under Article 3(4). These are distinct roles at different layers of the AI value chain.</p>
+</blockquote>
 <hr />
-<h3 id="gate-4-transparency-obligations-article-52">Gate 4 — Transparency Obligations (Article 52)</h3>
-<p><strong>Question:</strong> Does the system trigger transparency obligations under EU AI Act Article 52?</p>
-<p>Article 52 obligations apply to:
+<h3 id="gate-4-transparency-obligations-article-50">Gate 4 — Transparency Obligations (Article 50)</h3>
+<p><strong>Question:</strong> Does the system trigger transparency obligations under EU AI Act Article 50?</p>
+<p>Article 50 obligations apply to:
 - AI systems that interact with natural persons (chatbot disclosure requirement)
 - AI systems that generate synthetic content (deepfake disclosure)
 - Emotion recognition systems
 - Biometric categorisation systems</p>
 <p>Vertrag.AI produces AI-generated contract analysis and clause suggestions. The output is reviewed by a lawyer before reaching any client. The system does not directly interact with natural persons (law firm clients); it interacts with qualified lawyers as professional users.</p>
 <p><strong>Assessment:</strong></p>
-<p>Article 52(1) (chatbot disclosure) does not apply — the system is not a conversational interface used by natural persons who might otherwise believe they are interacting with a human.</p>
-<p>Article 52(3) (synthetic content disclosure) may apply to the AI-drafted clause suggestions in the redlined output, to the extent they constitute AI-generated text that could be presented as human-authored. The mandatory output labelling in the product design (all AI-generated amendments marked as AI-drafted) addresses this obligation. [Flag for legal review — whether Article 52(3) applies to AI-generated contract clauses and what disclosure form is required.]</p>
-<p><strong>Decision:</strong> ✅ Article 52 transparency obligations apply — specifically in relation to labelling of AI-generated clause suggestions → to be addressed in Transparency &amp; Disclosure Framework</p>
+<p>Article 50(1) (chatbot disclosure) — Lawyers using Vertrag.AI are natural persons, and Article 50(1) applies in principle. However, the obligation does not apply where the AI nature of the interaction is obvious from the context. In a professional B2B tool explicitly marketed and used as an AI contract review system, the AI nature of the interaction is apparent to a reasonably informed professional user. The obligation is therefore unlikely to apply in the standard interface. Note: if a client-facing conversational interface is added, Article 50(1) disclosure would need to be assessed interface-by-interface.</p>
+<p>Article 50(4) (deployer synthetic content disclosure) may apply to law firm clients who share AI-drafted clause suggestions with their own clients, to the extent those suggestions constitute AI-generated text that could be presented as human-authored. The mandatory output labelling in the product design (all AI-generated amendments marked as AI-drafted) supports compliance with this obligation by law firm deployers. [Flag for legal review — whether Article 50(4) applies to AI-generated contract clauses and what disclosure form is required.]</p>
+<p><strong>Decision:</strong> ✅ Article 50 transparency obligations apply — specifically Article 50(1) (low risk; AI nature likely obvious from context) and Article 50(2) (machine-readable labelling — gap, not yet addressed) → to be addressed in Transparency &amp; Disclosure Framework</p>
 <hr />
 <h3 id="gate-5-internal-risk-criteria">Gate 5 — Internal Risk Criteria</h3>
 <p>Having completed the regulatory gates, the system is now assessed against Pickles GmbH's internal risk criteria to assign an internal tier.</p>
@@ -2025,22 +2028,22 @@
 <tr>
 <td><strong>EU AI Act risk tier</strong></td>
 <td><strong>Limited risk</strong></td>
-<td>Does not fall within Annex III; no prohibited practice; Article 52 transparency obligations apply</td>
+<td>Does not fall within Annex III; no prohibited practice; Article 50 transparency obligations apply</td>
 </tr>
 <tr>
 <td><strong>Primary obligation</strong></td>
-<td>Transparency (Article 52) — labelling of AI-generated output</td>
+<td>Transparency (Article 50) — labelling of AI-generated output; chatbot disclosure (low risk — AI nature likely obvious)</td>
 <td>Addressed in product design via AI-drafted output marking</td>
 </tr>
 <tr>
 <td><strong>Secondary obligation</strong></td>
-<td>Deployer obligations under Article 16 apply to the extent required for the risk tier</td>
+<td>Provider obligations under Article 16 applied voluntarily at Medium-High internal tier; law firm clients hold deployer obligations under Article 26</td>
 <td>To be confirmed on legal review</td>
 </tr>
 <tr>
-<td><strong>GPAI deployer obligations</strong></td>
-<td>Applicable — Pickles GmbH as deployer of a GPAI-based system</td>
-<td>See Article 16 and relevant GPAI provisions</td>
+<td><strong>GPAI downstream obligations</strong></td>
+<td>Applicable — Pickles GmbH uses a GPAI model (Claude API); Anthropic holds Articles 51–55 obligations as GPAI provider</td>
+<td>See GPAI provisions and Section 2.5 of P2-Worked-Example-EU-AI-Act-Mapping-v1.md</td>
 </tr>
 </tbody>
 </table>
@@ -2085,12 +2088,14 @@
 <h3 id="33-classification-summary">3.3 Classification Summary</h3>
 <pre><code>Vertrag.AI — PKL-SYS-003
 
-EU AI Act:   Limited Risk (Article 52 transparency obligations)
+EU AI Act:   Limited Risk (Article 50 transparency obligations)
+             Pickles GmbH = provider of Vertrag.AI (Article 3(3))
+             Law firm clients = deployers of Vertrag.AI (Article 3(4))
 Internal:    Medium-High
              ↓
 Obligations triggered:
-  • AI-generated output labelling (Article 52)
-  • Deployer obligations (Article 16 — proportionate to risk tier)
+  • AI-generated output labelling (Article 50)
+  • Provider obligations (Article 16 — applied voluntarily at Medium-High tier)
   • Full technical documentation
   • DPIA required
   • Vendor/model risk assessment required
@@ -2112,7 +2117,7 @@ Legal review required before classification is treated as final.
 <tbody>
 <tr>
 <td>P2-Worked-Example-EU-AI-Act-Mapping-v1.md</td>
-<td>Article 52 obligations mapped in full; deployer obligations under Article 16 included; Annex III analysis documented</td>
+<td>Article 50 obligations mapped in full; provider obligations under Article 16 included (applied voluntarily); Annex III analysis documented</td>
 </tr>
 <tr>
 <td>P2-Worked-Example-Technical-Documentation-v1.md</td>
@@ -2144,7 +2149,7 @@ Legal review required before classification is treated as final.
 </tr>
 <tr>
 <td>RC-002</td>
-<td>Article 52(3) applicability to AI-generated contract clause suggestions</td>
+<td>Article 50(4) applicability to AI-generated contract clause suggestions (law firm deployer disclosure obligation)</td>
 <td>Legal review of disclosure form required</td>
 <td>Legal Counsel</td>
 </tr>
@@ -2156,7 +2161,7 @@ Legal review required before classification is treated as final.
 </tr>
 <tr>
 <td>RC-004</td>
-<td>Deployer obligations under Article 16 — precise scope at limited-risk tier</td>
+<td>Provider obligations under Article 16 — precise scope at limited-risk tier (voluntary application)</td>
 <td>Legal review</td>
 <td>Legal Counsel</td>
 </tr>
