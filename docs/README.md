@@ -90,7 +90,7 @@ The next stage is testing whether this approach transfers to a different jurisdi
 
 | Regulation | Coverage |
 |---|---|
-| EU AI Act (Regulation (EU) 2024/1689) | Risk classification, Article 52 transparency obligations, Annex III mapping, Article 11 technical documentation structure |
+| EU AI Act (Regulation (EU) 2024/1689) | Risk classification, Article 50 transparency obligations, Annex III mapping, Article 11 technical documentation structure |
 | GDPR (Regulation (EU) 2016/679) | Data flow mapping, DPIA, sub-processor obligations, data subject rights |
 | BDSG (Bundesdatenschutzgesetz) | German national data protection overlay |
 | BRAK professional standards | Lawyer obligations when using AI tools, client confidentiality |

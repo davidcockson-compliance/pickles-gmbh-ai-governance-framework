@@ -144,7 +144,7 @@ The retrieval layer draws from a curated corpus maintained by Pickles GmbH. [ASS
 
 | Classification Dimension | Assessment |
 |---|---|
-| **EU AI Act risk tier** | Limited risk (Article 52) — transparency obligations apply; system does not fall within Annex III high-risk categories as currently designed [see note below] |
+| **EU AI Act risk tier** | Limited risk (Article 50) — transparency obligations apply; system does not fall within Annex III high-risk categories as currently designed [see note below] |
 | **Pickles GmbH internal risk tier** | Medium-High |
 | **Professional liability exposure** | High — output feeds into legal advice given to clients of a regulated profession |
 | **Automation level** | Assisted decision-making — all outputs require mandatory human review and approval before use |
@@ -192,7 +192,7 @@ The following factors elevate Vertrag.AI's internal risk rating above low:
 
 | Framework | Relevance | Cross-Reference Document |
 |---|---|---|
-| EU AI Act (Regulation (EU) 2024/1689) | Transparency obligations (Article 52); provider obligations (Article 16 if high-risk classification confirmed) | P2-Worked-Example-EU-AI-Act-Mapping-v1.md |
+| EU AI Act (Regulation (EU) 2024/1689) | Transparency obligations (Article 50) — Pickles GmbH as provider of Vertrag.AI (Article 3(3)); law firm clients as deployers (Article 3(4)); provider obligations (Article 16 if high-risk classification confirmed) | P2-Worked-Example-EU-AI-Act-Mapping-v1.md |
 | GDPR (Regulation (EU) 2016/679) | Personal data in contracts; sub-processor relationship with Anthropic; data subject rights | L2-5.1-GDPR-Alignment-Framework-v1.md |
 | BDSG (Bundesdatenschutzgesetz) | German national data protection overlay | L2-5.1-GDPR-Alignment-Framework-v1.md |
 | BRAK professional standards | Lawyer obligations when using AI tools; client confidentiality | L2-4.3-Transparency-Disclosure-Framework-v1.md |

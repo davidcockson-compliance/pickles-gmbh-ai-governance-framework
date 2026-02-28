@@ -15,7 +15,7 @@
 
 This document constitutes the Technical Documentation Pack for Vertrag.AI, prepared in accordance with the obligations framework established in `P2-Worked-Example-EU-AI-Act-Mapping-v1.md`.
 
-Vertrag.AI is classified as **limited risk** under the EU AI Act (Article 52 transparency obligations apply) with an **internal classification of Medium-High** due to professional liability exposure in the German legal market. This documentation pack is maintained as a proportionate governance control aligned with that internal classification, and as preparation for potential reclassification if the system's scope or capabilities expand.
+Vertrag.AI is classified as **limited risk** under the EU AI Act (Article 50 transparency obligations apply) with an **internal classification of Medium-High** due to professional liability exposure in the German legal market. This documentation pack is maintained as a proportionate governance control aligned with that internal classification, and as preparation for potential reclassification if the system's scope or capabilities expand.
 
 The structure follows the Annex IV template from the EU AI Act, adapted for a limited-risk system. Sections are populated with realistic illustrative content. Where real system data would be required, this is explicitly flagged.
 
