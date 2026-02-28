@@ -1,0 +1,70 @@
+site_name: Pickles GmbH — AI Governance Framework
+site_description: >
+  An open-source AI governance framework for German legal AI providers.
+  Built under EU AI Act, GDPR, BDSG, and BRAK professional standards.
+  A speculative demonstration piece — not a legal compliance certification.
+site_author: David Cockson
+repo_url: https://github.com/davidcockson-compliance/pickles-gmbh-ai-governance-framework
+repo_name: pickles-gmbh-ai-governance-framework
+edit_uri: edit/main/
+docs_dir: .
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+    - content.action.edit
+
+plugins:
+  - search
+  - mermaid2
+
+nav:
+  - Home: README.md
+  - Disclaimer: DISCLAIMER.md
+  - Assumptions Log: ASSUMPTIONS-LOG.md
+  - Stage 1 — Regulatory Orientation:
+    - Orientation Note: stage-1-regulatory-orientation/STAGE1-Regulatory-Orientation-Note-v1.md
+  - Stage 2 — Governance Foundation:
+    - AI System Inventory: stage-2-governance-foundation/L1-3.1-AI-System-Inventory-v1.md
+    - Risk Classification Framework: stage-2-governance-foundation/L1-3.2-Risk-Classification-Framework-v1.md
+    - Intake & Approval Workflow: stage-2-governance-foundation/L1-3.3-AI-Intake-Approval-Workflow-v1.md
+    - Human Oversight Policy: stage-2-governance-foundation/L1-3.4-Human-Oversight-Policy-v1.md
+  - Stage 3 — Regulatory Alignment:
+    - EU AI Act Risk Mapping: stage-3-regulatory-alignment/L2-4.1-EU-AI-Act-Risk-Mapping-Matrix-v1.md
+    - Technical Documentation Template: stage-3-regulatory-alignment/L2-4.2-Technical-Documentation-Pack-Template-v1.md
+    - Transparency & Disclosure: stage-3-regulatory-alignment/L2-4.3-Transparency-Disclosure-Framework-v1.md
+    - Data Flow Map: stage-3-regulatory-alignment/L2-5.1-Data-Flow-Map-v1.md
+    - DPIA Assessment: stage-3-regulatory-alignment/L2-5.2-DPIA-Assessment-v1.md
+    - Vendor & Model Risk: stage-3-regulatory-alignment/L2-5.3-Vendor-Model-Risk-Assessment-v1.md
+  - Stage 4 — Monitoring & Controls:
+    - Monitoring Framework: stage-4-monitoring-controls/L3-6.1-AI-Monitoring-Framework-v1.md
+    - Incident Response Playbook: stage-4-monitoring-controls/L3-6.2-Incident-Response-Playbook-v1.md
+    - Model Change Management: stage-4-monitoring-controls/L3-6.3-Model-Change-Management-Protocol-v1.md
+  - Stage 5 — Commercial Packaging:
+    - Governance Information Pack: stage-5-commercial-packaging/L4-7.1-AI-Governance-Information-Pack-v1.md
+    - Sales Enablement Kit: stage-5-commercial-packaging/L4-7.2-Enterprise-Sales-Enablement-Kit-v1.md
+  - Phase 2 — Worked Example:
+    - System Profile: phase-2-worked-example/P2-Worked-Example-System-Profile-v1.md
+    - Risk Classification Walkthrough: phase-2-worked-example/P2-Worked-Example-Risk-Classification-v1.md
+    - EU AI Act Mapping: phase-2-worked-example/P2-Worked-Example-EU-AI-Act-Mapping-v1.md
+    - Technical Documentation: phase-2-worked-example/P2-Worked-Example-Technical-Documentation-v1.md
+    - Monitoring Entry: phase-2-worked-example/P2-Worked-Example-Monitoring-Entry-v1.md
+    - Reflection Note: phase-2-worked-example/P2-Reflection-Note-v1.md
