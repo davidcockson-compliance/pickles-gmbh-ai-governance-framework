@@ -23,14 +23,14 @@ and a reusable methodology that other organisations can adapt.
 
 ## Contents
 
-| Stage | Folder | Documents |
+| Stage | First document | Count |
 |---|---|---|
-| 1 — Regulatory Orientation | [`stage-1-regulatory-orientation/`](stage-1-regulatory-orientation/) | 1 |
-| 2 — Governance Foundation | [`stage-2-governance-foundation/`](stage-2-governance-foundation/) | 4 |
-| 3 — Regulatory Alignment | [`stage-3-regulatory-alignment/`](stage-3-regulatory-alignment/) | 6 |
-| 4 — Monitoring & Controls | [`stage-4-monitoring-controls/`](stage-4-monitoring-controls/) | 3 |
-| 5 — Commercial Packaging | [`stage-5-commercial-packaging/`](stage-5-commercial-packaging/) | 2 |
-| Worked Example (Phase 2) | [`phase-2-worked-example/`](phase-2-worked-example/) | 6 |
+| 1 — Regulatory Orientation | [Regulatory Orientation Note](stage-1-regulatory-orientation/STAGE1-Regulatory-Orientation-Note-v1.md) | 1 |
+| 2 — Governance Foundation | [AI System Inventory](stage-2-governance-foundation/L1-3.1-AI-System-Inventory-v1.md) | 4 |
+| 3 — Regulatory Alignment | [EU AI Act Risk Mapping](stage-3-regulatory-alignment/L2-4.1-EU-AI-Act-Risk-Mapping-Matrix-v1.md) | 6 |
+| 4 — Monitoring & Controls | [AI Monitoring Framework](stage-4-monitoring-controls/L3-6.1-AI-Monitoring-Framework-v1.md) | 3 |
+| 5 — Commercial Packaging | [Governance Information Pack](stage-5-commercial-packaging/L4-7.1-AI-Governance-Information-Pack-v1.md) | 2 |
+| Worked Example (Phase 2) | [System Profile — Vertrag.AI](phase-2-worked-example/P2-Worked-Example-System-Profile-v1.md) | 6 |
 
 See [`ASSUMPTIONS-LOG.md`](ASSUMPTIONS-LOG.md) for all unverified assumptions embedded in the framework.
 See [`DISCLAIMER.md`](DISCLAIMER.md) for full scope and limitations notice.
@@ -70,7 +70,7 @@ The worked example demonstrates:
 - What the human oversight gate looks like in a professional-liability context
 - How the monitoring framework handles legally privileged material
 
-See [`phase-2-worked-example/`](phase-2-worked-example/) and the [Reflection Note](phase-2-worked-example/P2-Reflection-Note-v1.md) for the full worked example and a first-person account of what the exercise revealed about the framework's design.
+See the [System Profile](phase-2-worked-example/P2-Worked-Example-System-Profile-v1.md) and the [Reflection Note](phase-2-worked-example/P2-Reflection-Note-v1.md) for the full worked example and a first-person account of what the exercise revealed about the framework's design.
 
 ---
 
@@ -112,7 +112,7 @@ The `ASSUMPTIONS-LOG.md` lists every unverified assumption across the framework.
 
 ## Licence
 
-[CC BY 4.0](LICENSE) — you are free to use, adapt, and distribute this framework, including commercially, provided you give appropriate credit.
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — you are free to use, adapt, and distribute this framework, including commercially, provided you give appropriate credit.
 
 ---
 
