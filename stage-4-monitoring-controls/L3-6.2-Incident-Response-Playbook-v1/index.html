@@ -1,0 +1,2646 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An open-source AI governance framework for German legal AI providers. Built under EU AI Act, GDPR, BDSG, and BRAK professional standards. A speculative demonstration piece — not a legal compliance certification.
+">
+      
+      
+        <meta name="author" content="David Cockson">
+      
+      
+      
+        <link rel="prev" href="../L3-6.1-AI-Monitoring-Framework-v1/">
+      
+      
+        <link rel="next" href="../L3-6.3-Model-Change-Management-Protocol-v1/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>Incident Response Playbook - Pickles GmbH — AI Governance Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#incident-response-playbook" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Pickles GmbH — AI Governance Framework" class="md-header__button md-logo" aria-label="Pickles GmbH — AI Governance Framework" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Pickles GmbH — AI Governance Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Incident Response Playbook
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/davidcockson-compliance/pickles-gmbh-ai-governance-framework" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pickles-gmbh-ai-governance-framework
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../DISCLAIMER/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Disclaimer
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ASSUMPTIONS-LOG/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Assumptions Log
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../stage-1-regulatory-orientation/STAGE1-Regulatory-Orientation-Note-v1/" class="md-tabs__link">
+          
+  
+  
+  Stage 1 — Regulatory Orientation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../stage-2-governance-foundation/L1-3.1-AI-System-Inventory-v1/" class="md-tabs__link">
+          
+  
+  
+  Stage 2 — Governance Foundation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../stage-3-regulatory-alignment/L2-4.1-EU-AI-Act-Risk-Mapping-Matrix-v1/" class="md-tabs__link">
+          
+  
+  
+  Stage 3 — Regulatory Alignment
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../L3-6.1-AI-Monitoring-Framework-v1/" class="md-tabs__link">
+          
+  
+  
+  Stage 4 — Monitoring & Controls
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../stage-5-commercial-packaging/L4-7.1-AI-Governance-Information-Pack-v1/" class="md-tabs__link">
+          
+  
+  
+  Stage 5 — Commercial Packaging
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase-2-worked-example/P2-Worked-Example-System-Profile-v1/" class="md-tabs__link">
+          
+  
+  
+  Phase 2 — Worked Example
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Pickles GmbH — AI Governance Framework" class="md-nav__button md-logo" aria-label="Pickles GmbH — AI Governance Framework" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Pickles GmbH — AI Governance Framework
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/davidcockson-compliance/pickles-gmbh-ai-governance-framework" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pickles-gmbh-ai-governance-framework
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DISCLAIMER/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disclaimer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ASSUMPTIONS-LOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assumptions Log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 1 — Regulatory Orientation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 1 — Regulatory Orientation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-1-regulatory-orientation/STAGE1-Regulatory-Orientation-Note-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orientation Note
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 2 — Governance Foundation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 2 — Governance Foundation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-3.1-AI-System-Inventory-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI System Inventory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-3.2-Risk-Classification-Framework-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risk Classification Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-3.3-AI-Intake-Approval-Workflow-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intake & Approval Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-3.4-Human-Oversight-Policy-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Human Oversight Policy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 3 — Regulatory Alignment
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 3 — Regulatory Alignment
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-4.1-EU-AI-Act-Risk-Mapping-Matrix-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EU AI Act Risk Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-4.2-Technical-Documentation-Pack-Template-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical Documentation Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-4.3-Transparency-Disclosure-Framework-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transparency & Disclosure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-5.1-Data-Flow-Map-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Flow Map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-5.2-DPIA-Assessment-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DPIA Assessment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-5.3-Vendor-Model-Risk-Assessment-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vendor & Model Risk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 4 — Monitoring & Controls
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 4 — Monitoring & Controls
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../L3-6.1-AI-Monitoring-Framework-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monitoring Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Incident Response Playbook
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Incident Response Playbook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-incident-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Incident Definition
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Incident Definition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-what-is-an-incident" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 What Is an Incident
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-eu-ai-act-serious-incident-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 EU AI Act Serious Incident Definition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-gdpr-personal-data-breach-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 GDPR Personal Data Breach Definition
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-incident-examples-by-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Incident Examples by System
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-severity-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Severity Classification
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-escalation-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Escalation Paths
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Escalation Paths">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#p1-critical-incident-escalation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        P1 — Critical Incident Escalation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p2-high-severity-escalation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        P2 — High Severity Escalation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p3-medium-severity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        P3 — Medium Severity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p4-low-severity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        P4 — Low Severity
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-regulatory-reporting-triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Regulatory Reporting Triggers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Regulatory Reporting Triggers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-eu-ai-act-article-73-serious-incident-reporting-sys-04-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 EU AI Act Article 73 — Serious Incident Reporting (SYS-04 Only)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-gdpr-article-33-data-breach-notification-to-supervisory-authority" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 GDPR Article 33 — Data Breach Notification to Supervisory Authority
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-gdpr-article-34-data-breach-notification-to-data-subjects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 GDPR Article 34 — Data Breach Notification to Data Subjects
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-incident-log-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Incident Log Template
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-root-cause-analysis-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Root Cause Analysis Template
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-client-notification-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Client Notification Requirements
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Client Notification Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-when-to-notify-clients" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 When to Notify Clients
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-client-notification-content-p1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Client Notification Content (P1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-post-incident-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Post-Incident Review
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#document-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Document Control
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../L3-6.3-Model-Change-Management-Protocol-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model Change Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 5 — Commercial Packaging
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 5 — Commercial Packaging
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-5-commercial-packaging/L4-7.1-AI-Governance-Information-Pack-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governance Information Pack
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-5-commercial-packaging/L4-7.2-Enterprise-Sales-Enablement-Kit-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sales Enablement Kit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Phase 2 — Worked Example
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Phase 2 — Worked Example
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-example/P2-Worked-Example-System-Profile-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Profile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-example/P2-Worked-Example-Risk-Classification-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risk Classification Walkthrough
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-example/P2-Worked-Example-EU-AI-Act-Mapping-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EU AI Act Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-example/P2-Worked-Example-Technical-Documentation-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-example/P2-Worked-Example-Monitoring-Entry-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monitoring Entry
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-example/P2-Reflection-Note-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reflection Note
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-incident-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Incident Definition
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Incident Definition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-what-is-an-incident" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 What Is an Incident
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-eu-ai-act-serious-incident-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 EU AI Act Serious Incident Definition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-gdpr-personal-data-breach-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 GDPR Personal Data Breach Definition
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-incident-examples-by-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Incident Examples by System
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-severity-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Severity Classification
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-escalation-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Escalation Paths
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Escalation Paths">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#p1-critical-incident-escalation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        P1 — Critical Incident Escalation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p2-high-severity-escalation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        P2 — High Severity Escalation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p3-medium-severity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        P3 — Medium Severity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p4-low-severity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        P4 — Low Severity
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-regulatory-reporting-triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Regulatory Reporting Triggers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Regulatory Reporting Triggers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-eu-ai-act-article-73-serious-incident-reporting-sys-04-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 EU AI Act Article 73 — Serious Incident Reporting (SYS-04 Only)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-gdpr-article-33-data-breach-notification-to-supervisory-authority" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 GDPR Article 33 — Data Breach Notification to Supervisory Authority
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-gdpr-article-34-data-breach-notification-to-data-subjects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 GDPR Article 34 — Data Breach Notification to Data Subjects
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-incident-log-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Incident Log Template
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-root-cause-analysis-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Root Cause Analysis Template
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-client-notification-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Client Notification Requirements
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Client Notification Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-when-to-notify-clients" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 When to Notify Clients
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-client-notification-content-p1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Client Notification Content (P1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-post-incident-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Post-Incident Review
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#document-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Document Control
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/davidcockson-compliance/pickles-gmbh-ai-governance-framework/edit/main/stage-4-monitoring-controls/L3-6.2-Incident-Response-Playbook-v1.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="incident-response-playbook">Incident Response Playbook</h1>
+<p><strong>Project:</strong> Pickles GmbH — AI Governance Framework
+<strong>Stage:</strong> Stage 4 — Monitoring &amp; Operational Controls
+<strong>Status:</strong> Draft
+<strong>Version:</strong> v1
+<strong>Date:</strong> 2026-02-26
+<strong>Assumptions:</strong> Built on outline assumptions — not verified against real Pickles GmbH data</p>
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>This playbook defines how Pickles GmbH identifies, classifies, escalates, and resolves incidents involving its AI systems. It covers:
+- Internal incident management (all systems)
+- EU AI Act Article 73 serious incident reporting obligations (SYS-04, high-risk)
+- GDPR Article 33/34 personal data breach notification
+- BDSG §65/66 breach notification under German law
+- Client notification requirements
+- Root cause analysis template</p>
+<blockquote>
+<p>[ASSUMPTION] Contact details, escalation paths, and authority assignments are placeholder — must be completed with real names and roles before operational use.</p>
+<p>[LEGAL REVIEW REQUIRED] Regulatory reporting obligations under Article 73 and GDPR Article 33 are time-critical and carry legal consequences for non-compliance. This playbook must be reviewed by a qualified legal practitioner before it is relied upon operationally.</p>
+</blockquote>
+<hr />
+<h2 id="1-incident-definition">1. Incident Definition</h2>
+<h3 id="11-what-is-an-incident">1.1 What Is an Incident</h3>
+<p>For the purposes of this playbook, an <strong>incident</strong> is any unplanned event or pattern affecting a Pickles GmbH AI system that:
+- Causes or risks causing harm to a user, client, or third party
+- Represents a material failure of the system to operate within its intended purpose
+- Triggers a regulatory reporting or notification obligation
+- Results in a personal data breach
+- Causes or risks causing reputational, financial, or legal harm to Pickles GmbH</p>
+<p>Monitoring alerts from L3-6.1 that breach defined thresholds are the primary source of incident triggers.</p>
+<h3 id="12-eu-ai-act-serious-incident-definition">1.2 EU AI Act Serious Incident Definition</h3>
+<p>Article 3(49) defines a <strong>serious incident</strong> as an incident or malfunctioning of an AI system that directly or indirectly leads to:
+- <strong>(a)</strong> The death of a person, or serious harm to a person's health
+- <strong>(b)</strong> A serious and irreversible disruption of the management or operation of critical infrastructure
+- <strong>(c)</strong> The infringement of obligations under Union law intended to protect fundamental rights
+- <strong>(d)</strong> Serious harm to property or the environment</p>
+<blockquote>
+<p><strong>For Pickles GmbH:</strong> Article 3(49)(c) — infringement of fundamental rights obligations — is the most likely serious incident category. A materially flawed SYS-04 legal analysis output that is relied upon in legal proceedings without adequate lawyer review, and that causes a demonstrable infringement of a party's right to a fair trial or effective legal representation, could constitute a serious incident under this definition. [LEGAL REVIEW REQUIRED]</p>
+</blockquote>
+<h3 id="13-gdpr-personal-data-breach-definition">1.3 GDPR Personal Data Breach Definition</h3>
+<p>A <strong>personal data breach</strong> (GDPR Article 4(12)) is a breach of security leading to the accidental or unlawful destruction, loss, alteration, unauthorised disclosure of, or access to, personal data transmitted, stored, or otherwise processed.</p>
+<hr />
+<h2 id="2-incident-examples-by-system">2. Incident Examples by System</h2>
+<table>
+<thead>
+<tr>
+<th>Example Incident</th>
+<th>System</th>
+<th>Likely Classification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI output contains a fabricated case citation relied upon by a lawyer in a court submission</td>
+<td>SYS-01, SYS-04</td>
+<td>P1 / potential Article 3(49)(c) serious incident</td>
+</tr>
+<tr>
+<td>SYS-04 produces systematically flawed analysis for a specific document type (discovered via M-01)</td>
+<td>SYS-04</td>
+<td>P1 — immediate investigation; possible Article 20 corrective action</td>
+</tr>
+<tr>
+<td>User-reported error rate spikes above threshold; root cause unknown</td>
+<td>Any system</td>
+<td>P2 — investigation; possible escalation to P1</td>
+</tr>
+<tr>
+<td>Third-party model provider suffers security breach; client query data may be exposed</td>
+<td>SYS-04</td>
+<td>P1 — GDPR Article 33 clock starts; potential Article 73 implications</td>
+</tr>
+<tr>
+<td>System returns outputs containing personal data from a different user's session (data isolation failure)</td>
+<td>Any system</td>
+<td>P1 — GDPR Article 33 breach notification; potential data subject notification</td>
+</tr>
+<tr>
+<td>Unauthorised model drift detected: outputs changed without authorised update</td>
+<td>SYS-04</td>
+<td>P2 — activate L3-6.3; assess Article 20/73</td>
+</tr>
+<tr>
+<td>Planned maintenance window overruns; system unavailable for 4 hours</td>
+<td>Any system</td>
+<td>P3 — client notification; no regulatory trigger</td>
+</tr>
+<tr>
+<td>Single user complaint about output quality; no pattern detected</td>
+<td>Any system</td>
+<td>P4 — log and investigate; no escalation</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-severity-classification">3. Severity Classification</h2>
+<table>
+<thead>
+<tr>
+<th>Severity</th>
+<th>Definition</th>
+<th>Examples</th>
+<th>Response Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P1 — Critical</strong></td>
+<td>Actual or probable serious harm to a person; potential Article 3(49) serious incident; confirmed personal data breach; Article 20 non-conformity</td>
+<td>Fabricated legal citation in court submission; data breach exposing client personal data; SYS-04 systemic failure</td>
+<td>Immediate — within 1 hour of detection</td>
+</tr>
+<tr>
+<td><strong>P2 — High</strong></td>
+<td>Material quality failure without confirmed harm; unplanned model drift; suspected (unconfirmed) data breach; pattern of errors meeting L3-6.1 alert thresholds</td>
+<td>Spike in user error reports; citation accuracy below 90%; unauthorised model drift detected</td>
+<td>Within 4 business hours of detection</td>
+</tr>
+<tr>
+<td><strong>P3 — Medium</strong></td>
+<td>Degraded performance affecting users; planned maintenance overruns; single client escalation with potential pattern</td>
+<td>System latency exceeding SLA; extended planned downtime; second client complaint in same category within 30 days</td>
+<td>Within 1 business day</td>
+</tr>
+<tr>
+<td><strong>P4 — Low</strong></td>
+<td>Isolated user complaint; minor quality issue; no threshold breach; no harm</td>
+<td>Single user error report; cosmetic output formatting issue; feature request misidentified as defect</td>
+<td>Within 3 business days</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-escalation-paths">4. Escalation Paths</h2>
+<h3 id="p1-critical-incident-escalation">P1 — Critical Incident Escalation</h3>
+<pre><code>Detection (L3-6.1 monitoring / user report / deployer notification)
+    │
+    ▼ Within 15 minutes
+Head of Engineering — confirmed? → If not confirmed: investigate; escalate if confirmed
+    │
+    ▼ Within 1 hour
+AIRO notified — initiates P1 incident log; assigns Incident Commander
+    │
+    ├─► CEO notified immediately
+    ├─► DPO notified immediately (if data breach suspected)
+    └─► Legal counsel notified (if Article 73 or GDPR reporting may be required)
+    │
+    ▼ Within 2 hours
+Regulatory clock assessment:
+    ├─► EU AI Act Article 73 trigger? → If yes: prepare report; see Section 6
+    └─► GDPR Article 33 trigger? → If yes: 72-hour clock starts; see Section 7
+    │
+    ▼ Ongoing
+Incident log updated every 2 hours until resolution
+Client notification assessed — see Section 8
+System suspension decision if harm ongoing (Article 20)
+</code></pre>
+<h3 id="p2-high-severity-escalation">P2 — High Severity Escalation</h3>
+<p>Head of Engineering → Head of Product → AIRO (within 4 hours) → CEO (if Article 20 obligations may arise) → DPO (if data-related)</p>
+<h3 id="p3-medium-severity">P3 — Medium Severity</h3>
+<p>Head of Engineering → Head of Product → client notification if SLA breach → AIRO weekly summary</p>
+<h3 id="p4-low-severity">P4 — Low Severity</h3>
+<p>Head of Product → logged in incident register → reviewed in monthly monitoring report</p>
+<hr />
+<h2 id="5-regulatory-reporting-triggers">5. Regulatory Reporting Triggers</h2>
+<h3 id="51-eu-ai-act-article-73-serious-incident-reporting-sys-04-only">5.1 EU AI Act Article 73 — Serious Incident Reporting (SYS-04 Only)</h3>
+<p>Article 73 applies to SYS-04 (high-risk) only. Reporting is to the market surveillance authority of the Member State where the incident occurred. [ASSUMPTION] For Pickles GmbH, the competent German market surveillance authority must be identified and contact details maintained. [LEGAL REVIEW REQUIRED — confirm which authority is competent for SYS-04 in Germany]</p>
+<p><strong>Reporting trigger:</strong> Reasonable likelihood that the incident is causally linked to SYS-04, AND the incident meets the Article 3(49) serious incident definition.</p>
+<table>
+<thead>
+<tr>
+<th>Incident Type</th>
+<th>Reporting Deadline</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Standard serious incident (Art. 3(49)(a)(c)(d))</td>
+<td><strong>15 days</strong> from provider awareness of causal link or reasonable likelihood</td>
+<td>Initial report may be incomplete (Art. 73(5))</td>
+</tr>
+<tr>
+<td>Widespread infringement OR critical infrastructure (Art. 3(49)(b))</td>
+<td><strong>2 days</strong> from awareness</td>
+<td>Immediate notification</td>
+</tr>
+<tr>
+<td>Death of a person (Art. 3(49)(a))</td>
+<td><strong>10 days</strong> from awareness; immediate when causal link suspected</td>
+<td>Highest priority</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Post-notification obligations (Article 73(6)):</strong>
+- Immediately investigate incident and AI system
+- Conduct risk assessment of incident
+- Take corrective action
+- Cooperate with competent authorities
+- Do NOT alter the AI system in ways that may affect evaluation of incident causes before informing authorities</p>
+<p><strong>Article 20 non-conformity trigger:</strong>
+If the incident indicates SYS-04 is not in conformity with the EU AI Act, Article 20 requires:
+- Immediate corrective action (up to and including withdrawal/recall)
+- Notification to deployers (lawyer clients)
+- If Article 79(1) risk: inform market surveillance authority</p>
+<h3 id="52-gdpr-article-33-data-breach-notification-to-supervisory-authority">5.2 GDPR Article 33 — Data Breach Notification to Supervisory Authority</h3>
+<p><strong>Trigger:</strong> A personal data breach has occurred (GDPR Article 4(12) definition met).</p>
+<p><strong>Deadline:</strong> Without undue delay and, where feasible, <strong>not later than 72 hours</strong> after becoming aware of the breach.</p>
+<p><strong>Supervisory authority:</strong> [ASSUMPTION] For Pickles GmbH: the Federal Commissioner for Data Protection and Freedom of Information (Bundesbeauftragter für den Datenschutz und die Informationsfreiheit — BfDI), or the relevant Landesbeauftragter depending on Pickles GmbH's registration. [LEGAL REVIEW REQUIRED]</p>
+<p><strong>Report must include (Article 33(3)):</strong>
+- Nature of the breach including categories and approximate number of data subjects and records
+- Name and contact details of the DPO
+- Likely consequences of the breach
+- Measures taken or proposed to address the breach</p>
+<p><strong>Exception:</strong> Notification not required if the breach is unlikely to result in a risk to the rights and freedoms of natural persons.</p>
+<p><strong>BDSG §65 parallel obligation:</strong> Same 72-hour deadline applies to notification to the Federal Commissioner under the BDSG framework for processing under Part 3 BDSG. [LEGAL REVIEW REQUIRED — confirm which regime applies]</p>
+<h3 id="53-gdpr-article-34-data-breach-notification-to-data-subjects">5.3 GDPR Article 34 — Data Breach Notification to Data Subjects</h3>
+<p><strong>Trigger:</strong> Personal data breach is likely to result in <strong>high risk</strong> to the rights and freedoms of natural persons.</p>
+<p><strong>Deadline:</strong> Without undue delay.</p>
+<p><strong>Exemptions (Article 34(3)):</strong>
+- Affected data was encrypted and unintelligible to unauthorised persons
+- Subsequent measures have eliminated the high risk
+- Disproportionate effort — public communication instead</p>
+<p><strong>BDSG §66 parallel obligation:</strong> Where the breach results in substantial risk to legally protected interests of natural persons, data subjects must be notified without delay. [LEGAL REVIEW REQUIRED]</p>
+<hr />
+<h2 id="6-incident-log-template">6. Incident Log Template</h2>
+<p>A new log entry is created for every incident at P4 or above. Log is maintained by the AIRO.</p>
+<pre><code>INCIDENT LOG — [INCIDENT-ID: INC-YYYY-MM-DD-NN]
+
+Date/time detected:
+Date/time reported to AIRO:
+Detected by:
+System affected:
+Severity classification (P1/P2/P3/P4):
+Incident Commander (P1/P2 only):
+
+DESCRIPTION
+What happened:
+How detected (monitoring / user report / deployer report / other):
+Systems and data affected:
+Number of users/clients potentially affected:
+Personal data involved? (Y/N):
+If yes — categories and approximate number of data subjects:
+
+REGULATORY TRIGGER ASSESSMENT
+EU AI Act Article 3(49) serious incident? (Y/N/Under assessment):
+If yes — Article 73 reporting deadline:
+GDPR Article 33 breach notification required? (Y/N/Under assessment):
+If yes — 72-hour clock start time:
+GDPR Article 34 data subject notification required? (Y/N/Under assessment):
+
+TIMELINE
+[Timestamp] — [Action taken] — [By whom]
+
+CONTAINMENT ACTIONS
+Immediate containment steps taken:
+System suspended? (Y/N):
+
+CLIENT NOTIFICATION
+Clients notified? (Y/N — if P1/P2):
+Date/time of client notification:
+Method:
+
+REGULATORY NOTIFICATIONS
+Article 73 report submitted? (Y/N — SYS-04 serious incidents only):
+Submission date/reference:
+GDPR Article 33 report submitted?
+Submission date/reference:
+
+RESOLUTION
+Root cause (summary — full RCA in Section 7 template):
+Corrective actions taken:
+Date resolved:
+Recurrence prevention measures:
+
+SIGN-OFF
+AIRO:                    Date:
+DPO (if data breach):    Date:
+CEO (if P1):             Date:
+</code></pre>
+<hr />
+<h2 id="7-root-cause-analysis-template">7. Root Cause Analysis Template</h2>
+<p>To be completed for every P1 and P2 incident; recommended for significant P3 incidents.</p>
+<pre><code>ROOT CAUSE ANALYSIS — [INCIDENT-ID]
+
+1. INCIDENT SUMMARY
+   What happened:
+   Impact (users affected, data affected, regulatory obligations triggered):
+
+2. TIMELINE OF EVENTS
+   [Chronological sequence from first signal to resolution]
+
+3. CONTRIBUTING FACTORS
+   Technical factors:
+   Process/governance factors:
+   Human factors:
+   Vendor/third-party factors (if applicable):
+
+4. ROOT CAUSE STATEMENT
+   Primary root cause:
+   Secondary contributing causes:
+
+5. WHY THE INCIDENT WAS NOT PREVENTED
+   What detection or prevention mechanisms should have caught this earlier:
+   Why they did not:
+
+6. CORRECTIVE ACTIONS
+   | Action | Owner | Target Date | Status |
+   |--------|-------|-------------|--------|
+   |        |       |             |        |
+
+7. PREVENTIVE MEASURES
+   Changes to monitoring (L3-6.1):
+   Changes to change management (L3-6.3):
+   Changes to vendor contracts (L2-5.3):
+   Changes to system design or documentation:
+
+8. RESIDUAL RISK AFTER CORRECTIVE ACTION
+   Remaining risk:
+   Accepted by (AIRO / CEO):
+
+9. LESSONS LEARNED
+   What would have changed the outcome:
+   Actions to prevent recurrence across other systems:
+
+10. SIGN-OFF
+    Prepared by:           Date:
+    AIRO review:           Date:
+    DPO review (if applicable): Date:
+    CEO approval (P1):     Date:
+</code></pre>
+<hr />
+<h2 id="8-client-notification-requirements">8. Client Notification Requirements</h2>
+<h3 id="81-when-to-notify-clients">8.1 When to Notify Clients</h3>
+<p>[ASSUMPTION] Pickles GmbH notifies lawyer clients in the following circumstances:</p>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Notification Trigger</th>
+<th>Timing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P1 incident affecting client data or outputs</td>
+<td>Mandatory</td>
+<td>As soon as practical; before regulatory notification where possible</td>
+</tr>
+<tr>
+<td>P1 incident where client may have relied on affected outputs</td>
+<td>Mandatory</td>
+<td>Within 24 hours of classification</td>
+</tr>
+<tr>
+<td>System suspension under Article 20</td>
+<td>Mandatory</td>
+<td>Immediately; before or concurrent with suspension</td>
+</tr>
+<tr>
+<td>GDPR personal data breach involving client data</td>
+<td>Mandatory (and client's own GDPR Article 33 clock may start)</td>
+<td>Without undue delay — client needs information to meet their own obligations as controller</td>
+</tr>
+<tr>
+<td>P2 quality incident with pattern affecting client's practice area</td>
+<td>Recommended</td>
+<td>Within 2 business days</td>
+</tr>
+<tr>
+<td>P3 SLA breach</td>
+<td>Per contractual SLA terms</td>
+<td>Per SLA</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-client-notification-content-p1">8.2 Client Notification Content (P1)</h3>
+<p>A P1 client notification must include:
+- Description of the incident in plain language
+- Systems and outputs affected
+- Period during which affected outputs were produced
+- Whether client's data was involved (and what categories if so)
+- Actions Pickles GmbH has taken
+- Actions the client should take (e.g., review outputs from the affected period)
+- Contact point for further information (DPO for data-related; AIRO for AI-related)</p>
+<hr />
+<h2 id="9-post-incident-review">9. Post-Incident Review</h2>
+<p>Every P1 and P2 incident triggers a post-incident review within 30 days of resolution:
+- AIRO presents RCA findings to CEO and relevant heads
+- Monitoring thresholds reviewed for adequacy
+- Playbook updated if gaps identified
+- If Article 73 was triggered: review whether reporting was timely and complete
+- ISO/IEC 42001 Clause 10.2 corrective action documented</p>
+<hr />
+<h2 id="document-control">Document Control</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Document ID</td>
+<td>L3-6.2</td>
+</tr>
+<tr>
+<td>Next review</td>
+<td>Annual; immediately after any P1 incident</td>
+</tr>
+<tr>
+<td>Regulatory basis</td>
+<td>EU AI Act Articles 3(49), 20, 73, 79; GDPR Articles 33, 34; BDSG §65, §66</td>
+</tr>
+<tr>
+<td>Cross-references</td>
+<td>L3-6.1 (triggers), L3-6.3 (change management post-incident), L2-5.3 (vendor breach)</td>
+</tr>
+<tr>
+<td>Assumptions relied upon</td>
+<td>A-001, A-003, A-008, A-009</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

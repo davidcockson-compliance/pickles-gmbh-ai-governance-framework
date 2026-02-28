@@ -1,0 +1,2309 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An open-source AI governance framework for German legal AI providers. Built under EU AI Act, GDPR, BDSG, and BRAK professional standards. A speculative demonstration piece — not a legal compliance certification.
+">
+      
+      
+        <meta name="author" content="David Cockson">
+      
+      
+      
+        <link rel="prev" href="../L1-3.2-Risk-Classification-Framework-v1/">
+      
+      
+        <link rel="next" href="../L1-3.4-Human-Oversight-Policy-v1/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>Intake & Approval Workflow - Pickles GmbH — AI Governance Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ai-intake-approval-workflow" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Pickles GmbH — AI Governance Framework" class="md-header__button md-logo" aria-label="Pickles GmbH — AI Governance Framework" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Pickles GmbH — AI Governance Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Intake & Approval Workflow
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/davidcockson-compliance/pickles-gmbh-ai-governance-framework" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pickles-gmbh-ai-governance-framework
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../DISCLAIMER/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Disclaimer
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ASSUMPTIONS-LOG/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Assumptions Log
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../stage-1-regulatory-orientation/STAGE1-Regulatory-Orientation-Note-v1/" class="md-tabs__link">
+          
+  
+  
+  Stage 1 — Regulatory Orientation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../L1-3.1-AI-System-Inventory-v1/" class="md-tabs__link">
+          
+  
+  
+  Stage 2 — Governance Foundation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../stage-3-regulatory-alignment/L2-4.1-EU-AI-Act-Risk-Mapping-Matrix-v1/" class="md-tabs__link">
+          
+  
+  
+  Stage 3 — Regulatory Alignment
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../stage-4-monitoring-controls/L3-6.1-AI-Monitoring-Framework-v1/" class="md-tabs__link">
+          
+  
+  
+  Stage 4 — Monitoring & Controls
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../stage-5-commercial-packaging/L4-7.1-AI-Governance-Information-Pack-v1/" class="md-tabs__link">
+          
+  
+  
+  Stage 5 — Commercial Packaging
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase-2-worked-example/P2-Worked-Example-System-Profile-v1/" class="md-tabs__link">
+          
+  
+  
+  Phase 2 — Worked Example
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Pickles GmbH — AI Governance Framework" class="md-nav__button md-logo" aria-label="Pickles GmbH — AI Governance Framework" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Pickles GmbH — AI Governance Framework
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/davidcockson-compliance/pickles-gmbh-ai-governance-framework" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pickles-gmbh-ai-governance-framework
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DISCLAIMER/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disclaimer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ASSUMPTIONS-LOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assumptions Log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 1 — Regulatory Orientation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 1 — Regulatory Orientation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-1-regulatory-orientation/STAGE1-Regulatory-Orientation-Note-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orientation Note
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 2 — Governance Foundation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 2 — Governance Foundation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../L1-3.1-AI-System-Inventory-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI System Inventory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../L1-3.2-Risk-Classification-Framework-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risk Classification Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intake & Approval Workflow
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intake & Approval Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gate-checklists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gate Checklists
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gate Checklists">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gate-1-system-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gate 1 — System Description
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gate-2-risk-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gate 2 — Risk Classification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gate-3a-data-review-initial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gate 3a — Data Review (Initial)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gate-3b-data-review-dpia-and-prior-consultation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gate 3b — Data Review (DPIA and Prior Consultation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gate-4-legal-and-regulatory-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gate 4 — Legal and Regulatory Review
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gate-5-engineering-sign-off" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gate 5 — Engineering Sign-Off
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gate-6-deployment-approval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gate 6 — Deployment Approval
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#substantive-modification-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Substantive Modification Process
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roles-and-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roles and Responsibilities
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blocked-system-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blocked System Protocol
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../L1-3.4-Human-Oversight-Policy-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Human Oversight Policy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 3 — Regulatory Alignment
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 3 — Regulatory Alignment
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-4.1-EU-AI-Act-Risk-Mapping-Matrix-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EU AI Act Risk Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-4.2-Technical-Documentation-Pack-Template-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical Documentation Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-4.3-Transparency-Disclosure-Framework-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transparency & Disclosure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-5.1-Data-Flow-Map-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Flow Map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-5.2-DPIA-Assessment-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DPIA Assessment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-5.3-Vendor-Model-Risk-Assessment-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vendor & Model Risk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 4 — Monitoring & Controls
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 4 — Monitoring & Controls
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-4-monitoring-controls/L3-6.1-AI-Monitoring-Framework-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monitoring Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-4-monitoring-controls/L3-6.2-Incident-Response-Playbook-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Incident Response Playbook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-4-monitoring-controls/L3-6.3-Model-Change-Management-Protocol-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model Change Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 5 — Commercial Packaging
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 5 — Commercial Packaging
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-5-commercial-packaging/L4-7.1-AI-Governance-Information-Pack-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governance Information Pack
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-5-commercial-packaging/L4-7.2-Enterprise-Sales-Enablement-Kit-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sales Enablement Kit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Phase 2 — Worked Example
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Phase 2 — Worked Example
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-example/P2-Worked-Example-System-Profile-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Profile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-example/P2-Worked-Example-Risk-Classification-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risk Classification Walkthrough
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-example/P2-Worked-Example-EU-AI-Act-Mapping-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EU AI Act Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-example/P2-Worked-Example-Technical-Documentation-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-example/P2-Worked-Example-Monitoring-Entry-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monitoring Entry
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-example/P2-Reflection-Note-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reflection Note
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gate-checklists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gate Checklists
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gate Checklists">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gate-1-system-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gate 1 — System Description
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gate-2-risk-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gate 2 — Risk Classification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gate-3a-data-review-initial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gate 3a — Data Review (Initial)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gate-3b-data-review-dpia-and-prior-consultation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gate 3b — Data Review (DPIA and Prior Consultation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gate-4-legal-and-regulatory-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gate 4 — Legal and Regulatory Review
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gate-5-engineering-sign-off" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gate 5 — Engineering Sign-Off
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gate-6-deployment-approval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gate 6 — Deployment Approval
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#substantive-modification-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Substantive Modification Process
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roles-and-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roles and Responsibilities
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blocked-system-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blocked System Protocol
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/davidcockson-compliance/pickles-gmbh-ai-governance-framework/edit/main/stage-2-governance-foundation/L1-3.3-AI-Intake-Approval-Workflow-v1.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="ai-intake-approval-workflow">AI Intake Approval Workflow</h1>
+<p><strong>Project:</strong> Pickles GmbH — AI Governance Framework
+<strong>Stage:</strong> Stage 2 — Governance Foundation
+<strong>Status:</strong> Draft
+<strong>Version:</strong> v1
+<strong>Date:</strong> 2026-02-22
+<strong>Assumptions:</strong> Built on outline assumptions — not verified against real Pickles GmbH data</p>
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>This workflow defines the mandatory gate process that every AI system must pass before it may be deployed by or on behalf of Pickles GmbH [ASSUMPTION — A-001, A-003]. No AI system may be used with real client data, integrated into client-facing products, or made accessible to external users until it has completed all gates in this workflow and received final Deployment Approval at Gate 6.</p>
+<p>The workflow applies to:
+- New AI systems being evaluated for procurement or development
+- Existing AI systems undergoing substantive modification (EU AI Act Article 3)
+- Third-party AI model integrations [ASSUMPTION — A-004]
+- Internal AI tools that access or process personal data</p>
+<p><strong>Regulatory basis:</strong>
+- EU AI Act Articles 3, 9, 11, 13, 14, 16-23 — Requirements prior to market placement
+- EU AI Act Article 72 — Post-market monitoring obligations triggered at deployment
+- GDPR Article 35 — Data Protection Impact Assessment prior to processing
+- GDPR Article 36 — Prior consultation with BfDI where residual high risk
+- GDPR Article 28 — Data Processing Agreement requirement before processing begins
+- BDSG Section 67 — German DPIA requirements
+- BDSG Section 69 — BfDI prior consultation (must be initiated at design stage, not post-deployment) [LEGAL REVIEW REQUIRED]
+- BRAK Position Paper Section 2.1 — Human oversight requirements prior to AI deployment in legal practice
+- ISO/IEC 42001 Clause 8.2 — AI risk and impact assessment requirements</p>
+<hr />
+<h2 id="workflow-overview">Workflow Overview</h2>
+<pre><code>INTAKE REQUEST
+     │
+     ▼
+┌─────────────────────────────────────────────────────────────────┐
+│  GATE 1 — System Description                                    │
+│  Complete system profile. No evaluation work until complete.    │
+└──────────────────────────┬──────────────────────────────────────┘
+                           │ PASS
+                           ▼
+┌─────────────────────────────────────────────────────────────────┐
+│  GATE 2 — Risk Classification                                   │
+│  Assign Tier (High / Medium / Low) using L1-3.2 decision tree. │
+└──────────────────────────┬──────────────────────────────────────┘
+                           │ PASS
+                           ▼
+┌─────────────────────────────────────────────────────────────────┐
+│  GATE 3a — Data Review                                          │
+│  Identify all personal data categories. Assess DPIA trigger.   │
+└──────────────────────────┬──────────────────────────────────────┘
+                           │ PASS
+                           ▼
+┌─────────────────────────────────────────────────────────────────┐
+│  GATE 3b — Data Review (DPIA / Prior Consultation)              │
+│  Complete DPIA if triggered. Initiate BfDI consultation         │
+│  if residual high risk. Skip if Tier 3 with no personal data.  │
+└──────────────────────────┬──────────────────────────────────────┘
+                           │ PASS
+                           ▼
+┌─────────────────────────────────────────────────────────────────┐
+│  GATE 4 — Legal and Regulatory Review                           │
+│  EU AI Act compliance, BRAO/BRAK obligations, DPA review,       │
+│  conformity assessment (Tier 1 only).                           │
+└──────────────────────────┬──────────────────────────────────────┘
+                           │ PASS
+                           ▼
+┌─────────────────────────────────────────────────────────────────┐
+│  GATE 5 — Engineering Sign-Off                                  │
+│  Security review, logging configuration, monitoring setup,      │
+│  technical documentation.                                       │
+└──────────────────────────┬──────────────────────────────────────┘
+                           │ PASS
+                           ▼
+┌─────────────────────────────────────────────────────────────────┐
+│  GATE 6 — Deployment Approval                                   │
+│  Final sign-off. System registered in AI System Inventory       │
+│  (L1-3.1). Deployment Status set to Production.                │
+└──────────────────────────┬──────────────────────────────────────┘
+                           │ APPROVED
+                           ▼
+                     DEPLOYED TO PRODUCTION
+</code></pre>
+<blockquote>
+<p><strong>BLOCKED systems</strong> at any gate are returned to the responsible person with a written blocking reason. Work may not proceed to the next gate until the block is resolved and the gate re-passed.</p>
+</blockquote>
+<hr />
+<h2 id="gate-checklists">Gate Checklists</h2>
+<h3 id="gate-1-system-description">Gate 1 — System Description</h3>
+<p><strong>Purpose:</strong> Capture a complete system profile before any evaluation or risk assessment begins. A system cannot be registered in L1-3.1 or assessed against L1-3.2 without a complete Gate 1 profile.</p>
+<p><strong>Responsible:</strong> System owner (named individual) [ASSUMPTION — A-008]</p>
+<p><strong>Checklist:</strong></p>
+<ul>
+<li>[ ] <strong>System name</strong> — the commercial or internal name of the system</li>
+<li>[ ] <strong>Purpose and intended use</strong> — what the system does; what problem it solves; who will use it</li>
+<li>[ ] <strong>Deployment scope</strong> — internal only, or customer-facing (triggering EU AI Act Article 50 obligations) [ASSUMPTION — A-006]</li>
+<li>[ ] <strong>Model type</strong> — e.g., LLM, RAG, classification model, rule-based system</li>
+<li>[ ] <strong>Third-party model provider identified</strong> [ASSUMPTION — A-004] — named provider or "to be confirmed at Gate 4"</li>
+<li>[ ] <strong>Hosting location</strong> [ASSUMPTION — A-005] — EU-based cloud, German data centre, third-party API, etc.</li>
+<li>[ ] <strong>Data categories</strong> — initial assessment of what personal data (if any) the system will process</li>
+<li>[ ] <strong>Intended users</strong> — Pickles GmbH staff only; lawyer clients; lawyer clients' end clients; all three</li>
+<li>[ ] <strong>System owner named</strong> — a specific named individual, not a job title, who will be responsible for ongoing compliance</li>
+<li>[ ] <strong>Date of intake request</strong> recorded</li>
+</ul>
+<p><strong>Gate 1 pass criteria:</strong> All fields above complete and internally consistent. No blanks permitted.</p>
+<p><strong>Regulatory basis:</strong> EU AI Act Article 11 (technical documentation requirements begin at intake); EU AI Act Article 13 (transparency and instructions for use must be designed from the start).</p>
+<hr />
+<h3 id="gate-2-risk-classification">Gate 2 — Risk Classification</h3>
+<p><strong>Purpose:</strong> Assign a risk tier to the system using the Risk Classification Framework (L1-3.2). The tier determines all subsequent requirements. Risk classification must be confirmed before the system is registered in the AI System Inventory (L1-3.1) as anything other than "Pre-intake."</p>
+<p><strong>Responsible:</strong> Compliance Lead</p>
+<p><strong>Checklist:</strong></p>
+<ul>
+<li>[ ] <strong>Decision tree applied</strong> — worked through all questions in L1-3.2 Section 3 in sequence</li>
+<li>[ ] <strong>Prohibited use check completed</strong> (L1-3.2 Q1) — confirm system does not fall within EU AI Act Article 5 prohibited practices; if yes, intake terminated and Legal notified</li>
+<li>[ ] <strong>Tier assigned</strong> — High (Tier 1), Medium (Tier 2), or Low (Tier 3)</li>
+<li>[ ] <strong>Classification rationale documented</strong> — specific criteria met or not met for each tier</li>
+<li>[ ] <strong>[LEGAL REVIEW REQUIRED for Tier 1]</strong> — if Tier 1 classification is proposed, a qualified lawyer must review the classification before Gate 2 is passed; in particular Q2 (Annex III / Recital 61) and Q6 (specific-case reliance) require legal interpretation</li>
+<li>[ ] <strong>Risk Classification field in L1-3.1 updated</strong> with tier and classification date</li>
+<li>[ ] <strong>Next gate requirements determined</strong> based on tier (see Gate 3a below)</li>
+</ul>
+<p><strong>Gate 2 pass criteria:</strong> Tier assigned, rationale documented, and (for Tier 1) legal review completed. Classification entered in L1-3.1.</p>
+<p><strong>Regulatory basis:</strong> EU AI Act Articles 6, 9 (risk-based requirements apply from design stage); EU AI Act Annex III and Recital 61 (legal AI classification triggers); ISO/IEC 42001 Clause 8.2.</p>
+<hr />
+<h3 id="gate-3a-data-review-initial">Gate 3a — Data Review (Initial)</h3>
+<p><strong>Purpose:</strong> Identify all personal data categories that the system will process and determine whether a DPIA is required before processing begins.</p>
+<p><strong>Responsible:</strong> DPO [ASSUMPTION — A-008] (with input from system owner and Engineering)</p>
+<p><strong>Checklist:</strong></p>
+<ul>
+<li>[ ] <strong>Personal data categories mapped</strong> — list all categories the system will process: general personal data (GDPR Article 4); special categories (GDPR Article 9(1)); criminal convictions (GDPR Article 10); no personal data</li>
+<li>[ ] <strong>Data subjects identified</strong> — whose personal data: lawyer clients; their end clients; Pickles GmbH staff; third parties appearing in legal documents</li>
+<li>[ ] <strong>Data flows documented</strong> — where data enters the system, where it is processed, where it is stored, where it exits [ASSUMPTION — A-005 on hosting]</li>
+<li>[ ] <strong>Sub-processors identified</strong> — third-party model providers [ASSUMPTION — A-004] and any cloud infrastructure providers</li>
+<li>[ ] <strong>DPIA trigger assessed</strong> against GDPR Article 35 and BDSG Section 67 criteria:</li>
+<li>[ ] Large-scale processing of special categories (Article 9(1)) or criminal data (Article 10)</li>
+<li>[ ] Systematic and extensive profiling with legal or significant effects</li>
+<li>[ ] Systematic monitoring of publicly accessible areas (not applicable to legal AI — note only)</li>
+<li>[ ] Other criteria in the BfDI or EDPB lists of processing operations requiring DPIA</li>
+<li>[ ] <strong>DPIA trigger conclusion documented</strong> — DPIA required / not required (with reasoning)</li>
+</ul>
+<p><strong>Gate 3a pass criteria:</strong> All data categories mapped. DPIA trigger assessment documented with conclusion.</p>
+<p><strong>Regulatory basis:</strong> GDPR Articles 35, 36; GDPR Article 28 (processor obligations triggered when personal data processing confirmed); BDSG Section 67.</p>
+<hr />
+<h3 id="gate-3b-data-review-dpia-and-prior-consultation">Gate 3b — Data Review (DPIA and Prior Consultation)</h3>
+<p><strong>Purpose:</strong> Complete the DPIA where required and initiate BfDI prior consultation if residual risk remains high after mitigations. This gate is <strong>mandatory for Tier 1 systems</strong> and required for Tier 2 systems where Gate 3a determines a DPIA is triggered. Tier 3 systems with no personal data may proceed directly to Gate 4.</p>
+<p><strong>Responsible:</strong> DPO (with Legal and Engineering input) [ASSUMPTION — A-008]</p>
+<p><strong>Checklist:</strong></p>
+<ul>
+<li>[ ] <strong>DPIA completed</strong> (where triggered) per L2-5.2 template — covering:</li>
+<li>[ ] Systematic description of processing operations and purposes (GDPR Article 35(7)(a))</li>
+<li>[ ] Assessment of necessity and proportionality (GDPR Article 35(7)(b))</li>
+<li>[ ] Assessment of risks to rights and freedoms of data subjects (GDPR Article 35(7)(c))</li>
+<li>[ ] Measures to address risks and demonstrate GDPR compliance (GDPR Article 35(7)(d))</li>
+<li>[ ] <strong>Data Processing Agreement (DPA) drafted</strong> under GDPR Article 28 if Pickles GmbH acts as processor [ASSUMPTION — A-007] — template at Stage 3</li>
+<li>[ ] <strong>Vendor DPA assessed</strong> for any third-party model provider [ASSUMPTION — A-004] — template at L2-5.3</li>
+<li>[ ] <strong>Section 43e BRAO service agreement assessed</strong> for lawyer clients [ASSUMPTION — A-002] [LEGAL REVIEW REQUIRED]</li>
+<li>[ ] <strong>Residual risk assessed</strong> — high, medium, or low after mitigations applied</li>
+<li>[ ] <strong>BfDI prior consultation initiated if residual high risk</strong> (GDPR Article 36; BDSG Section 69) [LEGAL REVIEW REQUIRED — must be initiated at design stage, not post-deployment]</li>
+<li>[ ] <strong>DPO sign-off recorded</strong> on DPIA conclusion and residual risk assessment</li>
+</ul>
+<p><strong>Gate 3b pass criteria:</strong> DPIA complete (where required); DPAs in place or in progress; BfDI consultation initiated where required; DPO sign-off recorded.</p>
+<p><strong>Regulatory basis:</strong> GDPR Articles 28, 35, 36; BDSG Sections 67, 69; BRAO Section 43e [ASSUMPTION — A-002].</p>
+<hr />
+<h3 id="gate-4-legal-and-regulatory-review">Gate 4 — Legal and Regulatory Review</h3>
+<p><strong>Purpose:</strong> Confirm that the system as designed and documented complies with all applicable regulatory obligations. For Tier 1 systems, this includes the EU AI Act conformity assessment. For all customer-facing systems, this includes BRAK professional obligation review.</p>
+<p><strong>Responsible:</strong> Legal (qualified lawyer with EU AI Act expertise) and Compliance Lead</p>
+<p><strong>Checklist:</strong></p>
+<p><strong>For all tiers:</strong>
+- [ ] <strong>EU AI Act obligations confirmed</strong> for the assigned risk tier — documentation, transparency, logging, human oversight requirements all planned and feasible
+- [ ] <strong>AI transparency disclosure designed</strong> for customer-facing systems (EU AI Act Article 50) [ASSUMPTION — A-006]
+- [ ] <strong>Human oversight design reviewed</strong> against L1-3.4 — confirm no fully automated legal advice output; mandatory review steps designed in
+- [ ] <strong>Legal review of classification rationale</strong> for Tier 1 systems (if not already completed at Gate 2)</p>
+<p><strong>Tier 1 additional requirements:</strong>
+- [ ] <strong>Conformity assessment process initiated</strong> (EU AI Act Articles 16-23) — internal conformity assessment or notified body assessment as applicable
+- [ ] <strong>Technical Documentation Pack initiated</strong> (EU AI Act Article 11) — template L2-4.2
+- [ ] <strong>EU AI Act Article 13 transparency content drafted</strong> — instructions for use, known limitations, human oversight requirements, intended purpose statement
+- [ ] <strong>Declaration of Conformity pathway confirmed</strong> (EU AI Act Article 47)</p>
+<p><strong>BRAK / professional obligation review (for lawyer-facing systems):</strong>
+- [ ] <strong>Anwaltgeheimnis compliance assessed</strong> — professional secrecy obligations satisfied [ASSUMPTION — A-002]
+- [ ] <strong>Section 43e BRAO IT outsourcing requirements satisfied</strong> — where system relies on a third-party provider [ASSUMPTION — A-004] [LEGAL REVIEW REQUIRED]
+- [ ] <strong>BRAK professional liability framework reviewed</strong> — responsibility allocation between Pickles GmbH and lawyer client documented</p>
+<p><strong>Gate 4 pass criteria:</strong> Legal sign-off documented. All Tier 1 conformity assessment steps initiated. Customer-facing transparency content drafted. No unresolved legal blockers.</p>
+<p><strong>Regulatory basis:</strong> EU AI Act Articles 6, 9, 11, 13, 16-23, 47, 50; BRAO Section 43e; BRAK Position Paper December 2024 Section 2.1.</p>
+<hr />
+<h3 id="gate-5-engineering-sign-off">Gate 5 — Engineering Sign-Off</h3>
+<p><strong>Purpose:</strong> Confirm that the technical implementation satisfies all security, logging, monitoring, and documentation requirements for the assigned risk tier before deployment proceeds.</p>
+<p><strong>Responsible:</strong> Engineering Lead (with Security review where applicable)</p>
+<p><strong>Checklist:</strong></p>
+<p><strong>For all tiers:</strong>
+- [ ] <strong>Security review completed</strong> — at minimum: access controls, authentication, data in transit (encryption), data at rest (encryption), input validation, output sanitisation
+- [ ] <strong>Logging configured</strong> as required for tier:
+  - Tier 1: Automatic logging mandatory (EU AI Act Article 12; BDSG Section 76) — logging of inputs, outputs, oversight decisions, anomalies
+  - Tier 2: Operational logging of interactions and errors
+  - Tier 3: Basic system logging
+- [ ] <strong>Hosting location confirmed</strong> as EU-based [ASSUMPTION — A-005]; if not EU-based, flag immediately to Legal and DPO for Article 44-49 GDPR transfer assessment
+- [ ] <strong>Monitoring configured</strong> per L3-6.1 requirements for tier:
+  - Tier 1: Continuous active monitoring with KPIs defined
+  - Tier 2: Periodic monitoring (minimum quarterly)
+  - Tier 3: Annual review schedule set</p>
+<p><strong>Tier 1 additional requirements:</strong>
+- [ ] <strong>Technical Documentation Pack (L2-4.2) complete</strong> — all required sections populated
+- [ ] <strong>Human oversight mechanisms tested</strong> — system cannot produce outputs that bypass mandatory review step
+- [ ] <strong>Audit trail tested</strong> — logging captures events required under EU AI Act Article 12
+- [ ] <strong>Incident response integration tested</strong> — system feeds into L3-6.2 Incident Response Playbook</p>
+<p><strong>Tier 2 additional requirements:</strong>
+- [ ] <strong>AI interaction transparency implemented</strong> — EU AI Act Article 50 disclosure active for any system that interacts with natural persons</p>
+<p><strong>Gate 5 pass criteria:</strong> Engineering sign-off recorded. All tier-specific logging and monitoring configured and tested. No unresolved security issues.</p>
+<p><strong>Regulatory basis:</strong> EU AI Act Articles 9, 11, 12, 14; GDPR Article 32; BDSG Section 64 (technical controls); BDSG Section 76 (audit logging).</p>
+<hr />
+<h3 id="gate-6-deployment-approval">Gate 6 — Deployment Approval</h3>
+<p><strong>Purpose:</strong> Final cross-functional sign-off confirming all gates have been passed, all documentation is complete, and the system is authorised to proceed to Production status.</p>
+<p><strong>Responsible:</strong> See sign-off authority table below.</p>
+<p><strong>Checklist:</strong></p>
+<ul>
+<li>[ ] <strong>All previous gates confirmed passed</strong> — written records of Gate 1-5 completions on file</li>
+<li>[ ] <strong>AI System Inventory (L1-3.1) entry complete and accurate</strong> — all fields populated with verified information; no placeholders</li>
+<li>[ ] <strong>Deployment Status set to "Staging"</strong> before any production traffic; <strong>Production</strong> only after this gate is passed</li>
+<li>[ ] <strong>Monitoring Status set to "Active Monitoring"</strong> (Tier 1/2) or "Not Required" (Tier 3) in L1-3.1</li>
+<li>[ ] <strong>System owner confirmed</strong> — named individual (not job title) recorded in L1-3.1</li>
+<li>[ ] <strong>Incident response pathway confirmed</strong> — system owner and Engineering Lead know the escalation pathway per L3-6.2</li>
+<li>[ ] <strong>Post-market monitoring plan active</strong> (EU AI Act Article 72 for Tier 1) — KPIs defined, monitoring schedule set</li>
+<li>[ ] <strong>First review date scheduled</strong> in L1-3.1</li>
+</ul>
+<p><strong>Sign-off authority by tier:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Required Sign-Offs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tier 1 — High Risk</strong></td>
+<td>(1) Legal and Compliance Lead; (2) DPO [ASSUMPTION — A-008]; (3) Engineering Lead; (4) CEO or designated C-suite executive</td>
+</tr>
+<tr>
+<td><strong>Tier 2 — Medium Risk</strong></td>
+<td>(1) Compliance Lead; (2) Engineering Lead</td>
+</tr>
+<tr>
+<td><strong>Tier 3 — Low Risk</strong></td>
+<td>(1) Engineering Lead</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Gate 6 pass criteria:</strong> All required sign-offs obtained and documented. L1-3.1 entry complete. Deployment Status set to Production.</p>
+<p><strong>Regulatory basis:</strong> EU AI Act Articles 16-23 (obligations of providers before market placement); EU AI Act Article 72 (post-market monitoring obligation begins at deployment); ISO/IEC 42001 Clause 8.4 (deployment requirements).</p>
+<hr />
+<h2 id="substantive-modification-process">Substantive Modification Process</h2>
+<p>A deployed system that undergoes substantive modification must re-enter this workflow at the appropriate gate. A modification is <strong>substantive</strong> under EU AI Act Article 3(23) if it affects the intended purpose, the AI model or its performance, or the risk level of the system.</p>
+<table>
+<thead>
+<tr>
+<th>Modification Type</th>
+<th>Re-entry Point</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Change to AI model architecture or provider</td>
+<td>Gate 2</td>
+<td>Re-run full risk classification; may require new conformity assessment</td>
+</tr>
+<tr>
+<td>Change in intended purpose or deployment scope</td>
+<td>Gate 2</td>
+<td>Scope change may change risk tier</td>
+</tr>
+<tr>
+<td>Change in data categories processed</td>
+<td>Gate 3a</td>
+<td>Re-assess DPIA trigger</td>
+</tr>
+<tr>
+<td>Change from internal to customer-facing</td>
+<td>Gate 2</td>
+<td>Likely triggers transparency obligations and tier upgrade</td>
+</tr>
+<tr>
+<td>Change of third-party model provider [ASSUMPTION — A-004]</td>
+<td>Gate 3b</td>
+<td>New vendor DPA required; re-run L2-5.3</td>
+</tr>
+<tr>
+<td>Security or infrastructure change affecting logging</td>
+<td>Gate 5</td>
+<td>Engineering re-sign-off required</td>
+</tr>
+<tr>
+<td>Minor bug fix or performance change without scope change</td>
+<td>No re-entry</td>
+<td>Document in change log; confirm not substantive per Article 3(23)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>[LEGAL REVIEW REQUIRED]</strong> The definition of "substantive modification" under EU AI Act Article 3(23) requires legal interpretation in each specific case. When in doubt, treat a modification as substantive and re-enter the workflow.</p>
+<hr />
+<h2 id="roles-and-responsibilities">Roles and Responsibilities</h2>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Responsibility in This Workflow</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>System Owner</strong> (named individual)</td>
+<td>Initiates intake; completes Gate 1; responsible for ongoing compliance post-deployment</td>
+</tr>
+<tr>
+<td><strong>Compliance Lead</strong></td>
+<td>Leads Gate 2 (risk classification) and Gate 4 (legal/regulatory review); final compliance sign-off for Tier 2</td>
+</tr>
+<tr>
+<td><strong>DPO</strong> [ASSUMPTION — A-008]</td>
+<td>Leads Gate 3a and Gate 3b (data review and DPIA); DPO sign-off for Tier 1 and any system triggering DPIA</td>
+</tr>
+<tr>
+<td><strong>Legal</strong></td>
+<td>Gate 4 legal review; Tier 1 classification review; BRAO/BRAK compliance confirmation</td>
+</tr>
+<tr>
+<td><strong>Engineering Lead</strong></td>
+<td>Gate 5 technical review; Engineering sign-off; post-deployment monitoring configuration</td>
+</tr>
+<tr>
+<td><strong>CEO / C-suite</strong></td>
+<td>Gate 6 final sign-off for Tier 1 systems only</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="blocked-system-protocol">Blocked System Protocol</h2>
+<p>If a system is blocked at any gate:</p>
+<ol>
+<li><strong>Written blocking reason</strong> produced by the gate reviewer within 2 business days of assessment</li>
+<li><strong>Blocking reason communicated</strong> to the system owner and recorded against the system in L1-3.1</li>
+<li><strong>System status</strong> remains "Development" or "Staging" — may not advance to Production</li>
+<li><strong>Resolution pathway agreed</strong> — system owner and gate reviewer agree remediation steps</li>
+<li><strong>Re-assessment</strong> — system re-presents at the blocked gate; previous gate completions remain valid unless the modification affects them</li>
+</ol>
+<p>A system that is blocked and subsequently abandoned must have its L1-3.1 entry updated to "Suspended" or "Decommissioned" with a reason noted.</p>
+<hr />
+<p><em>This workflow is a governance control document. Completion of all gates is a prerequisite for deployment. No exceptions.</em></p>
+<blockquote>
+<p>[LEGAL REVIEW REQUIRED] The application of this workflow to specific Pickles GmbH systems requires legal review before operational use. In particular: Gate 2 risk classification for legal AI tools; Gate 3b BDSG Section 69 prior consultation timing; and Gate 4 Section 43e BRAO compliance for any system relying on a third-party AI model provider.</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

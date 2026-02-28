@@ -1,0 +1,2401 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An open-source AI governance framework for German legal AI providers. Built under EU AI Act, GDPR, BDSG, and BRAK professional standards. A speculative demonstration piece — not a legal compliance certification.
+">
+      
+      
+        <meta name="author" content="David Cockson">
+      
+      
+      
+        <link rel="prev" href="../../stage-4-monitoring-controls/L3-6.3-Model-Change-Management-Protocol-v1/">
+      
+      
+        <link rel="next" href="../L4-7.2-Enterprise-Sales-Enablement-Kit-v1/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>Governance Information Pack - Pickles GmbH — AI Governance Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ai-governance-information-pack" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Pickles GmbH — AI Governance Framework" class="md-header__button md-logo" aria-label="Pickles GmbH — AI Governance Framework" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Pickles GmbH — AI Governance Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Governance Information Pack
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/davidcockson-compliance/pickles-gmbh-ai-governance-framework" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pickles-gmbh-ai-governance-framework
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../DISCLAIMER/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Disclaimer
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ASSUMPTIONS-LOG/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Assumptions Log
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../stage-1-regulatory-orientation/STAGE1-Regulatory-Orientation-Note-v1/" class="md-tabs__link">
+          
+  
+  
+  Stage 1 — Regulatory Orientation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../stage-2-governance-foundation/L1-3.1-AI-System-Inventory-v1/" class="md-tabs__link">
+          
+  
+  
+  Stage 2 — Governance Foundation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../stage-3-regulatory-alignment/L2-4.1-EU-AI-Act-Risk-Mapping-Matrix-v1/" class="md-tabs__link">
+          
+  
+  
+  Stage 3 — Regulatory Alignment
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../stage-4-monitoring-controls/L3-6.1-AI-Monitoring-Framework-v1/" class="md-tabs__link">
+          
+  
+  
+  Stage 4 — Monitoring & Controls
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Stage 5 — Commercial Packaging
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase-2-worked-example/P2-Worked-Example-System-Profile-v1/" class="md-tabs__link">
+          
+  
+  
+  Phase 2 — Worked Example
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Pickles GmbH — AI Governance Framework" class="md-nav__button md-logo" aria-label="Pickles GmbH — AI Governance Framework" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Pickles GmbH — AI Governance Framework
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/davidcockson-compliance/pickles-gmbh-ai-governance-framework" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pickles-gmbh-ai-governance-framework
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DISCLAIMER/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disclaimer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ASSUMPTIONS-LOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assumptions Log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 1 — Regulatory Orientation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 1 — Regulatory Orientation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-1-regulatory-orientation/STAGE1-Regulatory-Orientation-Note-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orientation Note
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 2 — Governance Foundation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 2 — Governance Foundation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-3.1-AI-System-Inventory-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI System Inventory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-3.2-Risk-Classification-Framework-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risk Classification Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-3.3-AI-Intake-Approval-Workflow-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intake & Approval Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-3.4-Human-Oversight-Policy-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Human Oversight Policy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 3 — Regulatory Alignment
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 3 — Regulatory Alignment
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-4.1-EU-AI-Act-Risk-Mapping-Matrix-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EU AI Act Risk Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-4.2-Technical-Documentation-Pack-Template-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical Documentation Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-4.3-Transparency-Disclosure-Framework-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transparency & Disclosure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-5.1-Data-Flow-Map-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Flow Map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-5.2-DPIA-Assessment-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DPIA Assessment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-5.3-Vendor-Model-Risk-Assessment-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vendor & Model Risk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 4 — Monitoring & Controls
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 4 — Monitoring & Controls
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-4-monitoring-controls/L3-6.1-AI-Monitoring-Framework-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monitoring Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-4-monitoring-controls/L3-6.2-Incident-Response-Playbook-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Incident Response Playbook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-4-monitoring-controls/L3-6.3-Model-Change-Management-Protocol-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model Change Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 5 — Commercial Packaging
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 5 — Commercial Packaging
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governance Information Pack
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governance Information Pack
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-executive-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Executive Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-ai-architecture-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. AI Architecture Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. AI Architecture Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-assumed-product-portfolio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Assumed Product Portfolio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-architectural-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Architectural Principles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-eu-ai-act-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. EU AI Act Compliance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. EU AI Act Compliance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-risk-classification-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Risk Classification Approach
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-technical-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Technical Documentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-transparency-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Transparency Measures
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-human-oversight-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Human Oversight Model
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Human Oversight Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-core-principle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Core Principle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-prohibited-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Prohibited Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-data-protection-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Data Protection Summary
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Data Protection Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-controller-processor-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Controller / Processor Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-lawful-basis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Lawful Basis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-dpia-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 DPIA Status
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-security-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Security Measures
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-monitoring-quality-assurance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Monitoring &amp; Quality Assurance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Monitoring &amp; Quality Assurance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-key-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Key Metrics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-incident-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Incident Handling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-change-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Change Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-professional-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Professional Standards
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-contact-further-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Contact &amp; Further Information
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../L4-7.2-Enterprise-Sales-Enablement-Kit-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sales Enablement Kit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Phase 2 — Worked Example
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Phase 2 — Worked Example
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-example/P2-Worked-Example-System-Profile-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Profile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-example/P2-Worked-Example-Risk-Classification-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risk Classification Walkthrough
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-example/P2-Worked-Example-EU-AI-Act-Mapping-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EU AI Act Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-example/P2-Worked-Example-Technical-Documentation-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-example/P2-Worked-Example-Monitoring-Entry-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monitoring Entry
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-example/P2-Reflection-Note-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reflection Note
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-executive-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Executive Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-ai-architecture-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. AI Architecture Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. AI Architecture Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-assumed-product-portfolio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Assumed Product Portfolio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-architectural-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Architectural Principles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-eu-ai-act-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. EU AI Act Compliance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. EU AI Act Compliance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-risk-classification-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Risk Classification Approach
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-technical-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Technical Documentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-transparency-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Transparency Measures
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-human-oversight-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Human Oversight Model
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Human Oversight Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-core-principle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Core Principle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-prohibited-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Prohibited Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-data-protection-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Data Protection Summary
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Data Protection Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-controller-processor-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Controller / Processor Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-lawful-basis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Lawful Basis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-dpia-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 DPIA Status
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-security-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Security Measures
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-monitoring-quality-assurance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Monitoring &amp; Quality Assurance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Monitoring &amp; Quality Assurance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-key-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Key Metrics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-incident-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Incident Handling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-change-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Change Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-professional-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Professional Standards
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-contact-further-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Contact &amp; Further Information
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/davidcockson-compliance/pickles-gmbh-ai-governance-framework/edit/main/stage-5-commercial-packaging/L4-7.1-AI-Governance-Information-Pack-v1.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="ai-governance-information-pack">AI Governance Information Pack</h1>
+<p><strong>Project:</strong> Pickles GmbH — AI Governance Framework<br />
+<strong>Stage:</strong> Stage 5 — Commercial Packaging<br />
+<strong>Status:</strong> Draft<br />
+<strong>Version:</strong> v1<br />
+<strong>Date:</strong> 2026-02-26<br />
+<strong>Assumptions:</strong> Built on outline assumptions — not verified against real Pickles GmbH data  </p>
+<hr />
+<h2 id="1-executive-summary">1. Executive Summary</h2>
+<p>Pickles GmbH [ASSUMPTION] is a German legal technology provider offering AI-powered tools designed to support qualified legal professionals in research, drafting, summarisation, and structured legal analysis. Its systems are designed as assistive tools for lawyers and in-house legal teams — not as autonomous legal decision-makers.</p>
+<p>AI governance is central to the trustworthiness of legal AI. Under Regulation (EU) 2024/1689 (EU AI Act), Regulation (EU) 2016/679 (GDPR), the German Federal Data Protection Act (BDSG), and professional rules applicable to German lawyers (BRAO/BRAK), AI systems used in legal contexts must be carefully controlled, documented, and subject to meaningful human oversight. In addition, GDPR Article 5 requires accountability and demonstrable compliance with data protection principles.</p>
+<p>This Information Pack summarises Pickles GmbH’s AI governance architecture as implemented through its multi-stage AI Governance Framework (Stages 1–4). It explains how systems are classified, documented, monitored, and reviewed, and how regulatory obligations — including EU AI Act Articles 9, 11, 13, 14, 31, 72; GDPR Articles 5, 22, 28, 32, 33, 35; and relevant BRAO/BRAK provisions — are operationalised.</p>
+<p>This document is intended for non-technical legal procurement teams evaluating Pickles GmbH as a vendor. It provides a structured overview of compliance posture, risk management, transparency measures, and professional safeguards.</p>
+<hr />
+<h2 id="2-ai-architecture-overview">2. AI Architecture Overview</h2>
+<h3 id="21-assumed-product-portfolio">2.1 Assumed Product Portfolio</h3>
+<p>[ASSUMPTION] Based on the AI System Inventory (L1-3.1) and EU AI Act Risk Mapping Matrix (L2-4.1), Pickles GmbH operates the following AI system categories:</p>
+<ul>
+<li>
+<p><strong>Legal Research Assistant (SYS-01)</strong><br />
+  AI-supported retrieval and summarisation of case law and legislation.</p>
+</li>
+<li>
+<p><strong>Document Drafting Tool (SYS-02)</strong><br />
+  AI-assisted drafting and auto-completion of contracts and legal documents.</p>
+</li>
+<li>
+<p><strong>Document Summarisation Tool (SYS-03)</strong><br />
+  AI summarisation of lengthy legal documents and judgments.</p>
+</li>
+<li>
+<p><strong>Legal Analysis Tool (SYS-04)</strong><br />
+  AI-supported structured legal analysis applied to specific fact patterns.</p>
+</li>
+</ul>
+<p>These descriptions are provisional and must be verified against the actual production architecture. [LEGAL REVIEW REQUIRED]</p>
+<h3 id="22-architectural-principles">2.2 Architectural Principles</h3>
+<p>Across all systems, the following architectural principles apply:</p>
+<ol>
+<li>
+<p><strong>Registration Before Deployment</strong><br />
+   No AI system may be deployed without prior registration in the AI System Inventory (EU AI Act Article 11; L1-3.1).</p>
+</li>
+<li>
+<p><strong>Gate-Based Intake Process</strong><br />
+   All systems must pass a six-gate approval workflow before production deployment (L1-3.3).</p>
+</li>
+<li>
+<p><strong>Defined Intended Purpose</strong><br />
+   Each system’s intended purpose is documented in technical documentation in line with Annex IV and Article 13(3)(b)(i) EU AI Act (L2-4.2).</p>
+</li>
+<li>
+<p><strong>Human-in-the-Loop Design</strong><br />
+   System outputs cannot bypass mandatory lawyer review prior to client-facing use (EU AI Act Article 14; GDPR Article 22; L1-3.4).</p>
+</li>
+</ol>
+<hr />
+<h2 id="3-eu-ai-act-compliance">3. EU AI Act Compliance</h2>
+<h3 id="31-risk-classification-approach">3.1 Risk Classification Approach</h3>
+<p>Pickles GmbH applies a structured Risk Classification Framework (L1-3.2) aligned to:</p>
+<ul>
+<li>EU AI Act Article 6 (High-risk classification)</li>
+<li>Annex III (High-risk categories)</li>
+<li>Recitals 53 and 61 (legal AI interpretation)</li>
+</ul>
+<p>Under Annex III Point 8(a), AI systems used by judicial authorities to apply law to concrete facts are classified as high-risk. [ASSUMPTION] Pickles GmbH sells to lawyers rather than judicial authorities; however, classification boundaries require legal review. [LEGAL REVIEW REQUIRED]</p>
+<p>Where a system is determined to be high-risk:</p>
+<ul>
+<li><strong>Article 9</strong> — A continuous risk management system is implemented.</li>
+<li><strong>Article 11 &amp; Annex IV</strong> — Full technical documentation is maintained.</li>
+<li><strong>Article 13</strong> — Instructions for use and transparency documentation are provided.</li>
+<li><strong>Article 14</strong> — Effective human oversight is designed into the system.</li>
+<li><strong>Article 72</strong> — Post-market monitoring is mandatory.</li>
+<li><strong>Article 73</strong> — Serious incidents must be reported.</li>
+</ul>
+<h3 id="32-technical-documentation">3.2 Technical Documentation</h3>
+<p>For each system, Pickles GmbH prepares documentation structured to Annex IV requirements (L2-4.2), including:</p>
+<ul>
+<li>Intended purpose</li>
+<li>System architecture overview</li>
+<li>Training and validation approach [ASSUMPTION]</li>
+<li>Known limitations and accuracy constraints</li>
+<li>Human oversight mechanisms</li>
+<li>Logging and monitoring design (Article 12)</li>
+</ul>
+<p>Documentation is version-controlled and updated upon substantial modification (Article 3(23); Article 43(4)).</p>
+<h3 id="33-transparency-measures">3.3 Transparency Measures</h3>
+<p>Transparency is addressed at three levels (L2-4.3):</p>
+<ul>
+<li><strong>System-Level Transparency (Article 13)</strong> — Deployer-facing instructions.</li>
+<li><strong>User-Level Transparency (Article 50)</strong> — Disclosure when interacting with AI; labelling of AI-generated content (effective 2 August 2026).</li>
+<li><strong>Professional Transparency</strong> — Alignment with BRAK Position Paper obligations.</li>
+</ul>
+<hr />
+<h2 id="4-human-oversight-model">4. Human Oversight Model</h2>
+<p>Human oversight is governed by the Human Oversight Policy (L1-3.4).</p>
+<h3 id="41-core-principle">4.1 Core Principle</h3>
+<p>No AI output may constitute final legal advice without review and authorisation by a qualified lawyer.</p>
+<p>This principle reflects:</p>
+<ul>
+<li>EU AI Act Article 14 (Human oversight)</li>
+<li>GDPR Article 22 (No solely automated decisions with legal effects)</li>
+<li>BRAO §43a(2) (Independent professional judgement)</li>
+</ul>
+<h3 id="42-prohibited-practices">4.2 Prohibited Practices</h3>
+<p>Prohibited practices include:</p>
+<ul>
+<li>Direct delivery of AI-generated advice to clients without review.</li>
+<li>Designing workflows that bypass human review.</li>
+<li>Representing AI output as independent legal advice.</li>
+</ul>
+<p>[LEGAL REVIEW REQUIRED] The exact application of GDPR Article 22 in AI-assisted legal workflows must be assessed in context.</p>
+<hr />
+<h2 id="5-data-protection-summary">5. Data Protection Summary</h2>
+<h3 id="51-controller-processor-model">5.1 Controller / Processor Model</h3>
+<p>Based on the Data Flow Map (L2-5.1):</p>
+<ul>
+<li>Pickles GmbH acts as <strong>data controller</strong> for employee and account data. [ASSUMPTION]</li>
+<li>Pickles GmbH acts as <strong>data processor</strong> for client-submitted legal documents. [ASSUMPTION]</li>
+<li>Third-party model providers may act as <strong>sub-processors</strong> (GDPR Article 28(2)). [ASSUMPTION]</li>
+</ul>
+<p>[LEGAL REVIEW REQUIRED] Role allocation must be verified per GDPR Article 4(7)–(8).</p>
+<h3 id="52-lawful-basis">5.2 Lawful Basis</h3>
+<p>Lawyer clients, as controllers, determine lawful basis under GDPR Article 6. Where special categories of data (Article 9) are processed, additional conditions apply.</p>
+<h3 id="53-dpia-status">5.3 DPIA Status</h3>
+<p>The DPIA Assessment (L2-5.2) confirms:</p>
+<ul>
+<li>High-risk systems require DPIA consideration (GDPR Article 35).</li>
+<li>SYS-04 is treated as requiring full DPIA. [ASSUMPTION]</li>
+</ul>
+<h3 id="54-security-measures">5.4 Security Measures</h3>
+<p>Security controls are implemented in line with GDPR Article 32 and BDSG §64, including:</p>
+<ul>
+<li>Encryption in transit (TLS 1.3+) [ASSUMPTION]</li>
+<li>Access controls and role-based permissions [ASSUMPTION]</li>
+<li>Sub-processor due diligence (L2-5.3)</li>
+</ul>
+<hr />
+<h2 id="6-monitoring-quality-assurance">6. Monitoring &amp; Quality Assurance</h2>
+<p>Monitoring is governed by the AI Monitoring Framework (L3-6.1).</p>
+<h3 id="61-key-metrics">6.1 Key Metrics</h3>
+<p>Monitored metrics include:</p>
+<ul>
+<li>Hallucination / factual error rate</li>
+<li>Citation integrity</li>
+<li>User-reported accuracy concerns</li>
+<li>Incident frequency</li>
+<li>Model drift indicators</li>
+</ul>
+<p>For high-risk systems, Article 72 requires structured post-market monitoring.</p>
+<h3 id="62-incident-handling">6.2 Incident Handling</h3>
+<p>The Incident Response Playbook (L3-6.2) defines:</p>
+<ul>
+<li>Severity levels (P1–P4)</li>
+<li>GDPR Article 33/34 breach notification timelines</li>
+<li>EU AI Act Article 73 serious incident reporting</li>
+</ul>
+<h3 id="63-change-management">6.3 Change Management</h3>
+<p>The Model Change Management Protocol (L3-6.3) governs:</p>
+<ul>
+<li>Change classification (Types A–F)</li>
+<li>Substantial modification assessment (Article 3(23))</li>
+<li>Conformity reassessment triggers (Article 43(4))</li>
+</ul>
+<hr />
+<h2 id="7-professional-standards">7. Professional Standards</h2>
+<p>Pickles GmbH aligns its governance architecture with:</p>
+<ul>
+<li>BRAO §43a(2) — Independent legal judgement</li>
+<li>BRAO §43e — IT outsourcing safeguards</li>
+<li>BRAK AI Position Paper (December 2024)</li>
+</ul>
+<p>Where third-party providers are used, confidentiality obligations consistent with §43e BRAO are required (L2-5.3).</p>
+<hr />
+<h2 id="8-contact-further-information">8. Contact &amp; Further Information</h2>
+<p><strong>Pickles GmbH</strong> [ASSUMPTION]<br />
+Registered Address: [Placeholder]<br />
+Email: compliance@pickles.example [ASSUMPTION]<br />
+Data Protection Officer: dpo@pickles.example [ASSUMPTION]  </p>
+<p>Further documentation (under NDA where appropriate) may include:</p>
+<ul>
+<li>Technical Documentation Packs (Annex IV format)</li>
+<li>DPIA summaries</li>
+<li>Sub-processor list</li>
+<li>Monitoring dashboard extracts</li>
+<li>Incident management summaries</li>
+</ul>
+<hr />
+<p><em>End of Document 1</em></p>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

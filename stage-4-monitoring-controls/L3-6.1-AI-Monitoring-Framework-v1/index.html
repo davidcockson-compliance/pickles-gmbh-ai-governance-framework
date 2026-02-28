@@ -1,0 +1,2531 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An open-source AI governance framework for German legal AI providers. Built under EU AI Act, GDPR, BDSG, and BRAK professional standards. A speculative demonstration piece — not a legal compliance certification.
+">
+      
+      
+        <meta name="author" content="David Cockson">
+      
+      
+      
+        <link rel="prev" href="../../stage-3-regulatory-alignment/L2-5.3-Vendor-Model-Risk-Assessment-v1/">
+      
+      
+        <link rel="next" href="../L3-6.2-Incident-Response-Playbook-v1/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>Monitoring Framework - Pickles GmbH — AI Governance Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ai-monitoring-framework" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Pickles GmbH — AI Governance Framework" class="md-header__button md-logo" aria-label="Pickles GmbH — AI Governance Framework" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Pickles GmbH — AI Governance Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Monitoring Framework
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/davidcockson-compliance/pickles-gmbh-ai-governance-framework" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pickles-gmbh-ai-governance-framework
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../DISCLAIMER/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Disclaimer
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ASSUMPTIONS-LOG/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Assumptions Log
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../stage-1-regulatory-orientation/STAGE1-Regulatory-Orientation-Note-v1/" class="md-tabs__link">
+          
+  
+  
+  Stage 1 — Regulatory Orientation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../stage-2-governance-foundation/L1-3.1-AI-System-Inventory-v1/" class="md-tabs__link">
+          
+  
+  
+  Stage 2 — Governance Foundation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../stage-3-regulatory-alignment/L2-4.1-EU-AI-Act-Risk-Mapping-Matrix-v1/" class="md-tabs__link">
+          
+  
+  
+  Stage 3 — Regulatory Alignment
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Stage 4 — Monitoring & Controls
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../stage-5-commercial-packaging/L4-7.1-AI-Governance-Information-Pack-v1/" class="md-tabs__link">
+          
+  
+  
+  Stage 5 — Commercial Packaging
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase-2-worked-example/P2-Worked-Example-System-Profile-v1/" class="md-tabs__link">
+          
+  
+  
+  Phase 2 — Worked Example
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Pickles GmbH — AI Governance Framework" class="md-nav__button md-logo" aria-label="Pickles GmbH — AI Governance Framework" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Pickles GmbH — AI Governance Framework
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/davidcockson-compliance/pickles-gmbh-ai-governance-framework" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pickles-gmbh-ai-governance-framework
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DISCLAIMER/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disclaimer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ASSUMPTIONS-LOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assumptions Log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 1 — Regulatory Orientation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 1 — Regulatory Orientation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-1-regulatory-orientation/STAGE1-Regulatory-Orientation-Note-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orientation Note
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 2 — Governance Foundation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 2 — Governance Foundation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-3.1-AI-System-Inventory-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI System Inventory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-3.2-Risk-Classification-Framework-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risk Classification Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-3.3-AI-Intake-Approval-Workflow-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intake & Approval Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-3.4-Human-Oversight-Policy-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Human Oversight Policy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 3 — Regulatory Alignment
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 3 — Regulatory Alignment
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-4.1-EU-AI-Act-Risk-Mapping-Matrix-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EU AI Act Risk Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-4.2-Technical-Documentation-Pack-Template-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical Documentation Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-4.3-Transparency-Disclosure-Framework-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transparency & Disclosure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-5.1-Data-Flow-Map-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Flow Map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-5.2-DPIA-Assessment-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DPIA Assessment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-5.3-Vendor-Model-Risk-Assessment-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vendor & Model Risk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 4 — Monitoring & Controls
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 4 — Monitoring & Controls
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monitoring Framework
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monitoring Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-monitoring-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Monitoring Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Monitoring Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-data-collection-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Data Collection Sources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-monitoring-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Monitoring Responsibilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-metrics-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Metrics Framework
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Metrics Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-primary-metrics-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Primary Metrics Table
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-sys-04-high-risk-specific-metrics-article-72-post-market-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 SYS-04 High-Risk Specific Metrics (Article 72 — Post-Market Monitoring)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-monitoring-frequency-and-reporting-schedule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Monitoring Frequency and Reporting Schedule
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-dashboard-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Dashboard Design
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Dashboard Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-dashboard-sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Dashboard Sections
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-escalation-thresholds-and-incident-triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Escalation Thresholds and Incident Triggers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-post-market-monitoring-plan-sys-04-article-72" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Post-Market Monitoring Plan — SYS-04 (Article 72)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-cross-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Cross-References
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#document-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Document Control
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../L3-6.2-Incident-Response-Playbook-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Incident Response Playbook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../L3-6.3-Model-Change-Management-Protocol-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model Change Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 5 — Commercial Packaging
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 5 — Commercial Packaging
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-5-commercial-packaging/L4-7.1-AI-Governance-Information-Pack-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governance Information Pack
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-5-commercial-packaging/L4-7.2-Enterprise-Sales-Enablement-Kit-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sales Enablement Kit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Phase 2 — Worked Example
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Phase 2 — Worked Example
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-example/P2-Worked-Example-System-Profile-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Profile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-example/P2-Worked-Example-Risk-Classification-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risk Classification Walkthrough
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-example/P2-Worked-Example-EU-AI-Act-Mapping-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EU AI Act Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-example/P2-Worked-Example-Technical-Documentation-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-example/P2-Worked-Example-Monitoring-Entry-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monitoring Entry
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-example/P2-Reflection-Note-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reflection Note
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-monitoring-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Monitoring Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Monitoring Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-data-collection-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Data Collection Sources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-monitoring-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Monitoring Responsibilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-metrics-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Metrics Framework
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Metrics Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-primary-metrics-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Primary Metrics Table
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-sys-04-high-risk-specific-metrics-article-72-post-market-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 SYS-04 High-Risk Specific Metrics (Article 72 — Post-Market Monitoring)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-monitoring-frequency-and-reporting-schedule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Monitoring Frequency and Reporting Schedule
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-dashboard-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Dashboard Design
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Dashboard Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-dashboard-sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Dashboard Sections
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-escalation-thresholds-and-incident-triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Escalation Thresholds and Incident Triggers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-post-market-monitoring-plan-sys-04-article-72" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Post-Market Monitoring Plan — SYS-04 (Article 72)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-cross-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Cross-References
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#document-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Document Control
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/davidcockson-compliance/pickles-gmbh-ai-governance-framework/edit/main/stage-4-monitoring-controls/L3-6.1-AI-Monitoring-Framework-v1.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="ai-monitoring-framework">AI Monitoring Framework</h1>
+<p><strong>Project:</strong> Pickles GmbH — AI Governance Framework
+<strong>Stage:</strong> Stage 4 — Monitoring &amp; Operational Controls
+<strong>Status:</strong> Draft
+<strong>Version:</strong> v1
+<strong>Date:</strong> 2026-02-26
+<strong>Assumptions:</strong> Built on outline assumptions — not verified against real Pickles GmbH data</p>
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>This document defines Pickles GmbH's operational monitoring framework for all deployed AI systems. It fulfils the post-market monitoring system requirement under EU AI Act Article 72 for SYS-04 (high-risk), and establishes good-practice monitoring for SYS-01 through SYS-03 (limited-risk).</p>
+<p><strong>Regulatory basis:</strong>
+- EU AI Act Article 72 — Post-market monitoring system (mandatory for SYS-04)
+- EU AI Act Article 9(2)(c) — Risk management system: continuous iterative process including data from post-market monitoring
+- EU AI Act Article 15 — Accuracy, robustness, and cybersecurity performance targets
+- EU AI Act Article 17(1)(h) — Quality management system must include post-market monitoring
+- EU AI Act Article 12 — Logging requirements for high-risk AI systems
+- ISO/IEC 42001 Clauses 9.1, 9.2, 9.3 — Performance evaluation</p>
+<blockquote>
+<p>[ASSUMPTION] All metrics, thresholds, and measurement methods in this document are proposed based on the assumed product architecture. They must be validated against real system capabilities and real baseline performance data before operational use.</p>
+<p>[LEGAL REVIEW REQUIRED] Article 72(3) requires the post-market monitoring plan for SYS-04 to form part of the Annex IV technical documentation (L2-4.2 Section 9). The Commission implementing act establishing the template for that plan was due by 2 February 2026 — check whether it has been published and update accordingly.</p>
+</blockquote>
+<hr />
+<h2 id="1-scope">1. Scope</h2>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Risk Tier</th>
+<th>Monitoring Obligation</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SYS-01 — Legal Research Assistant</td>
+<td>Tier 3 Limited-risk</td>
+<td>Good practice monitoring</td>
+<td>No Article 72 mandate</td>
+</tr>
+<tr>
+<td>SYS-02 — Document Drafting Tool</td>
+<td>Tier 3 Limited-risk</td>
+<td>Good practice monitoring</td>
+<td>No Article 72 mandate</td>
+</tr>
+<tr>
+<td>SYS-03 — Document Summarisation Tool</td>
+<td>Tier 3 Limited-risk</td>
+<td>Good practice monitoring</td>
+<td>No Article 72 mandate</td>
+</tr>
+<tr>
+<td>SYS-04 — Legal Analysis Tool</td>
+<td><strong>Tier 2 High-risk</strong></td>
+<td><strong>Article 72 mandatory post-market monitoring</strong></td>
+<td>Full monitoring plan required</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2-monitoring-architecture">2. Monitoring Architecture</h2>
+<h3 id="21-data-collection-sources">2.1 Data Collection Sources</h3>
+<p>Per Article 72(2), monitoring data may be provided by deployers or collected from other sources. [ASSUMPTION] Pickles GmbH collects monitoring data from:</p>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Data Type</th>
+<th>Collection Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Platform event logs (Article 12)</td>
+<td>Session events, errors, latency</td>
+<td>Automated — system-generated [ASSUMPTION]</td>
+</tr>
+<tr>
+<td>User feedback mechanism (in-product)</td>
+<td>User-reported errors, inaccuracies, complaints</td>
+<td>In-product flag/report button [ASSUMPTION]</td>
+</tr>
+<tr>
+<td>Lawyer client reports</td>
+<td>Client-escalated accuracy concerns</td>
+<td>Structured incident report form [ASSUMPTION]</td>
+</tr>
+<tr>
+<td>Automated output sampling</td>
+<td>Periodic automated quality checks</td>
+<td>Sampling pipeline [ASSUMPTION]</td>
+</tr>
+<tr>
+<td>Expert review panel</td>
+<td>Independent legal accuracy assessment</td>
+<td>Quarterly panel review [ASSUMPTION]</td>
+</tr>
+<tr>
+<td>Model provider notifications</td>
+<td>Model version changes, known issues</td>
+<td>Provider update channel per L2-5.3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-monitoring-responsibilities">2.2 Monitoring Responsibilities</h3>
+<p>[ASSUMPTION]</p>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Monitoring Responsibility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI Risk and Information Officer (AIRO)</td>
+<td>Owns monitoring framework; reviews monthly dashboard; escalates to CEO</td>
+</tr>
+<tr>
+<td>Head of Engineering</td>
+<td>Operates technical monitoring tooling; reviews daily/weekly technical metrics</td>
+</tr>
+<tr>
+<td>Head of Product</td>
+<td>Reviews output quality and user experience metrics; owns expert review panel</td>
+</tr>
+<tr>
+<td>DPO</td>
+<td>Reviews data-related metrics; receives breach-relevant flags</td>
+</tr>
+<tr>
+<td>Client Success</td>
+<td>Aggregates and categorises client-reported concerns</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-metrics-framework">3. Metrics Framework</h2>
+<h3 id="31-primary-metrics-table">3.1 Primary Metrics Table</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Metric</th>
+<th>Description</th>
+<th>System Scope</th>
+<th>Measurement Method</th>
+<th>Frequency</th>
+<th>Alert Threshold [ASSUMPTION]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M-01</td>
+<td><strong>Hallucination / factual error rate</strong></td>
+<td>Rate of AI outputs containing demonstrably false or unsupported legal statements</td>
+<td>SYS-01, SYS-02, SYS-03, SYS-04</td>
+<td>Expert review panel sampling (n=50 outputs per system per quarter); user-reported errors normalised to output volume</td>
+<td>Quarterly (expert); ongoing (user-reported)</td>
+<td>&gt;2% expert-identified errors per sample triggers review; &gt;5% triggers incident</td>
+</tr>
+<tr>
+<td>M-02</td>
+<td><strong>Citation accuracy rate</strong></td>
+<td>Rate of legal citations (case references, article numbers, legislation) that are correctly identified and traceable</td>
+<td>SYS-01, SYS-04</td>
+<td>Automated citation verification against legal database [ASSUMPTION]; monthly sample audit</td>
+<td>Monthly automated; quarterly audit</td>
+<td>&lt;95% accuracy triggers investigation; &lt;90% triggers incident</td>
+</tr>
+<tr>
+<td>M-03</td>
+<td><strong>User error report rate</strong></td>
+<td>Volume of user-submitted error/inaccuracy reports per 1,000 outputs</td>
+<td>All systems</td>
+<td>In-product reporting tool; normalised to output volume</td>
+<td>Weekly</td>
+<td>&gt;5 reports per 1,000 outputs triggers product review</td>
+</tr>
+<tr>
+<td>M-04</td>
+<td><strong>Output override / discard rate</strong></td>
+<td>Rate at which users actively discard or override AI outputs</td>
+<td>All systems</td>
+<td>User action logging (override/discard events)</td>
+<td>Weekly</td>
+<td>Significant increase (&gt;20% week-on-week) triggers investigation — may indicate quality degradation or automation bias reduction</td>
+</tr>
+<tr>
+<td>M-05</td>
+<td><strong>Bias signal monitoring</strong></td>
+<td>Differential performance across document language (German/English), practice area, or document type</td>
+<td>SYS-01, SYS-04</td>
+<td>Stratified sampling by category; compare error rates across strata</td>
+<td>Quarterly</td>
+<td>Statistically significant performance gap between strata triggers bias investigation</td>
+</tr>
+<tr>
+<td>M-06</td>
+<td><strong>System availability / uptime</strong></td>
+<td>Percentage of time system is available and responsive</td>
+<td>All systems</td>
+<td>Infrastructure monitoring</td>
+<td>Continuous</td>
+<td>&lt;99.5% monthly uptime triggers engineering review</td>
+</tr>
+<tr>
+<td>M-07</td>
+<td><strong>Latency — P95 response time</strong></td>
+<td>95th percentile response time for standard queries</td>
+<td>All systems</td>
+<td>Infrastructure monitoring</td>
+<td>Continuous</td>
+<td>&gt;10 seconds P95 triggers engineering review [ASSUMPTION]</td>
+</tr>
+<tr>
+<td>M-08</td>
+<td><strong>Model drift indicator</strong></td>
+<td>Detected change in output distribution, style, or behaviour without an authorised model update</td>
+<td>SYS-04</td>
+<td>Automated comparison of output embedding distribution against baseline; triggered on model provider update notifications</td>
+<td>Continuous; reviewed monthly</td>
+<td>Any statistically significant drift not attributable to an authorised update triggers L3-6.3 change management</td>
+</tr>
+<tr>
+<td>M-09</td>
+<td><strong>Complaint volume and classification</strong></td>
+<td>Number and category of formal client complaints relating to AI output quality</td>
+<td>All systems</td>
+<td>Client complaints log (Client Success); AIRO review</td>
+<td>Monthly</td>
+<td>&gt;3 complaints per month in same category triggers root cause analysis</td>
+</tr>
+<tr>
+<td>M-10</td>
+<td><strong>Out-of-scope use detection</strong></td>
+<td>Queries or use patterns outside the system's intended purpose</td>
+<td>SYS-04</td>
+<td>Log analysis for query patterns outside defined intended purpose categories [ASSUMPTION]</td>
+<td>Monthly</td>
+<td>Confirmed out-of-scope use pattern triggers client communication and Terms of Service review</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-sys-04-high-risk-specific-metrics-article-72-post-market-monitoring">3.2 SYS-04 High-Risk Specific Metrics (Article 72 — Post-Market Monitoring)</h3>
+<p>In addition to M-01 through M-10, SYS-04 requires the following Article 72-specific monitoring to evaluate continuous compliance with Chapter III Section 2 requirements:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Metric</th>
+<th>Chapter III Section 2 Requirement</th>
+<th>Measurement Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M-11</td>
+<td><strong>Risk management system effectiveness</strong></td>
+<td>Article 9 — ongoing risk management</td>
+<td>Annual risk management review; compare identified risks against incident log</td>
+</tr>
+<tr>
+<td>M-12</td>
+<td><strong>Human oversight compliance</strong></td>
+<td>Article 14 — users able to override, disregard, halt</td>
+<td>Quarterly audit of override/discard rate (M-04); user competence assessment [ASSUMPTION]</td>
+</tr>
+<tr>
+<td>M-13</td>
+<td><strong>Logging completeness</strong></td>
+<td>Article 12 — automatic event logging</td>
+<td>Monthly log audit — confirm all session events are captured; no gaps</td>
+</tr>
+<tr>
+<td>M-14</td>
+<td><strong>Accuracy declaration compliance</strong></td>
+<td>Article 15(3) — accuracy metrics declared in instructions for use</td>
+<td>Quarterly comparison of actual accuracy (M-01, M-02) against declared metrics; flag if actual performance falls below declared level</td>
+</tr>
+<tr>
+<td>M-15</td>
+<td><strong>Cybersecurity posture</strong></td>
+<td>Article 15(5) — resilience against adversarial inputs</td>
+<td>Annual penetration test; quarterly review of prompt injection defence logs [ASSUMPTION]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-monitoring-frequency-and-reporting-schedule">4. Monitoring Frequency and Reporting Schedule</h2>
+<table>
+<thead>
+<tr>
+<th>Frequency</th>
+<th>Activities</th>
+<th>Output</th>
+<th>Recipient [ASSUMPTION]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Continuous</strong></td>
+<td>Uptime, latency, error alerts (M-06, M-07), drift detection (M-08)</td>
+<td>Real-time alerts</td>
+<td>Head of Engineering</td>
+</tr>
+<tr>
+<td><strong>Weekly</strong></td>
+<td>User error report rate (M-03), override/discard rate (M-04)</td>
+<td>Weekly metrics digest</td>
+<td>Head of Product, Head of Engineering</td>
+</tr>
+<tr>
+<td><strong>Monthly</strong></td>
+<td>Citation accuracy (M-02 automated), complaint classification (M-09), out-of-scope use (M-10), logging audit (M-13)</td>
+<td>Monthly monitoring report</td>
+<td>AIRO, DPO (data-related metrics)</td>
+</tr>
+<tr>
+<td><strong>Quarterly</strong></td>
+<td>Hallucination/error rate (M-01 expert review), bias signals (M-05), human oversight compliance (M-12), accuracy declaration compliance (M-14)</td>
+<td>Quarterly performance report</td>
+<td>AIRO, CEO, Head of Product</td>
+</tr>
+<tr>
+<td><strong>Annual</strong></td>
+<td>Risk management system effectiveness (M-11), cybersecurity posture (M-15), full post-market monitoring plan review</td>
+<td>Annual AI system review</td>
+<td>CEO, AIRO, DPO, Board [ASSUMPTION]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-dashboard-design">5. Dashboard Design</h2>
+<p>[ASSUMPTION] Pickles GmbH's monitoring dashboard aggregates the above metrics into a single view accessible to the AIRO and senior leadership. Recommended dashboard structure:</p>
+<h3 id="51-dashboard-sections">5.1 Dashboard Sections</h3>
+<p><strong>Section A — System Health (Real-time)</strong>
+- Uptime status per system (RAG: green/amber/red)
+- P95 latency per system
+- Active incident count (links to L3-6.2 incident log)</p>
+<p><strong>Section B — Output Quality (Weekly/Monthly)</strong>
+- User error report rate trend (line chart, 13-week rolling)
+- Override/discard rate trend (line chart, 13-week rolling)
+- Complaint volume by category (bar chart, monthly)
+- Citation accuracy rate (SYS-01, SYS-04) — monthly trend</p>
+<p><strong>Section C — High-Risk Compliance (SYS-04)</strong>
+- Last expert review date and result (M-01)
+- Logging completeness status (M-13)
+- Drift indicator status (M-08)
+- Days since last model update and change management status</p>
+<p><strong>Section D — Governance</strong>
+- Open action items from previous monitoring reports
+- Next scheduled expert review date
+- Assumptions requiring verification (link to ASSUMPTIONS-LOG.md)</p>
+<hr />
+<h2 id="6-escalation-thresholds-and-incident-triggers">6. Escalation Thresholds and Incident Triggers</h2>
+<p>When a monitoring metric breaches its alert threshold, the following escalation applies:</p>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Immediate Action</th>
+<th>Escalation Path</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M-01 &gt;5% error rate in expert sample</td>
+<td>Pause deployment of affected system pending investigation</td>
+<td>Head of Engineering → AIRO → CEO; activate L3-6.2</td>
+</tr>
+<tr>
+<td>M-02 citation accuracy &lt;90%</td>
+<td>Investigate root cause; suspend marketing claims about accuracy</td>
+<td>Head of Product → AIRO</td>
+</tr>
+<tr>
+<td>M-08 confirmed unauthorised model drift</td>
+<td>Activate L3-6.3 change management; assess Article 20 / Article 73 obligations</td>
+<td>Head of Engineering → AIRO → Legal</td>
+</tr>
+<tr>
+<td>Any metric meeting Article 3(49) serious incident definition</td>
+<td>Activate L3-6.2 Incident Response Playbook immediately</td>
+<td>AIRO → CEO → Legal → Article 73 reporting</td>
+</tr>
+<tr>
+<td>GDPR data breach detected</td>
+<td>Activate L3-6.2 GDPR breach channel; 72-hour GDPR Article 33 clock starts</td>
+<td>DPO → CEO → Legal</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-post-market-monitoring-plan-sys-04-article-72">7. Post-Market Monitoring Plan — SYS-04 (Article 72)</h2>
+<p>This section constitutes the post-market monitoring plan for SYS-04 required by Article 72(3). It must be incorporated into the SYS-04 Technical Documentation Pack (L2-4.2 Section 9).</p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Monitoring objective</strong></td>
+<td>Evaluate continuous compliance of SYS-04 with Chapter III Section 2 requirements throughout its operational lifetime</td>
+</tr>
+<tr>
+<td><strong>Data actively collected</strong></td>
+<td>Metrics M-01 through M-15 as defined in Section 3; event logs per Article 12</td>
+</tr>
+<tr>
+<td><strong>Data from deployers</strong></td>
+<td>Client-reported errors (M-03, M-09); client-confirmed out-of-scope use reports (M-10) [ASSUMPTION]</td>
+</tr>
+<tr>
+<td><strong>Review frequency</strong></td>
+<td>Per Section 4 schedule; annual comprehensive review</td>
+</tr>
+<tr>
+<td><strong>Compliance evaluation trigger</strong></td>
+<td>Any metric breach (Section 6) triggers compliance re-evaluation against Chapter III Section 2</td>
+</tr>
+<tr>
+<td><strong>Corrective action link</strong></td>
+<td>Metric breaches trigger L3-6.2 (incident) or L3-6.3 (change management) as appropriate</td>
+</tr>
+<tr>
+<td><strong>Interaction with other AI systems</strong></td>
+<td>[ASSUMPTION] SYS-04 does not currently interact with other AI systems — confirm against real architecture; update if integration occurs</td>
+</tr>
+<tr>
+<td><strong>Plan update trigger</strong></td>
+<td>Material change to SYS-04 (L3-6.3); change in regulatory requirements; annual review</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="8-cross-references">8. Cross-References</h2>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>Relevance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L2-4.1 — EU AI Act Risk Mapping Matrix</td>
+<td>Risk classification determining Article 72 scope</td>
+</tr>
+<tr>
+<td>L2-4.2 — Technical Documentation Pack</td>
+<td>Section 9 — post-market monitoring plan; Section 2.7 — accuracy metrics declared</td>
+</tr>
+<tr>
+<td>L3-6.2 — Incident Response Playbook</td>
+<td>Activated when monitoring triggers Article 3(49) or GDPR breach</td>
+</tr>
+<tr>
+<td>L3-6.3 — Model Change Management Protocol</td>
+<td>Activated when monitoring detects drift or change event</td>
+</tr>
+<tr>
+<td>L2-5.3 — Vendor Risk Assessment</td>
+<td>Model provider update notifications feed into M-08</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="document-control">Document Control</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Document ID</td>
+<td>L3-6.1</td>
+</tr>
+<tr>
+<td>Next review</td>
+<td>Annual; or when SYS-04 model changes materially</td>
+</tr>
+<tr>
+<td>Regulatory basis</td>
+<td>EU AI Act Articles 9, 12, 15, 17(1)(h), 72; ISO/IEC 42001 Clauses 9.1–9.3</td>
+</tr>
+<tr>
+<td>Assumptions relied upon</td>
+<td>A-001, A-004, A-005, A-009</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,3023 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An open-source AI governance framework for German legal AI providers. Built under EU AI Act, GDPR, BDSG, and BRAK professional standards. A speculative demonstration piece — not a legal compliance certification.
+">
+      
+      
+        <meta name="author" content="David Cockson">
+      
+      
+      
+        <link rel="prev" href="../L2-4.3-Transparency-Disclosure-Framework-v1/">
+      
+      
+        <link rel="next" href="../L2-5.2-DPIA-Assessment-v1/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>Data Flow Map - Pickles GmbH — AI Governance Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#data-flow-map" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Pickles GmbH — AI Governance Framework" class="md-header__button md-logo" aria-label="Pickles GmbH — AI Governance Framework" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Pickles GmbH — AI Governance Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Data Flow Map
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/davidcockson-compliance/pickles-gmbh-ai-governance-framework" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pickles-gmbh-ai-governance-framework
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../DISCLAIMER/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Disclaimer
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ASSUMPTIONS-LOG/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Assumptions Log
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../stage-1-regulatory-orientation/STAGE1-Regulatory-Orientation-Note-v1/" class="md-tabs__link">
+          
+  
+  
+  Stage 1 — Regulatory Orientation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../stage-2-governance-foundation/L1-3.1-AI-System-Inventory-v1/" class="md-tabs__link">
+          
+  
+  
+  Stage 2 — Governance Foundation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../L2-4.1-EU-AI-Act-Risk-Mapping-Matrix-v1/" class="md-tabs__link">
+          
+  
+  
+  Stage 3 — Regulatory Alignment
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../stage-4-monitoring-controls/L3-6.1-AI-Monitoring-Framework-v1/" class="md-tabs__link">
+          
+  
+  
+  Stage 4 — Monitoring & Controls
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../stage-5-commercial-packaging/L4-7.1-AI-Governance-Information-Pack-v1/" class="md-tabs__link">
+          
+  
+  
+  Stage 5 — Commercial Packaging
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase-2-worked-example/P2-Worked-Example-System-Profile-v1/" class="md-tabs__link">
+          
+  
+  
+  Phase 2 — Worked Example
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Pickles GmbH — AI Governance Framework" class="md-nav__button md-logo" aria-label="Pickles GmbH — AI Governance Framework" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Pickles GmbH — AI Governance Framework
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/davidcockson-compliance/pickles-gmbh-ai-governance-framework" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pickles-gmbh-ai-governance-framework
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DISCLAIMER/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disclaimer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ASSUMPTIONS-LOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assumptions Log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 1 — Regulatory Orientation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 1 — Regulatory Orientation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-1-regulatory-orientation/STAGE1-Regulatory-Orientation-Note-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orientation Note
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 2 — Governance Foundation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 2 — Governance Foundation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-3.1-AI-System-Inventory-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI System Inventory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-3.2-Risk-Classification-Framework-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risk Classification Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-3.3-AI-Intake-Approval-Workflow-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intake & Approval Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-3.4-Human-Oversight-Policy-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Human Oversight Policy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 3 — Regulatory Alignment
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 3 — Regulatory Alignment
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../L2-4.1-EU-AI-Act-Risk-Mapping-Matrix-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EU AI Act Risk Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../L2-4.2-Technical-Documentation-Pack-Template-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical Documentation Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../L2-4.3-Transparency-Disclosure-Framework-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transparency & Disclosure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Flow Map
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Flow Map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-regulatory-basis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Regulatory Basis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-data-controller-and-processor-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Data Controller and Processor Roles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Data Controller and Processor Roles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-role-identification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Role Identification
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-data-categories-in-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Data Categories in Scope
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Data Categories in Scope">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-personal-data-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Personal Data Categories
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-data-flow-maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Data Flow Maps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Data Flow Maps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-primary-prompt-flow-sys-01-sys-02-sys-03-sys-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Primary Prompt Flow (SYS-01, SYS-02, SYS-03, SYS-04)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-data-flow-at-third-party-model-provider-if-applicable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Data Flow at Third-Party Model Provider (If Applicable)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-storage-locations-and-retention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Storage Locations and Retention
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Storage Locations and Retention">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-storage-location-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Storage Location Map
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-retention-periods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Retention Periods
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-sub-processors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Sub-Processors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Sub-Processors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-sub-processor-register-assumed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Sub-Processor Register (Assumed)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-client-notification-of-sub-processors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Client Notification of Sub-Processors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-international-data-transfers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. International Data Transfers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. International Data Transfers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-transfer-risk-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Transfer Risk Assessment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-gdpr-article-46-safeguards-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 GDPR Article 46 Safeguards Required
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-brak-43e4-brao-transfer-obligation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 BRAK §43e(4) BRAO Transfer Obligation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-security-measures-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Security Measures Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-gdpr-article-30-records-of-processing-activities-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. GDPR Article 30 — Records of Processing Activities Summary
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. GDPR Article 30 — Records of Processing Activities Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-controller-records-pickles-gmbh-as-controller-for-user-account-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 Controller Records (Pickles GmbH as controller — for user account data)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-processor-records-pickles-gmbh-as-processor-for-lawyer-client-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 Processor Records (Pickles GmbH as processor — for lawyer client data)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-data-flows-requiring-immediate-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Data Flows Requiring Immediate Action
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#document-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Document Control
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../L2-5.2-DPIA-Assessment-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DPIA Assessment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../L2-5.3-Vendor-Model-Risk-Assessment-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vendor & Model Risk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 4 — Monitoring & Controls
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 4 — Monitoring & Controls
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-4-monitoring-controls/L3-6.1-AI-Monitoring-Framework-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monitoring Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-4-monitoring-controls/L3-6.2-Incident-Response-Playbook-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Incident Response Playbook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-4-monitoring-controls/L3-6.3-Model-Change-Management-Protocol-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model Change Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 5 — Commercial Packaging
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 5 — Commercial Packaging
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-5-commercial-packaging/L4-7.1-AI-Governance-Information-Pack-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governance Information Pack
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-5-commercial-packaging/L4-7.2-Enterprise-Sales-Enablement-Kit-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sales Enablement Kit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Phase 2 — Worked Example
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Phase 2 — Worked Example
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-example/P2-Worked-Example-System-Profile-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Profile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-example/P2-Worked-Example-Risk-Classification-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risk Classification Walkthrough
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-example/P2-Worked-Example-EU-AI-Act-Mapping-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EU AI Act Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-example/P2-Worked-Example-Technical-Documentation-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-example/P2-Worked-Example-Monitoring-Entry-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monitoring Entry
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-example/P2-Reflection-Note-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reflection Note
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-regulatory-basis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Regulatory Basis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-data-controller-and-processor-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Data Controller and Processor Roles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Data Controller and Processor Roles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-role-identification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Role Identification
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-data-categories-in-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Data Categories in Scope
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Data Categories in Scope">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-personal-data-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Personal Data Categories
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-data-flow-maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Data Flow Maps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Data Flow Maps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-primary-prompt-flow-sys-01-sys-02-sys-03-sys-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Primary Prompt Flow (SYS-01, SYS-02, SYS-03, SYS-04)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-data-flow-at-third-party-model-provider-if-applicable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Data Flow at Third-Party Model Provider (If Applicable)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-storage-locations-and-retention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Storage Locations and Retention
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Storage Locations and Retention">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-storage-location-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Storage Location Map
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-retention-periods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Retention Periods
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-sub-processors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Sub-Processors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Sub-Processors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-sub-processor-register-assumed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Sub-Processor Register (Assumed)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-client-notification-of-sub-processors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Client Notification of Sub-Processors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-international-data-transfers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. International Data Transfers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. International Data Transfers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-transfer-risk-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Transfer Risk Assessment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-gdpr-article-46-safeguards-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 GDPR Article 46 Safeguards Required
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-brak-43e4-brao-transfer-obligation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 BRAK §43e(4) BRAO Transfer Obligation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-security-measures-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Security Measures Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-gdpr-article-30-records-of-processing-activities-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. GDPR Article 30 — Records of Processing Activities Summary
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. GDPR Article 30 — Records of Processing Activities Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-controller-records-pickles-gmbh-as-controller-for-user-account-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 Controller Records (Pickles GmbH as controller — for user account data)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-processor-records-pickles-gmbh-as-processor-for-lawyer-client-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 Processor Records (Pickles GmbH as processor — for lawyer client data)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-data-flows-requiring-immediate-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Data Flows Requiring Immediate Action
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#document-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Document Control
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/davidcockson-compliance/pickles-gmbh-ai-governance-framework/edit/main/stage-3-regulatory-alignment/L2-5.1-Data-Flow-Map-v1.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="data-flow-map">Data Flow Map</h1>
+<p><strong>Project:</strong> Pickles GmbH — AI Governance Framework
+<strong>Stage:</strong> Stage 3 — Regulatory Alignment
+<strong>Status:</strong> Draft
+<strong>Version:</strong> v1
+<strong>Date:</strong> 2026-02-26
+<strong>Assumptions:</strong> Built on outline assumptions — not verified against real Pickles GmbH data</p>
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>This document maps the flow of personal data through Pickles GmbH's AI platform, identifies storage locations, retention periods, sub-processors, and encryption measures. It supports:</p>
+<ul>
+<li>Compliance with GDPR Article 30 (Records of Processing Activities — RoPA)</li>
+<li>The DPIA threshold assessment and DPIA preparation (L2-5.2)</li>
+<li>Vendor and sub-processor management (L2-5.3)</li>
+<li>EU AI Act Article 12 (logging and record-keeping for high-risk systems)</li>
+</ul>
+<blockquote>
+<p>[ASSUMPTION] This data flow map is based entirely on assumed system architecture (A-001 through A-005) and has not been validated against Pickles GmbH's actual technical infrastructure. Before this document is used for compliance purposes, the entire flow must be verified against real system documentation, hosting contracts, and model provider agreements.</p>
+<p>[LEGAL REVIEW REQUIRED] Finalisation of the RoPA, DPIA, and sub-processor list requires legal review. This document is a working framework, not a compliance certification.</p>
+</blockquote>
+<hr />
+<h2 id="1-regulatory-basis">1. Regulatory Basis</h2>
+<table>
+<thead>
+<tr>
+<th>Instrument</th>
+<th>Provision</th>
+<th>Topic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GDPR</td>
+<td>Article 4(7)</td>
+<td>Controller definition</td>
+</tr>
+<tr>
+<td>GDPR</td>
+<td>Article 4(8)</td>
+<td>Processor definition</td>
+</tr>
+<tr>
+<td>GDPR</td>
+<td>Article 28</td>
+<td>Processor contract requirements</td>
+</tr>
+<tr>
+<td>GDPR</td>
+<td>Article 30</td>
+<td>Records of processing activities (RoPA)</td>
+</tr>
+<tr>
+<td>GDPR</td>
+<td>Article 32</td>
+<td>Security of processing</td>
+</tr>
+<tr>
+<td>GDPR</td>
+<td>Articles 44, 46</td>
+<td>International data transfers — general principle and appropriate safeguards</td>
+</tr>
+<tr>
+<td>BDSG</td>
+<td>Section 64</td>
+<td>Security requirements for automated processing</td>
+</tr>
+<tr>
+<td>EU AI Act</td>
+<td>Article 12</td>
+<td>Logging for high-risk AI systems (SYS-04)</td>
+</tr>
+<tr>
+<td>EU AI Act</td>
+<td>Article 26(6)</td>
+<td>Deployer log retention (relevant for Pickles GmbH's lawyer clients)</td>
+</tr>
+<tr>
+<td>BRAK</td>
+<td>Section 3 (§43e BRAO)</td>
+<td>Attorney-client confidentiality in IT outsourcing</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2-data-controller-and-processor-roles">2. Data Controller and Processor Roles</h2>
+<h3 id="21-role-identification">2.1 Role Identification</h3>
+<p>[ASSUMPTION] The following role allocation is assumed and must be verified against Pickles GmbH's actual service agreements and data processing practices.</p>
+<table>
+<thead>
+<tr>
+<th>Party</th>
+<th>Role</th>
+<th>Basis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pickles GmbH</td>
+<td><strong>Data controller</strong> — for personal data of its own employees, registered users, and account holders</td>
+<td>GDPR Article 4(7) [ASSUMPTION]</td>
+</tr>
+<tr>
+<td>Pickles GmbH</td>
+<td><strong>Data processor</strong> — for personal data contained in legal documents, queries, and inputs submitted by lawyer clients who are the data controllers for their clients' data</td>
+<td>GDPR Article 4(8) [ASSUMPTION]</td>
+</tr>
+<tr>
+<td>Lawyer clients (law firms, in-house legal depts.)</td>
+<td><strong>Data controllers</strong> — for personal data of their own clients and counterparties contained in documents they submit to Pickles GmbH</td>
+<td>GDPR Article 4(7) [ASSUMPTION]</td>
+</tr>
+<tr>
+<td>Third-party AI model provider</td>
+<td><strong>Sub-processor</strong> — if lawyer client data is passed to a third-party model API</td>
+<td>GDPR Article 28(2) [ASSUMPTION A-004]</td>
+</tr>
+<tr>
+<td>Cloud hosting provider</td>
+<td><strong>Sub-processor</strong> — for infrastructure hosting</td>
+<td>GDPR Article 28(2) [ASSUMPTION A-005]</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[LEGAL REVIEW REQUIRED] The controller/processor boundary is critical. If Pickles GmbH determines its own purposes and means for processing client-submitted data (e.g., for model training or product improvement), it may be a joint controller or an independent controller for that processing. This must be assessed carefully per Article 4(7) and Recital 74 GDPR.</p>
+</blockquote>
+<hr />
+<h2 id="3-data-categories-in-scope">3. Data Categories in Scope</h2>
+<h3 id="31-personal-data-categories">3.1 Personal Data Categories</h3>
+<p>[ASSUMPTION] The following categories of personal data are assumed to flow through Pickles GmbH's systems based on the nature of legal AI tools:</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Source</th>
+<th>Sensitivity</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lawyer/user account data</td>
+<td>Registration and onboarding</td>
+<td>Standard personal data</td>
+<td>Name, email, firm name, role</td>
+</tr>
+<tr>
+<td>Legal document content</td>
+<td>User-submitted documents and prompts</td>
+<td><strong>Potentially sensitive / special categories</strong> [ASSUMPTION]</td>
+<td>May include health data, financial data, family information, criminal records — depending on practice area</td>
+</tr>
+<tr>
+<td>Case facts and client details</td>
+<td>User queries and prompts</td>
+<td><strong>Potentially sensitive / special categories</strong> [ASSUMPTION]</td>
+<td>May include client names, dispute facts, identifying details</td>
+</tr>
+<tr>
+<td>Usage logs and session data</td>
+<td>Automatically generated</td>
+<td>Standard personal data / technical data</td>
+<td>Query timestamps, session IDs, system events</td>
+</tr>
+<tr>
+<td>Payment data</td>
+<td>Subscription / billing</td>
+<td>Standard financial personal data</td>
+<td>[ASSUMPTION — handled by payment processor sub-processor]</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Key risk:</strong> Legal documents routinely contain special categories of personal data (GDPR Article 9) — health, financial, criminal. Processing special categories of personal data triggers GDPR Article 9 restrictions, heightened Article 32 security requirements, and may trigger DPIA requirements under Article 35(3)(b). See L2-5.2 for DPIA assessment.</p>
+</blockquote>
+<hr />
+<h2 id="4-data-flow-maps">4. Data Flow Maps</h2>
+<h3 id="41-primary-prompt-flow-sys-01-sys-02-sys-03-sys-04">4.1 Primary Prompt Flow (SYS-01, SYS-02, SYS-03, SYS-04)</h3>
+<pre><code>┌─────────────────────────────────────────────────────────────────────┐
+│                         LAWYER CLIENT                               │
+│   (Data controller for client personal data)                        │
+└─────────────────┬───────────────────────────────────────────────────┘
+                  │
+                  │ HTTPS (TLS 1.3+) [ASSUMPTION]
+                  │ Query / document input
+                  ▼
+┌─────────────────────────────────────────────────────────────────────┐
+│                    PICKLES GMBH PLATFORM                            │
+│   (Data processor for client data; data controller for user data)   │
+│                                                                     │
+│   [1] API Gateway / Authentication layer                            │
+│       - User identity verification                                  │
+│       - Input validation                                            │
+│       - Session logging (start timestamp, session ID)               │
+│                                                                     │
+│   [2] Application Processing Layer                                  │
+│       - Query routing to appropriate AI system                      │
+│       - Input preprocessing / prompt construction                   │
+│       - Retrieval step (SYS-01: legal document index search)        │
+│                                                                     │
+│   [3] AI Inference Layer                                            │
+│       EITHER: In-house model inference [ASSUMPTION]                 │
+│       OR: API call to third-party model provider [ASSUMPTION A-004] │
+│                                                                     │
+│   [4] Output Processing Layer                                       │
+│       - Response formatting                                         │
+│       - AI-generated content marking (Article 50(2))               │
+│       - Output logging (Article 12 — SYS-04)                       │
+│                                                                     │
+│   [5] Storage                                                       │
+│       - Logs retained per retention policy                          │
+│       - User account data retained per account lifecycle            │
+└──────────┬──────────────────────────┬───────────────────────────────┘
+           │                          │
+           │ Output returned          │ API call [ASSUMPTION A-004]
+           │ via HTTPS                │ HTTPS (TLS)
+           │                          ▼
+           │             ┌────────────────────────────┐
+           │             │  THIRD-PARTY MODEL PROVIDER │
+           │             │  (Sub-processor)            │
+           │             │  [ASSUMPTION A-004]         │
+           │             │                             │
+           │             │  Location: [UNKNOWN —       │
+           │             │  may be non-EU ASSUMPTION]  │
+           │             └────────────────────────────┘
+           │
+           ▼
+┌─────────────────────────────────────────────────────────────────────┐
+│                         LAWYER CLIENT                               │
+│   Receives AI output — applies professional judgment                │
+│   No automatic transmission to third parties [ASSUMPTION]           │
+└─────────────────────────────────────────────────────────────────────┘
+</code></pre>
+<blockquote>
+<p>[ASSUMPTION] The architecture above is entirely assumed. Actual data flows may differ significantly depending on whether Pickles GmbH runs its own models, uses third-party model APIs, or uses a hybrid approach.</p>
+</blockquote>
+<h3 id="42-data-flow-at-third-party-model-provider-if-applicable">4.2 Data Flow at Third-Party Model Provider (If Applicable)</h3>
+<p>[ASSUMPTION A-004] If Pickles GmbH uses a third-party AI model provider:</p>
+<pre><code>┌────────────────────────────────────────────────────────────────────┐
+│               THIRD-PARTY MODEL PROVIDER                           │
+│                                                                    │
+│   Receives: Constructed prompt (may contain personal data from     │
+│             lawyer client's documents) [ASSUMPTION]                │
+│                                                                    │
+│   Processing: Language model inference only [ASSUMPTION]           │
+│                                                                    │
+│   Returns: Generated text response                                 │
+│                                                                    │
+│   Data retention by provider: [UNKNOWN — must be contractually     │
+│   restricted per GDPR Article 28(3)(g) and §43e BRAO]             │
+│                                                                    │
+│   Location: [UNKNOWN — if USA: SCCs required under GDPR Art. 46;  │
+│   §43e(4) BRAO requires comparable confidentiality protection]     │
+└────────────────────────────────────────────────────────────────────┘
+</code></pre>
+<blockquote>
+<p>[LEGAL REVIEW REQUIRED] Whether personal data from lawyer client documents is actually transmitted to the third-party model provider depends on architecture (e.g., RAG systems may avoid transmitting personal data if retrieval is in-house and only anonymised prompts are sent to the model). This must be confirmed per system.</p>
+</blockquote>
+<hr />
+<h2 id="5-storage-locations-and-retention">5. Storage Locations and Retention</h2>
+<h3 id="51-storage-location-map">5.1 Storage Location Map</h3>
+<table>
+<thead>
+<tr>
+<th>Data Type</th>
+<th>Storage Location</th>
+<th>Jurisdiction</th>
+<th>Encryption</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User account data</td>
+<td>Pickles GmbH cloud infrastructure [ASSUMPTION]</td>
+<td>EU [ASSUMPTION A-005]</td>
+<td>At rest: AES-256 [ASSUMPTION]; In transit: TLS [ASSUMPTION]</td>
+<td>Includes registration, login, firm details</td>
+</tr>
+<tr>
+<td>Query logs / session logs</td>
+<td>Pickles GmbH cloud infrastructure [ASSUMPTION]</td>
+<td>EU [ASSUMPTION A-005]</td>
+<td>As above [ASSUMPTION]</td>
+<td>May contain personal data from queries</td>
+</tr>
+<tr>
+<td>AI output logs (SYS-04 only)</td>
+<td>Pickles GmbH cloud infrastructure [ASSUMPTION]</td>
+<td>EU [ASSUMPTION A-005]</td>
+<td>As above [ASSUMPTION]</td>
+<td>Mandatory logging per EU AI Act Article 12</td>
+</tr>
+<tr>
+<td>Submitted documents (if retained)</td>
+<td>[UNKNOWN — must be clarified] [ASSUMPTION]</td>
+<td>[UNKNOWN]</td>
+<td>[UNKNOWN]</td>
+<td>[LEGAL REVIEW REQUIRED] — Retention of submitted documents creates significant GDPR liability if personal data is involved</td>
+</tr>
+<tr>
+<td>Training / fine-tuning data</td>
+<td>[UNKNOWN — if Pickles GmbH fine-tunes models] [ASSUMPTION]</td>
+<td>[UNKNOWN]</td>
+<td>[UNKNOWN]</td>
+<td>If personal data used for training: Article 6 lawful basis required; Article 9 heightened requirements for special categories</td>
+</tr>
+<tr>
+<td>Data at third-party model provider</td>
+<td>[UNKNOWN — if API used] [ASSUMPTION A-004]</td>
+<td>[UNKNOWN — possibly non-EU]</td>
+<td>[UNKNOWN]</td>
+<td>SCCs required if non-EU; §43e BRAO contractual controls required</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[ASSUMPTION A-005] EU-based hosting is assumed but unverified. If any storage location is outside the EEA, GDPR Chapter V (international transfer requirements) applies.</p>
+</blockquote>
+<h3 id="52-retention-periods">5.2 Retention Periods</h3>
+<p>[ASSUMPTION] The following retention periods are proposed as a working framework and must be confirmed against Pickles GmbH's actual business requirements, contractual obligations, and data protection assessment.</p>
+<table>
+<thead>
+<tr>
+<th>Data Type</th>
+<th>Proposed Retention</th>
+<th>Basis</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User account data (active accounts)</td>
+<td>Duration of account relationship + 3 years [ASSUMPTION]</td>
+<td>Contract performance; legitimate interests (legal claims)</td>
+<td>[LEGAL REVIEW REQUIRED]</td>
+</tr>
+<tr>
+<td>User account data (closed accounts)</td>
+<td>3 years from account closure [ASSUMPTION]</td>
+<td>Limitation periods (§195 BGB — standard 3-year period)</td>
+<td>[LEGAL REVIEW REQUIRED]</td>
+</tr>
+<tr>
+<td>Query and session logs</td>
+<td>90 days [ASSUMPTION]</td>
+<td>Operational monitoring and incident response</td>
+<td>[LEGAL REVIEW REQUIRED — balance against Article 5(1)(e) GDPR storage limitation]</td>
+</tr>
+<tr>
+<td>AI output logs (SYS-04 — high-risk)</td>
+<td>6 months minimum per EU AI Act Article 26(6)</td>
+<td>EU AI Act Article 26(6) mandatory minimum</td>
+<td>"Deployers shall keep logs... for a period of at least six months"</td>
+</tr>
+<tr>
+<td>Submitted documents (if retained)</td>
+<td>[NOT RECOMMENDED — avoid retention unless operationally essential] [ASSUMPTION]</td>
+<td>GDPR Article 5(1)(e) storage limitation principle</td>
+<td>Retention of client legal documents creates maximum GDPR risk and §43a BRAO confidentiality risk</td>
+</tr>
+<tr>
+<td>Training data</td>
+<td>Per training dataset lifecycle documentation [ASSUMPTION]</td>
+<td>As required by EU AI Act Article 10</td>
+<td>Anonymised training data should be treated differently from personal data</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[LEGAL REVIEW REQUIRED] Retention periods must be assessed against GDPR Article 5(1)(e) (storage limitation) and documented in the RoPA. Pickles GmbH must have a specific lawful basis for each processing activity within each retention window.</p>
+</blockquote>
+<hr />
+<h2 id="6-sub-processors">6. Sub-Processors</h2>
+<h3 id="61-sub-processor-register-assumed">6.1 Sub-Processor Register (Assumed)</h3>
+<p>[ASSUMPTION] The following sub-processors are assumed based on the typical architecture of a cloud-based legal AI SaaS platform. This list must be verified and maintained as the definitive sub-processor register under GDPR Article 28(2).</p>
+<table>
+<thead>
+<tr>
+<th>Sub-Processor Category</th>
+<th>Role</th>
+<th>Data Transferred</th>
+<th>Location</th>
+<th>Transfer Mechanism</th>
+<th>DPA in Place</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Third-party AI model provider [ASSUMPTION A-004]</td>
+<td>Processes queries / generates AI outputs</td>
+<td>May include personal data from prompts [ASSUMPTION]</td>
+<td>Unknown — possibly non-EU [ASSUMPTION]</td>
+<td>SCCs required if non-EU [LEGAL REVIEW REQUIRED]</td>
+<td>Required — see L2-5.3</td>
+</tr>
+<tr>
+<td>Cloud hosting provider [ASSUMPTION A-005]</td>
+<td>Infrastructure hosting — compute, storage, networking</td>
+<td>All platform data</td>
+<td>EU assumed [ASSUMPTION]</td>
+<td>Within EEA — no Chapter V mechanism required</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>Payment processor [ASSUMPTION]</td>
+<td>Subscription billing</td>
+<td>Payment data, account holder name/email</td>
+<td>[UNKNOWN]</td>
+<td>[UNKNOWN]</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>Email / notification provider [ASSUMPTION]</td>
+<td>Transactional emails (account verification, alerts)</td>
+<td>Email address, name</td>
+<td>[UNKNOWN]</td>
+<td>[UNKNOWN]</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>Monitoring / logging provider [ASSUMPTION]</td>
+<td>Application performance monitoring</td>
+<td>Technical logs (may include metadata)</td>
+<td>[UNKNOWN]</td>
+<td>[UNKNOWN]</td>
+<td>Required</td>
+</tr>
+<tr>
+<td>Analytics provider [ASSUMPTION]</td>
+<td>Product usage analytics</td>
+<td>Anonymised or pseudonymised usage data [ASSUMPTION]</td>
+<td>[UNKNOWN]</td>
+<td>[UNKNOWN]</td>
+<td>Required if personal data</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>BRAK §43e BRAO obligation:</strong> For any sub-processor that handles data that may constitute attorney-client confidential information, Pickles GmbH must ensure a written contract (at minimum in text form per §43e(2) BRAW) containing the minimum content specified in §43e(3) Nos. 1–3 BRAO: (1) confidentiality obligation with criminal consequences disclosure; (2) purpose limitation; (3) obligation to terminate if confidentiality can no longer be guaranteed.</p>
+</blockquote>
+<h3 id="62-client-notification-of-sub-processors">6.2 Client Notification of Sub-Processors</h3>
+<p>GDPR Article 28(2) requires that processors obtain prior specific or general written authorisation from the controller before engaging sub-processors. If Pickles GmbH acts as a data processor for its lawyer clients:</p>
+<ul>
+<li>Pickles GmbH must notify lawyer clients of all sub-processors handling their data</li>
+<li>Lawyer clients must have the opportunity to object to sub-processor changes</li>
+<li>The sub-processor list should be published and maintained as part of Pickles GmbH's Privacy Policy or a dedicated sub-processor list page</li>
+</ul>
+<p>[ASSUMPTION] This disclosure has not been confirmed as currently in place.</p>
+<hr />
+<h2 id="7-international-data-transfers">7. International Data Transfers</h2>
+<h3 id="71-transfer-risk-assessment">7.1 Transfer Risk Assessment</h3>
+<p>GDPR Article 44 requires that personal data transferred to third countries is subject to appropriate safeguards. This is particularly relevant where Pickles GmbH's third-party model provider is located outside the EEA.</p>
+<p>[ASSUMPTION A-004] If using a US-based model provider (common for large language models):</p>
+<table>
+<thead>
+<tr>
+<th>Transfer</th>
+<th>Destination</th>
+<th>Risk</th>
+<th>Mechanism Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Prompts containing personal data → third-party model API</td>
+<td>USA (assumed) [ASSUMPTION]</td>
+<td>High — no adequacy decision for USA for all transfers; Data Privacy Framework applies only to certified organisations</td>
+<td>SCCs (EU Standard Contractual Clauses per Article 46(2)(c) GDPR) and Transfer Impact Assessment (TIA) [LEGAL REVIEW REQUIRED]</td>
+</tr>
+<tr>
+<td>Prompts → non-EU, non-adequacy country</td>
+<td>Other third countries</td>
+<td>Very high</td>
+<td>SCCs + TIA, or other Article 46 safeguards; §43e(4) BRAO requires special protective measures</td>
+</tr>
+</tbody>
+</table>
+<h3 id="72-gdpr-article-46-safeguards-required">7.2 GDPR Article 46 Safeguards Required</h3>
+<p>Where no adequacy decision exists (GDPR Article 45), transfers may proceed only if appropriate safeguards are in place (Article 46), including:
+- Standard data protection clauses adopted by the Commission (Article 46(2)(c)) — EU SCCs (Commission Decision 2021/914)
+- Transfer Impact Assessment (TIA) — non-binding but required by EDPB recommendations for SCC transfers to high-risk destinations</p>
+<h3 id="73-brak-43e4-brao-transfer-obligation">7.3 BRAK §43e(4) BRAO Transfer Obligation</h3>
+<p>Where client secrets are transferred to providers in non-EU countries, §43e(4) BRAO requires the level of confidentiality protection to be comparable to Germany. For US-based cloud and AI providers, the BRAK position paper notes: "it is not yet clear whether the level of data protection can be relied upon in this context, so that — as far as possible — preference should be given to AI providers with servers located in Germany or Europe."</p>
+<blockquote>
+<p>[LEGAL REVIEW REQUIRED] If the third-party model provider is US-based, a TIA must be conducted and documented. Contractual data processing agreement terms must meet both GDPR Article 28 and §43e BRAO requirements. See L2-5.3 for vendor risk assessment framework.</p>
+</blockquote>
+<hr />
+<h2 id="8-security-measures-overview">8. Security Measures Overview</h2>
+<p><em>Detailed security requirements are governed by GDPR Article 32 and BDSG Section 64.</em></p>
+<table>
+<thead>
+<tr>
+<th>Security Control</th>
+<th>Requirement Basis</th>
+<th>Status [ASSUMPTION]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Encryption in transit (TLS 1.3+)</td>
+<td>GDPR Article 32(1)(a); BDSG §64(2)</td>
+<td>[ASSUMPTION — not verified]</td>
+</tr>
+<tr>
+<td>Encryption at rest (AES-256 or equivalent)</td>
+<td>GDPR Article 32(1)(a); BDSG §64(2)</td>
+<td>[ASSUMPTION — not verified]</td>
+</tr>
+<tr>
+<td>Access controls — user authentication</td>
+<td>BDSG §64(3) Nos. 4, 5</td>
+<td>[ASSUMPTION — not verified]</td>
+</tr>
+<tr>
+<td>Access controls — internal staff (need-to-know)</td>
+<td>BDSG §64(3) No. 5; BRAK §43e(1)</td>
+<td>[ASSUMPTION — not verified]</td>
+</tr>
+<tr>
+<td>Audit logging — who accessed what</td>
+<td>BDSG §64(3) No. 7 ("input control")</td>
+<td>[ASSUMPTION — not verified]</td>
+</tr>
+<tr>
+<td>Communication control — data transmission tracking</td>
+<td>BDSG §64(3) No. 6</td>
+<td>[ASSUMPTION — not verified]</td>
+</tr>
+<tr>
+<td>Separation of data by purpose</td>
+<td>BDSG §64(3) No. 14 ("separability")</td>
+<td>[ASSUMPTION — not verified]</td>
+</tr>
+<tr>
+<td>Resilience and recovery</td>
+<td>GDPR Article 32(1)(b)(c); BDSG §64(2)</td>
+<td>[ASSUMPTION — not verified]</td>
+</tr>
+<tr>
+<td>Regular security testing</td>
+<td>GDPR Article 32(1)(d); BDSG §64(3) No. 11</td>
+<td>[ASSUMPTION — not verified]</td>
+</tr>
+<tr>
+<td>Adversarial input defences (SYS-04 high-risk)</td>
+<td>EU AI Act Article 15(5)</td>
+<td>[ASSUMPTION — not verified]</td>
+</tr>
+<tr>
+<td>Pseudonymisation where feasible</td>
+<td>GDPR Article 32(1)(a)</td>
+<td>[ASSUMPTION — recommended for query logs]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="9-gdpr-article-30-records-of-processing-activities-summary">9. GDPR Article 30 — Records of Processing Activities Summary</h2>
+<p>This section provides the core elements required for Pickles GmbH's RoPA under Article 30. The RoPA must be maintained in writing (including electronic form) and made available to the supervisory authority on request.</p>
+<h3 id="91-controller-records-pickles-gmbh-as-controller-for-user-account-data">9.1 Controller Records (Pickles GmbH as controller — for user account data)</h3>
+<table>
+<thead>
+<tr>
+<th>RoPA Element</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Controller name and contact</td>
+<td>Pickles GmbH; [PLACEHOLDER — address, DPO contact]</td>
+</tr>
+<tr>
+<td>Purpose of processing</td>
+<td>Provision of legal AI platform services; account management; billing</td>
+</tr>
+<tr>
+<td>Categories of data subjects</td>
+<td>Registered users (lawyers, paralegals, legal professionals) [ASSUMPTION]</td>
+</tr>
+<tr>
+<td>Categories of personal data</td>
+<td>Name, email, firm, professional role, billing details, usage logs [ASSUMPTION]</td>
+</tr>
+<tr>
+<td>Categories of recipients</td>
+<td>Cloud hosting sub-processor; payment processor; email provider [ASSUMPTION]</td>
+</tr>
+<tr>
+<td>International transfers</td>
+<td>[UNKNOWN — depends on sub-processor locations]</td>
+</tr>
+<tr>
+<td>Retention periods</td>
+<td>[See Section 5.2]</td>
+</tr>
+<tr>
+<td>Security measures</td>
+<td>[See Section 8]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="92-processor-records-pickles-gmbh-as-processor-for-lawyer-client-data">9.2 Processor Records (Pickles GmbH as processor — for lawyer client data)</h3>
+<table>
+<thead>
+<tr>
+<th>RoPA Element</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Processor name and contact</td>
+<td>Pickles GmbH; [PLACEHOLDER — DPO contact]</td>
+</tr>
+<tr>
+<td>Controller(s)</td>
+<td>Lawyer clients (each law firm or in-house legal dept.)</td>
+</tr>
+<tr>
+<td>Categories of processing</td>
+<td>AI-assisted legal research, drafting, summarisation, analysis</td>
+</tr>
+<tr>
+<td>International transfers</td>
+<td>[UNKNOWN — depends on third-party model provider location; see Section 7]</td>
+</tr>
+<tr>
+<td>Security measures</td>
+<td>[See Section 8]</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[LEGAL REVIEW REQUIRED] GDPR Article 30(5) provides an exemption for organisations with fewer than 250 employees, but this exemption does not apply where processing is likely to result in a risk to data subjects' rights, is not occasional, or involves special categories of data. Given the almost certain involvement of special categories of personal data in legal documents, the RoPA obligation almost certainly applies to Pickles GmbH regardless of employee count.</p>
+</blockquote>
+<hr />
+<h2 id="10-data-flows-requiring-immediate-action">10. Data Flows Requiring Immediate Action</h2>
+<p>The following gaps require resolution before Pickles GmbH can produce a complete and accurate data flow map:</p>
+<table>
+<thead>
+<tr>
+<th>Gap</th>
+<th>Priority</th>
+<th>Owner [ASSUMPTION]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Confirm whether third-party model provider is used, and if so, which</td>
+<td><strong>Critical</strong></td>
+<td>CEO / Head of Engineering [ASSUMPTION]</td>
+</tr>
+<tr>
+<td>Confirm model provider location — EEA or non-EEA</td>
+<td><strong>Critical</strong></td>
+<td>CEO / Head of Engineering [ASSUMPTION]</td>
+</tr>
+<tr>
+<td>Confirm whether user queries / documents are retained after session</td>
+<td><strong>Critical</strong></td>
+<td>Head of Engineering [ASSUMPTION]</td>
+</tr>
+<tr>
+<td>Confirm whether personal data from queries is transmitted to model provider</td>
+<td><strong>Critical</strong></td>
+<td>Head of Engineering [ASSUMPTION]</td>
+</tr>
+<tr>
+<td>Confirm cloud hosting provider identity and jurisdiction</td>
+<td>High</td>
+<td>Head of Engineering [ASSUMPTION]</td>
+</tr>
+<tr>
+<td>Review whether any model training uses client-submitted data</td>
+<td><strong>Critical</strong></td>
+<td>Head of Engineering / CEO [ASSUMPTION]</td>
+</tr>
+<tr>
+<td>Audit all sub-processors and confirm DPAs in place</td>
+<td>High</td>
+<td>DPO / Legal [ASSUMPTION]</td>
+</tr>
+<tr>
+<td>Conduct Transfer Impact Assessment if non-EU transfers identified</td>
+<td>High</td>
+<td>DPO / Legal [ASSUMPTION]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="document-control">Document Control</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Document ID</td>
+<td>L2-5.1</td>
+</tr>
+<tr>
+<td>Next review</td>
+<td>After architecture confirmation from engineering; before DPIA (L2-5.2) is finalised</td>
+</tr>
+<tr>
+<td>Cross-references</td>
+<td>L2-5.2 (DPIA Assessment), L2-5.3 (Vendor Risk Assessment), L1-3.1 (AI System Inventory)</td>
+</tr>
+<tr>
+<td>Regulatory basis</td>
+<td>GDPR Articles 28, 30, 32, 44, 46; BDSG §64; EU AI Act Articles 12, 26(6); BRAK §43e BRAO</td>
+</tr>
+<tr>
+<td>Assumptions relied upon</td>
+<td>A-001, A-002, A-004, A-005, A-007</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

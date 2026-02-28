@@ -1,0 +1,4273 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An open-source AI governance framework for German legal AI providers. Built under EU AI Act, GDPR, BDSG, and BRAK professional standards. A speculative demonstration piece — not a legal compliance certification.
+">
+      
+      
+        <meta name="author" content="David Cockson">
+      
+      
+      
+        <link rel="prev" href="../../ASSUMPTIONS-LOG/">
+      
+      
+        <link rel="next" href="../../stage-2-governance-foundation/L1-3.1-AI-System-Inventory-v1/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>Orientation Note - Pickles GmbH — AI Governance Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#regulatory-orientation-note-stage-1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Pickles GmbH — AI Governance Framework" class="md-header__button md-logo" aria-label="Pickles GmbH — AI Governance Framework" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Pickles GmbH — AI Governance Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Orientation Note
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/davidcockson-compliance/pickles-gmbh-ai-governance-framework" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pickles-gmbh-ai-governance-framework
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../DISCLAIMER/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Disclaimer
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ASSUMPTIONS-LOG/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Assumptions Log
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Stage 1 — Regulatory Orientation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../stage-2-governance-foundation/L1-3.1-AI-System-Inventory-v1/" class="md-tabs__link">
+          
+  
+  
+  Stage 2 — Governance Foundation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../stage-3-regulatory-alignment/L2-4.1-EU-AI-Act-Risk-Mapping-Matrix-v1/" class="md-tabs__link">
+          
+  
+  
+  Stage 3 — Regulatory Alignment
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../stage-4-monitoring-controls/L3-6.1-AI-Monitoring-Framework-v1/" class="md-tabs__link">
+          
+  
+  
+  Stage 4 — Monitoring & Controls
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../stage-5-commercial-packaging/L4-7.1-AI-Governance-Information-Pack-v1/" class="md-tabs__link">
+          
+  
+  
+  Stage 5 — Commercial Packaging
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../phase-2-worked-example/P2-Worked-Example-System-Profile-v1/" class="md-tabs__link">
+          
+  
+  
+  Phase 2 — Worked Example
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Pickles GmbH — AI Governance Framework" class="md-nav__button md-logo" aria-label="Pickles GmbH — AI Governance Framework" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Pickles GmbH — AI Governance Framework
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/davidcockson-compliance/pickles-gmbh-ai-governance-framework" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pickles-gmbh-ai-governance-framework
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DISCLAIMER/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disclaimer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ASSUMPTIONS-LOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assumptions Log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 1 — Regulatory Orientation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 1 — Regulatory Orientation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orientation Note
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orientation Note
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose-of-this-document" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose of This Document
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-eu-ai-act-classification-of-legal-ai-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. EU AI Act: Classification of Legal AI Systems
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. EU AI Act: Classification of Legal AI Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-risk-classification-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Risk Classification Framework
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-classification-of-legal-ai-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Classification of Legal AI Systems
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-key-obligations-for-high-risk-ai-system-providers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Key Obligations for High-Risk AI System Providers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-transparency-obligations-ai-systems-interacting-with-humans-article-50" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Transparency Obligations — AI Systems Interacting with Humans (Article 50)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-conformity-assessment-requirements-articles-16-23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 Conformity Assessment Requirements (Articles 16-23)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-ai-competence-obligation-article-4-effective-2-february-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 AI Competence Obligation (Article 4 — Effective 2 February 2025)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-gdpr-key-obligations-for-a-legal-ai-provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. GDPR: Key Obligations for a Legal AI Provider
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. GDPR: Key Obligations for a Legal AI Provider">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-processing-principles-article-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Processing Principles (Article 5)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-article-28-processor-obligations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Article 28 — Processor Obligations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-chapter-iii-rights-of-data-subjects-articles-12-23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Chapter III — Rights of Data Subjects (Articles 12-23)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-article-22-automated-individual-decision-making-including-profiling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Article 22 — Automated Individual Decision-Making, Including Profiling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-article-25-data-protection-by-design-and-by-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Article 25 — Data Protection by Design and by Default
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-article-32-security-of-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 Article 32 — Security of Processing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-article-35-data-protection-impact-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7 Article 35 — Data Protection Impact Assessment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-international-data-transfers-articles-44-49" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.8 International Data Transfers (Articles 44-49)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-bdsg-german-law-overlay-on-gdpr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. BDSG: German Law Overlay on GDPR
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. BDSG: German Law Overlay on GDPR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Application
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-mandatory-dpo-designation-section-38-bdsg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Mandatory DPO Designation (Section 38 BDSG)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-automated-decision-making-bdsg-overlay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Automated Decision-Making — BDSG Overlay
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-data-subject-rights-professional-confidentiality-modifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Data Subject Rights — Professional Confidentiality Modifications
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-dpia-and-prior-consultation-with-bfdi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 DPIA and Prior Consultation with BfDI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-technical-and-organisational-security-controls-section-64-bdsg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 Technical and Organisational Security Controls (Section 64 BDSG)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-mandatory-audit-logging-section-76-bdsg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7 Mandatory Audit Logging (Section 76 BDSG)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38-enforcement-and-penalties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.8 Enforcement and Penalties
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-edpb-guidelines-052020-consent-under-gdpr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. EDPB Guidelines 05/2020 — Consent Under GDPR
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. EDPB Guidelines 05/2020 — Consent Under GDPR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-requirements-for-valid-consent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Requirements for Valid Consent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-demonstrating-and-managing-consent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Demonstrating and Managing Consent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-implications-for-legal-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Implications for Legal AI
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-brak-position-paper-ai-in-legal-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. BRAK Position Paper — AI in Legal Practice
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. BRAK Position Paper — AI in Legal Practice">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-braks-overall-position" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 BRAK's Overall Position
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-professional-duty-obligations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Professional Duty Obligations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-attorney-client-privilege-anwaltgeheimnis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Attorney-Client Privilege — Anwaltgeheimnis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-it-outsourcing-requirements-section-43e-brao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 IT Outsourcing Requirements — Section 43e BRAO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-transparency-and-ai-output-labelling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Transparency and AI Output Labelling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56-liability-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6 Liability Framework
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#57-regulatory-coexistence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.7 Regulatory Coexistence
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#58-ongoing-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.8 Ongoing Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-isoiec-42001-ai-management-system-standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. ISO/IEC 42001 — AI Management System Standard
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. ISO/IEC 42001 — AI Management System Standard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Scope
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-key-clauses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Key Clauses
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-risk-management-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Risk Management Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-relevance-to-pickles-gmbh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Relevance to Pickles GmbH
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-certification-pathway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5 Certification Pathway
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-enisa-ai-cybersecurity-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. ENISA AI Cybersecurity Guidelines
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. ENISA AI Cybersecurity Guidelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Scope
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-ai-lifecycle-phases-threat-surface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 AI Lifecycle Phases — Threat Surface
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-key-ai-threat-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Key AI Threat Categories
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-supply-chain-and-third-party-ai-provider-risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4 Supply Chain and Third-Party AI Provider Risks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#75-implied-controls-for-legal-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.5 Implied Controls for Legal AI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#76-alignment-with-gdpr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.6 Alignment with GDPR
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-concluding-regulatory-obligations-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Concluding Regulatory Obligations Checklist
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Concluding Regulatory Obligations Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-eu-ai-act" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 EU AI Act
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-gdpr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 GDPR
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-bdsg-german-law" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 BDSG (German Law)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84-brak-professional-conduct" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4 BRAK / Professional Conduct
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#85-isoiec-42001-and-enisa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.5 ISO/IEC 42001 and ENISA
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-regulatory-assumptions-flagged-in-this-document" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appendix: Regulatory Assumptions Flagged in This Document
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 2 — Governance Foundation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 2 — Governance Foundation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-3.1-AI-System-Inventory-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI System Inventory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-3.2-Risk-Classification-Framework-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risk Classification Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-3.3-AI-Intake-Approval-Workflow-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intake & Approval Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-3.4-Human-Oversight-Policy-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Human Oversight Policy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 3 — Regulatory Alignment
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 3 — Regulatory Alignment
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-4.1-EU-AI-Act-Risk-Mapping-Matrix-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EU AI Act Risk Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-4.2-Technical-Documentation-Pack-Template-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical Documentation Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-4.3-Transparency-Disclosure-Framework-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transparency & Disclosure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-5.1-Data-Flow-Map-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Flow Map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-5.2-DPIA-Assessment-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DPIA Assessment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-5.3-Vendor-Model-Risk-Assessment-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vendor & Model Risk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 4 — Monitoring & Controls
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 4 — Monitoring & Controls
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-4-monitoring-controls/L3-6.1-AI-Monitoring-Framework-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monitoring Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-4-monitoring-controls/L3-6.2-Incident-Response-Playbook-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Incident Response Playbook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-4-monitoring-controls/L3-6.3-Model-Change-Management-Protocol-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model Change Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 5 — Commercial Packaging
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 5 — Commercial Packaging
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-5-commercial-packaging/L4-7.1-AI-Governance-Information-Pack-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governance Information Pack
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-5-commercial-packaging/L4-7.2-Enterprise-Sales-Enablement-Kit-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sales Enablement Kit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Phase 2 — Worked Example
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Phase 2 — Worked Example
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-example/P2-Worked-Example-System-Profile-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Profile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-example/P2-Worked-Example-Risk-Classification-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risk Classification Walkthrough
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-example/P2-Worked-Example-EU-AI-Act-Mapping-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EU AI Act Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-example/P2-Worked-Example-Technical-Documentation-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-example/P2-Worked-Example-Monitoring-Entry-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monitoring Entry
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-example/P2-Reflection-Note-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reflection Note
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose-of-this-document" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose of This Document
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-eu-ai-act-classification-of-legal-ai-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. EU AI Act: Classification of Legal AI Systems
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. EU AI Act: Classification of Legal AI Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-risk-classification-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Risk Classification Framework
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-classification-of-legal-ai-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Classification of Legal AI Systems
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-key-obligations-for-high-risk-ai-system-providers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Key Obligations for High-Risk AI System Providers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-transparency-obligations-ai-systems-interacting-with-humans-article-50" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Transparency Obligations — AI Systems Interacting with Humans (Article 50)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-conformity-assessment-requirements-articles-16-23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 Conformity Assessment Requirements (Articles 16-23)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-ai-competence-obligation-article-4-effective-2-february-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 AI Competence Obligation (Article 4 — Effective 2 February 2025)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-gdpr-key-obligations-for-a-legal-ai-provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. GDPR: Key Obligations for a Legal AI Provider
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. GDPR: Key Obligations for a Legal AI Provider">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-processing-principles-article-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Processing Principles (Article 5)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-article-28-processor-obligations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Article 28 — Processor Obligations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-chapter-iii-rights-of-data-subjects-articles-12-23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Chapter III — Rights of Data Subjects (Articles 12-23)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-article-22-automated-individual-decision-making-including-profiling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Article 22 — Automated Individual Decision-Making, Including Profiling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-article-25-data-protection-by-design-and-by-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Article 25 — Data Protection by Design and by Default
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-article-32-security-of-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 Article 32 — Security of Processing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-article-35-data-protection-impact-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7 Article 35 — Data Protection Impact Assessment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-international-data-transfers-articles-44-49" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.8 International Data Transfers (Articles 44-49)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-bdsg-german-law-overlay-on-gdpr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. BDSG: German Law Overlay on GDPR
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. BDSG: German Law Overlay on GDPR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Application
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-mandatory-dpo-designation-section-38-bdsg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Mandatory DPO Designation (Section 38 BDSG)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-automated-decision-making-bdsg-overlay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Automated Decision-Making — BDSG Overlay
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-data-subject-rights-professional-confidentiality-modifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Data Subject Rights — Professional Confidentiality Modifications
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-dpia-and-prior-consultation-with-bfdi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 DPIA and Prior Consultation with BfDI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-technical-and-organisational-security-controls-section-64-bdsg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 Technical and Organisational Security Controls (Section 64 BDSG)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-mandatory-audit-logging-section-76-bdsg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7 Mandatory Audit Logging (Section 76 BDSG)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38-enforcement-and-penalties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.8 Enforcement and Penalties
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-edpb-guidelines-052020-consent-under-gdpr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. EDPB Guidelines 05/2020 — Consent Under GDPR
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. EDPB Guidelines 05/2020 — Consent Under GDPR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-requirements-for-valid-consent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Requirements for Valid Consent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-demonstrating-and-managing-consent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Demonstrating and Managing Consent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-implications-for-legal-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Implications for Legal AI
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-brak-position-paper-ai-in-legal-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. BRAK Position Paper — AI in Legal Practice
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. BRAK Position Paper — AI in Legal Practice">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-braks-overall-position" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 BRAK's Overall Position
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-professional-duty-obligations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Professional Duty Obligations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-attorney-client-privilege-anwaltgeheimnis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Attorney-Client Privilege — Anwaltgeheimnis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-it-outsourcing-requirements-section-43e-brao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 IT Outsourcing Requirements — Section 43e BRAO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-transparency-and-ai-output-labelling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Transparency and AI Output Labelling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56-liability-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6 Liability Framework
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#57-regulatory-coexistence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.7 Regulatory Coexistence
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#58-ongoing-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.8 Ongoing Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-isoiec-42001-ai-management-system-standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. ISO/IEC 42001 — AI Management System Standard
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. ISO/IEC 42001 — AI Management System Standard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Scope
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-key-clauses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Key Clauses
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-risk-management-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Risk Management Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-relevance-to-pickles-gmbh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Relevance to Pickles GmbH
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-certification-pathway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5 Certification Pathway
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-enisa-ai-cybersecurity-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. ENISA AI Cybersecurity Guidelines
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. ENISA AI Cybersecurity Guidelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Scope
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-ai-lifecycle-phases-threat-surface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 AI Lifecycle Phases — Threat Surface
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-key-ai-threat-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Key AI Threat Categories
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-supply-chain-and-third-party-ai-provider-risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4 Supply Chain and Third-Party AI Provider Risks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#75-implied-controls-for-legal-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.5 Implied Controls for Legal AI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#76-alignment-with-gdpr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.6 Alignment with GDPR
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-concluding-regulatory-obligations-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Concluding Regulatory Obligations Checklist
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Concluding Regulatory Obligations Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-eu-ai-act" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 EU AI Act
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-gdpr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 GDPR
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-bdsg-german-law" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 BDSG (German Law)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84-brak-professional-conduct" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4 BRAK / Professional Conduct
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#85-isoiec-42001-and-enisa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.5 ISO/IEC 42001 and ENISA
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-regulatory-assumptions-flagged-in-this-document" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appendix: Regulatory Assumptions Flagged in This Document
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/davidcockson-compliance/pickles-gmbh-ai-governance-framework/edit/main/stage-1-regulatory-orientation/STAGE1-Regulatory-Orientation-Note-v1.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="regulatory-orientation-note-stage-1">Regulatory Orientation Note — Stage 1</h1>
+<p><strong>Project:</strong> Pickles GmbH — AI Governance Framework
+<strong>Stage:</strong> Stage 1 — Regulatory Orientation
+<strong>Status:</strong> Draft
+<strong>Version:</strong> v1
+<strong>Date:</strong> 2026-02-22
+<strong>Assumptions:</strong> Built on outline assumptions — not verified against real Pickles GmbH data</p>
+<hr />
+<h2 id="purpose-of-this-document">Purpose of This Document</h2>
+<p>This note establishes the regulatory landscape applicable to Pickles GmbH [ASSUMPTION — A-003] as a provider of legal AI tools to German legal professionals. It extracts the obligations that the AI Governance &amp; Operational Architecture Framework must address, drawn directly from the source documents in <code>_input/</code>. It does not interpret or supplement those documents beyond what is stated in them.</p>
+<p>All provisions cited are traceable to source documents in <code>_input/</code>. Where a provision cannot be confirmed in source documents, it is flagged as [UNVERIFIED].</p>
+<hr />
+<h2 id="1-eu-ai-act-classification-of-legal-ai-systems">1. EU AI Act: Classification of Legal AI Systems</h2>
+<p><strong>Source:</strong> Regulation (EU) 2024/1689 of 13 June 2024 (EU AI Act), as read from <code>_input/EU-AI-Act-full-text.pdf</code></p>
+<h3 id="11-risk-classification-framework">1.1 Risk Classification Framework</h3>
+<p>The EU AI Act establishes a risk-based hierarchy with four tiers:</p>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Status</th>
+<th>Consequence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Prohibited AI</td>
+<td>Article 5</td>
+<td>Cannot be placed on market. Examples: real-time biometric identification for law enforcement in public spaces; social scoring; manipulation techniques.</td>
+</tr>
+<tr>
+<td>High-Risk AI</td>
+<td>Articles 6 + Annex III</td>
+<td>Mandatory pre-market requirements: documentation, conformity assessment, human oversight, logging.</td>
+</tr>
+<tr>
+<td>Limited-Risk AI</td>
+<td>Article 50</td>
+<td>Transparency obligations only — disclosure when interacting with natural persons.</td>
+</tr>
+<tr>
+<td>Minimal Risk</td>
+<td>General</td>
+<td>Voluntary self-regulation only.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="12-classification-of-legal-ai-systems">1.2 Classification of Legal AI Systems</h3>
+<p>The EU AI Act explicitly addresses AI in legal and judicial contexts.</p>
+<p><strong>Recital 61</strong> identifies AI systems intended for use by judicial authorities (or on their behalf) for:
+- Assisting with fact-finding
+- Legal research
+- Prediction of legal outcomes applied to <strong>a concrete set of facts</strong></p>
+<p>...as <strong>high-risk</strong> when their outputs are used in the administration of law.</p>
+<p><strong>Exception:</strong> Systems performing ancillary administrative functions (pseudonymisation, document management) are <strong>not</strong> classified as high-risk under Recital 61.</p>
+<p><strong>Application to Pickles GmbH</strong> [ASSUMPTION — A-001]:</p>
+<table>
+<thead>
+<tr>
+<th>Use Case</th>
+<th>Likely Classification</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Legal drafting assistance</td>
+<td>Unclear</td>
+<td>Ancillary if tool only suggests; potentially high-risk if applied to specific facts to produce binding drafts</td>
+</tr>
+<tr>
+<td>Legal research assistance</td>
+<td>Likely ancillary / lower risk</td>
+<td>Research support without autonomous conclusions</td>
+</tr>
+<tr>
+<td>Summarisation</td>
+<td>Likely ancillary / lower risk</td>
+<td>Unless summaries applied to specific facts in decision-making</td>
+</tr>
+<tr>
+<td>Legal analysis applied to specific client facts</td>
+<td>Likely <strong>high-risk</strong></td>
+<td>AI analysis applied to specific facts — Recital 61</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[LEGAL REVIEW REQUIRED] The boundary between ancillary and high-risk for legal AI tools depends on actual deployment context. A qualified lawyer must review the application of Recital 61 and Annex III to Pickles GmbH's specific product capabilities before the risk classification is finalised.</p>
+</blockquote>
+<p><strong>Key classification principle (Recital 53):</strong> An AI system "does not necessarily influence the outcome of decision-making should be understood to be an AI system that does not have an impact on the substance, and therefore the outcome, of decision-making."</p>
+<h3 id="13-key-obligations-for-high-risk-ai-system-providers">1.3 Key Obligations for High-Risk AI System Providers</h3>
+<p>Where Pickles GmbH's systems are classified as high-risk, the following obligations apply:</p>
+<p><strong>Technical Documentation (Article 11):</strong>
+- System description and intended purpose
+- Data and development methodology
+- Training, validation, and testing methodology
+- Performance assessment and known limitations
+- Human oversight design
+- Logging and automatic recording capabilities</p>
+<p><strong>Risk Management (Article 9):</strong>
+- Continuous, iterative risk management process across the full system lifecycle
+- Identify and document foreseeable misuse scenarios
+- Identify risks of errors, bias, and discrimination
+- Implement and document risk mitigation measures
+- Review and update regularly</p>
+<p><strong>Data Quality and Governance (Article 10):</strong>
+- Training, validation, and test data must be relevant, representative, free of errors, and complete
+- Statistical properties must be appropriate for the system's intended use
+- Data must be assessed for bias and potential for discriminatory outcomes
+- Data minimisation required</p>
+<p><strong>Human Oversight (Article 14):</strong>
+- High-risk systems must be designed to allow human override at all times
+- Human reviewers must have the competence, training, and authority to intervene
+- Fully automated legal decisions without human review are incompatible with high-risk classification requirements
+- Recital 91: Deployers must ensure humans overseeing high-risk systems are competent to do so</p>
+<p><strong>Transparency and Information (Article 13):</strong>
+- Instructions for use must be clear, comprehensive, and accessible
+- Characteristics, capabilities, and limitations must be documented for deployers</p>
+<p><strong>Logging and Traceability (Article 12):</strong>
+- High-risk systems must automatically record events throughout their operational lifetime</p>
+<p><strong>Quality Management and Post-Market Monitoring (Articles 17 and 72):</strong>
+- Providers must maintain a sound quality management system
+- Post-market monitoring must track system performance throughout its lifecycle and report serious incidents to market surveillance authorities</p>
+<h3 id="14-transparency-obligations-ai-systems-interacting-with-humans-article-50">1.4 Transparency Obligations — AI Systems Interacting with Humans (Article 50)</h3>
+<p>Even where an AI system is not classified as high-risk, Article 50 requires:
+- Users must be informed they are interacting with an AI system
+- Clear disclosure of circumstances and context of use
+- Where AI generates synthetic text, users must be clearly informed the content is AI-generated (exceptions: satirical, artistic, or analogous work with appropriate safeguards; and where content has been subject to human review and editorial responsibility — Recital 132-133)</p>
+<p>[ASSUMPTION — A-006] It is assumed that Pickles GmbH's products include interfaces through which legal professionals interact directly with the AI system. This assumption must be verified before Article 50 obligations are mapped to specific product features.</p>
+<p><strong>EU AI Act Article 50 (effective 2 August 2026):</strong> Providers of AI systems interacting with natural persons (e.g., legal chatbots) must:
+- Inform users they are interacting with AI (Article 50(1))
+- Label AI-generated content as AI-generated (Article 50(2), (5))</p>
+<h3 id="15-conformity-assessment-requirements-articles-16-23">1.5 Conformity Assessment Requirements (Articles 16-23)</h3>
+<p>For high-risk AI systems, providers must:
+- Perform conformity assessment before market placement
+- Maintain all required documentation
+- Draw up a Declaration of Conformity
+- Affix CE marking
+- Establish and maintain a quality management system</p>
+<p><strong>Conformity assessment procedures (Articles 43(1) and 43(2)):</strong> For high-risk AI systems listed in Annex III point 1, or where applicable harmonised standards are absent, conformity assessment requires involvement of a notified body (Article 43(1)). For high-risk AI systems listed in Annex III points 2–8, the conformity assessment procedure is based on <strong>internal control</strong>, which does not require the involvement of a notified body (Article 43(2)). [LEGAL REVIEW REQUIRED — the applicable procedure depends on the specific Annex III classification of each system]</p>
+<p><strong>Substantial modification (Article 3):</strong> Changes that affect compliance with high-risk requirements require a new conformity assessment. Providers must track all changes that could constitute a substantial modification.</p>
+<h3 id="16-ai-competence-obligation-article-4-effective-2-february-2025">1.6 AI Competence Obligation (Article 4 — Effective 2 February 2025)</h3>
+<p>Providers and operators must take measures to ensure staff involved in the operation and use of AI systems have <strong>sufficient AI competence</strong>, taking into account technical knowledge, experience, education, and training in context. This obligation has been in force since 2 February 2025.</p>
+<hr />
+<h2 id="2-gdpr-key-obligations-for-a-legal-ai-provider">2. GDPR: Key Obligations for a Legal AI Provider</h2>
+<p><strong>Source:</strong> Regulation (EU) 2016/679 (GDPR), as read from <code>_input/GDPR-full-text.pdf</code></p>
+<h3 id="21-processing-principles-article-5">2.1 Processing Principles (Article 5)</h3>
+<p>All personal data processing by Pickles GmbH must comply with Article 5:</p>
+<table>
+<thead>
+<tr>
+<th>Principle</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lawfulness, fairness, transparency</td>
+<td>Processing must have a valid legal basis (Article 6); data subjects must be informed</td>
+</tr>
+<tr>
+<td>Purpose limitation</td>
+<td>Data collected for specified, explicit, legitimate purposes; not further processed incompatibly</td>
+</tr>
+<tr>
+<td>Data minimisation</td>
+<td>Only data adequate, relevant, and limited to what is necessary</td>
+</tr>
+<tr>
+<td>Accuracy</td>
+<td>Data must be accurate; inaccurate data erased or rectified without delay</td>
+</tr>
+<tr>
+<td>Storage limitation</td>
+<td>Kept no longer than necessary for the purpose</td>
+</tr>
+<tr>
+<td>Integrity and confidentiality</td>
+<td>Appropriate security against unauthorised access, loss, destruction, or damage</td>
+</tr>
+<tr>
+<td>Accountability</td>
+<td>Controller must be able to demonstrate compliance with all of the above</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Lawful bases for processing (Article 6):</strong> One of the following must apply: (a) consent; (b) contract; (c) legal obligation; (d) vital interests; (e) public task; (f) legitimate interests.</p>
+<h3 id="22-article-28-processor-obligations">2.2 Article 28 — Processor Obligations</h3>
+<p>[ASSUMPTION — A-007] It is assumed that Pickles GmbH will act as a <strong>data processor</strong> on behalf of its lawyer clients (the <strong>data controllers</strong>) when processing personal data contained in legal documents. This structural assumption is fundamental to the governance framework and must be verified.</p>
+<blockquote>
+<p>[LEGAL REVIEW REQUIRED] Whether Pickles GmbH acts as a processor, joint controller, or independent controller for specific processing activities must be assessed by a qualified lawyer. This determines the structure of all client contracts and the legal basis for processing.</p>
+</blockquote>
+<p>If Pickles GmbH is a processor, Article 28 requires:</p>
+<p><strong>Controller selection duty (Article 28(1)):</strong> Controllers may only use processors that provide <strong>sufficient guarantees</strong> to implement appropriate technical and organisational measures ensuring GDPR compliance.</p>
+<p><strong>Processor obligations (Article 28(3)):</strong> Processing must be governed by a written contract (the Data Processing Agreement — DPA) stipulating that Pickles GmbH as processor shall:</p>
+<ul>
+<li>(a) Process personal data only on documented instructions from the controller, including with regard to international transfers</li>
+<li>(b) Ensure persons authorised to process personal data are bound by confidentiality</li>
+<li>(c) Take all security measures required by Article 32</li>
+<li>(d) Respect conditions for engaging sub-processors (Article 28(2) — prior specific or general written authorisation from the controller; sub-processors subject to same obligations by contract)</li>
+<li>(e) Assist the controller in responding to data subject rights requests (Articles 15-22)</li>
+<li>(f) Assist the controller in obligations under Articles 32-36 (security, breach notification, DPIA, prior consultation)</li>
+<li>(g) Delete or return all personal data at the end of services; delete existing copies unless Union or Member State law requires otherwise</li>
+<li>(h) Make available all information necessary to demonstrate compliance; allow for and contribute to audits, including inspections, conducted by the controller or auditor mandated by the controller</li>
+<li>Notify the controller immediately if any instruction infringes GDPR (Article 28(3), final paragraph)</li>
+</ul>
+<p><strong>DPA form (Article 28(9)):</strong> The contract must be in writing, including in electronic form.</p>
+<p><strong>Sub-processor liability (Article 28(4)):</strong> Where Pickles GmbH engages a sub-processor (e.g., a third-party AI model provider), the same data protection obligations must be imposed by contract. Pickles GmbH remains fully liable to the controller for the sub-processor's performance.</p>
+<p><strong>Standard Contractual Clauses (Article 28(6)-(8)):</strong> DPAs may be based on Commission or supervisory authority-approved SCCs.</p>
+<h3 id="23-chapter-iii-rights-of-data-subjects-articles-12-23">2.3 Chapter III — Rights of Data Subjects (Articles 12-23)</h3>
+<p>Where Pickles GmbH processes personal data of individuals named in legal documents, the following rights must be supported:</p>
+<table>
+<thead>
+<tr>
+<th>Article</th>
+<th>Right</th>
+<th>Key Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Art. 12</td>
+<td>Modalities</td>
+<td>Respond concisely, transparently, intelligibly; free of charge; within 1 month (extendable by 2 months for complexity)</td>
+</tr>
+<tr>
+<td>Art. 13</td>
+<td>Information (data from subject)</td>
+<td>At point of collection: controller identity, DPO contact, purposes, legal basis, recipients, retention, rights, and existence of automated decision-making (Art. 13(2)(f))</td>
+</tr>
+<tr>
+<td>Art. 14</td>
+<td>Information (data not from subject)</td>
+<td>Within 1 month: same information plus source of data. Exception: Art. 14(5)(d) — does not apply where professional secrecy obligation applies under Union or Member State law</td>
+</tr>
+<tr>
+<td>Art. 15</td>
+<td>Access</td>
+<td>Right to confirmation of processing and copy of personal data</td>
+</tr>
+<tr>
+<td>Art. 16</td>
+<td>Rectification</td>
+<td>Right to correction of inaccurate data without undue delay</td>
+</tr>
+<tr>
+<td>Art. 17</td>
+<td>Erasure</td>
+<td>Right to deletion where: no longer necessary; consent withdrawn; objection upheld; unlawful processing; legal obligation to erase. Exceptions: freedom of expression; legal obligation; legal claims (Art. 17(3))</td>
+</tr>
+<tr>
+<td>Art. 18</td>
+<td>Restriction</td>
+<td>Right to restrict processing where accuracy contested; processing unlawful and data subject opposes erasure; data needed for legal claims; objection pending</td>
+</tr>
+<tr>
+<td>Art. 19</td>
+<td>Notification</td>
+<td>Controller must notify each recipient of rectification, erasure, or restriction; inform data subject of recipients on request</td>
+</tr>
+<tr>
+<td>Art. 20</td>
+<td>Portability</td>
+<td>Right to receive data in structured, machine-readable format where basis is consent or contract and processing is automated</td>
+</tr>
+<tr>
+<td>Art. 21</td>
+<td>Right to object</td>
+<td>Right to object to processing based on legitimate interests (Art. 6(1)(f)); absolute right to object to direct marketing including profiling</td>
+</tr>
+<tr>
+<td>Art. 22</td>
+<td>Automated decision-making</td>
+<td>See Section 2.4 below</td>
+</tr>
+<tr>
+<td>Art. 23</td>
+<td>Restrictions</td>
+<td>Member States may restrict these rights by law for specified purposes (national security, defence, criminal proceedings, etc.)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Professional secrecy note:</strong> Article 14(5)(d) provides that the obligation to provide information under Article 14 does not apply where personal data must remain confidential subject to an obligation of professional secrecy regulated by Union or Member State law. This is directly relevant in the legal context, where lawyer-client confidentiality may restrict transparency obligations.</p>
+<h3 id="24-article-22-automated-individual-decision-making-including-profiling">2.4 Article 22 — Automated Individual Decision-Making, Including Profiling</h3>
+<p><strong>Core right (Article 22(1)):</strong> Data subjects have the right not to be subject to a decision based <strong>solely</strong> on automated processing — including profiling — which produces <strong>legal effects</strong> concerning them or <strong>similarly significantly affects</strong> them.</p>
+<p><strong>Exceptions (Article 22(2)):</strong> The right does not apply where the decision:
+- (a) Is necessary for entering into or performance of a contract
+- (b) Is authorised by Union or Member State law with appropriate safeguards
+- (c) Is based on the data subject's explicit consent</p>
+<p><strong>Safeguards mandatory in exceptions (a) and (c) (Article 22(3)):</strong>
+- Right to obtain human intervention on the part of the controller
+- Right to express the data subject's point of view
+- Right to contest the decision</p>
+<p><strong>Special categories prohibition (Article 22(4)):</strong> Automated decisions must not be based on special categories of data (Article 9(1)) unless Article 9(2)(a) or (g) applies and suitable safeguards are in place.</p>
+<p><strong>Application to legal AI</strong> [ASSUMPTION — A-001, A-007]: If Pickles GmbH's systems generate analysis or recommendations that are adopted without human review to produce decisions with legal effects on individuals, Article 22 is triggered. This reinforces the human oversight obligation under EU AI Act Article 14 and BRAK professional conduct rules.</p>
+<h3 id="25-article-25-data-protection-by-design-and-by-default">2.5 Article 25 — Data Protection by Design and by Default</h3>
+<p><strong>By design (Article 25(1)):</strong> At the time of determining the means of processing and at the time of processing itself, controllers must implement appropriate technical and organisational measures — such as pseudonymisation — to implement data protection principles effectively and integrate necessary safeguards.</p>
+<p><strong>By default (Article 25(2)):</strong> By default, only personal data <strong>necessary</strong> for each specific purpose must be processed. This obligation applies to amount of data collected, extent of processing, storage period, and accessibility.</p>
+<h3 id="26-article-32-security-of-processing">2.6 Article 32 — Security of Processing</h3>
+<p>Controllers and processors must implement appropriate technical and organisational measures ensuring security appropriate to the risk, including as appropriate:</p>
+<ul>
+<li>(a) Pseudonymisation and encryption of personal data</li>
+<li>(b) Ability to ensure ongoing confidentiality, integrity, availability, and <strong>resilience</strong> of processing systems and services</li>
+<li>(c) Ability to restore availability and access to personal data in a timely manner in the event of a physical or technical incident</li>
+<li>(d) A process for regularly testing, assessing, and evaluating the effectiveness of technical and organisational security measures</li>
+</ul>
+<p><strong>Risk assessment basis (Article 32(2)):</strong> Security risk includes accidental or unlawful destruction, loss, alteration, unauthorised disclosure of, or access to personal data transmitted, stored, or otherwise processed.</p>
+<p><strong>Staff access controls (Article 32(4)):</strong> Any person acting under the authority of the controller or processor with access to personal data must not process them except on instructions from the controller.</p>
+<h3 id="27-article-35-data-protection-impact-assessment">2.7 Article 35 — Data Protection Impact Assessment</h3>
+<p><strong>Trigger (Article 35(1)):</strong> Where a type of processing — particularly using new technologies — is likely to result in a <strong>high risk</strong> to the rights and freedoms of natural persons, a DPIA must be carried out <strong>prior to processing</strong>. A single assessment may address a set of similar processing operations presenting similar high risks.</p>
+<p><strong>Mandatory DPIA triggers (Article 35(3)):</strong>
+- (a) Systematic and extensive evaluation of personal aspects based on automated processing, including profiling, on which decisions producing legal effects or similarly significantly affecting persons are made
+- (b) Processing on a large scale of special categories of data (Article 9(1)) or personal data relating to criminal convictions (Article 10)
+- (c) Systematic monitoring of a publicly accessible area on a large scale</p>
+<p>[ASSUMPTION — A-001, A-007] Pickles GmbH's systems likely trigger Article 35(3)(a) if they perform automated analysis of personal data to produce legal analysis or recommendations, and Article 35(3)(b) if they process special categories of data within legal documents. A DPIA is therefore likely mandatory before deployment of any legal AI system that processes personal data.</p>
+<p><strong>DPIA must contain at minimum (Article 35(7)):</strong>
+- (a) Systematic description of envisaged processing operations and purposes, including the legitimate interest pursued by the controller where applicable
+- (b) Assessment of the necessity and proportionality of the processing operations in relation to the purposes
+- (c) Assessment of the risks to the rights and freedoms of data subjects
+- (d) Measures envisaged to address the risks, including safeguards, security measures, and mechanisms to ensure protection of personal data and demonstrate compliance</p>
+<p><strong>DPO involvement (Article 35(2)):</strong> The controller must seek the advice of the DPO when carrying out a DPIA.</p>
+<p><strong>Review requirement (Article 35(11)):</strong> Controller must carry out a review at least when there is a change in the risk represented by processing operations.</p>
+<p><strong>Prior consultation (Article 36):</strong> Where a DPIA indicates that processing would result in high risk in the absence of mitigation measures, the controller must consult the supervisory authority <strong>prior to processing</strong>. The supervisory authority has up to eight weeks (extendable by six weeks for complex cases) to provide written advice. Consultation is required with the following information: responsibilities of all parties; purposes and means of intended processing; measures and safeguards to protect data subjects; DPO contact details; and the DPIA itself.</p>
+<h3 id="28-international-data-transfers-articles-44-49">2.8 International Data Transfers (Articles 44-49)</h3>
+<p><strong>General principle (Article 44):</strong> All transfers of personal data to third countries or international organisations may take place only if Chapter V conditions are complied with — including onward transfers.</p>
+<p>[ASSUMPTION — A-004, A-005] If Pickles GmbH uses third-party AI model providers based outside the EU/EEA, or if data is processed on servers outside the EU/EEA, these transfer provisions apply.</p>
+<p><strong>Transfer mechanisms in order of preference:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Mechanism</th>
+<th>Article</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Adequacy decision</td>
+<td>Art. 45</td>
+<td>Commission decision that third country ensures adequate protection — no further authorisation required</td>
+</tr>
+<tr>
+<td>Standard Contractual Clauses (SCCs)</td>
+<td>Art. 46(2)(c)-(d)</td>
+<td>Commission or supervisory authority-approved SCCs — no further authorisation required</td>
+</tr>
+<tr>
+<td>Binding Corporate Rules (BCRs)</td>
+<td>Art. 47</td>
+<td>For intra-group transfers within a corporate group</td>
+</tr>
+<tr>
+<td>Approved code of conduct + binding commitments</td>
+<td>Art. 46(2)(e)</td>
+<td></td>
+</tr>
+<tr>
+<td>Approved certification mechanism + binding commitments</td>
+<td>Art. 46(2)(f)</td>
+<td></td>
+</tr>
+<tr>
+<td>Derogations</td>
+<td>Art. 49</td>
+<td>Exceptions only: consent, contract performance, important public interest, legal claims, vital interests</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key risk for US-based AI providers:</strong> The EU-US Data Privacy Framework provides a current adequacy mechanism for certified US organisations. Providers not certified under this framework require SCCs.</p>
+<hr />
+<h2 id="3-bdsg-german-law-overlay-on-gdpr">3. BDSG: German Law Overlay on GDPR</h2>
+<p><strong>Source:</strong> BDSG (German Federal Data Protection Act), as read from <code>_input/BDSG-German-Federal-Data-Protection-Act-EN.pdf</code></p>
+<h3 id="31-application">3.1 Application</h3>
+<p><strong>Sections 1(4) and 1(7) BDSG:</strong> BDSG applies to controllers and processors processing personal data in Germany or in the context of a German establishment. Where GDPR applies directly, BDSG provisions apply only where GDPR does not conclusively govern the matter. BDSG fills gaps and provides German-specific implementation.</p>
+<p><strong>Section 2 BDSG:</strong> Pickles GmbH as a private legal entity is a "private body" for BDSG purposes.</p>
+<h3 id="32-mandatory-dpo-designation-section-38-bdsg">3.2 Mandatory DPO Designation (Section 38 BDSG)</h3>
+<p><strong>Section 38(1) BDSG:</strong> A DPO must be designated if the controller or processor <strong>consistently employs at least 20 persons</strong> dealing with automated processing of personal data. This threshold is lower than GDPR Article 37, which focuses on large-scale or systematic monitoring.</p>
+<p>Additionally, Section 38(1) BDSG requires a DPO where the controller undertakes processing subject to DPIA under GDPR Article 35, regardless of staff count.</p>
+<p>[ASSUMPTION — A-008] Whether Pickles GmbH meets the 20-person threshold is unverified. If it does, DPO designation is mandatory under BDSG Section 38.</p>
+<p><strong>DPO tasks (Section 7 BDSG):</strong> In addition to GDPR tasks, the DPO must monitor compliance with both GDPR and BDSG provisions and advise on DPIAs under Section 67 BDSG.</p>
+<h3 id="33-automated-decision-making-bdsg-overlay">3.3 Automated Decision-Making — BDSG Overlay</h3>
+<p><strong>Section 37 BDSG:</strong> The GDPR Article 22(1) right not to be subject to automated decisions does not apply in the context of certain insurance contract services.</p>
+<p><strong>Section 54 BDSG (law enforcement context):</strong> Decisions based solely on automated processing producing adverse legal effects shall be permitted only if authorised by law. Profiling resulting in discrimination against natural persons is <strong>prohibited</strong>.</p>
+<h3 id="34-data-subject-rights-professional-confidentiality-modifications">3.4 Data Subject Rights — Professional Confidentiality Modifications</h3>
+<p><strong>Section 29 BDSG:</strong> The right of access (GDPR Article 15) and transparency obligations (GDPR Article 14) do not apply where disclosure would breach the legitimate interests of a third party, including professional confidentiality obligations. This directly reinforces the Anwaltgeheimnis (attorney-client privilege) requirements described in Section 5 below.</p>
+<h3 id="35-dpia-and-prior-consultation-with-bfdi">3.5 DPIA and Prior Consultation with BfDI</h3>
+<p><strong>Section 67 BDSG:</strong> Where processing using new technologies is likely to result in a substantial risk to the legally protected interests of data subjects, a DPIA is mandatory prior to processing. This applies independently of the GDPR Article 35 trigger.</p>
+<p><strong>Section 69 BDSG:</strong> Prior consultation with the BfDI (Federal Commissioner for Data Protection and Freedom of Information) is required before processing commences if:
+- DPIA indicates substantial risk that the controller cannot sufficiently mitigate; or
+- Processing using new technologies or mechanisms involves substantial risk to legally protected interests</p>
+<p><strong>BfDI response time (Section 69(3) BDSG):</strong> The BfDI has up to <strong>six weeks</strong> to provide written advice (extendable by one month for especially complex processing). If processing is especially urgent, it may commence after consultation begins but before the period expires — BfDI recommendations must then be applied retroactively (Section 69(4)).</p>
+<blockquote>
+<p>[LEGAL REVIEW REQUIRED] This prior consultation obligation applies to all new legal AI systems deployed by Pickles GmbH that involve substantial risk. The BfDI consultation process should be initiated at the design stage, not after deployment.</p>
+</blockquote>
+<h3 id="36-technical-and-organisational-security-controls-section-64-bdsg">3.6 Technical and Organisational Security Controls (Section 64 BDSG)</h3>
+<p>Section 64 BDSG requires the following specific controls for automated processing systems:</p>
+<table>
+<thead>
+<tr>
+<th>Control Type</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equipment access control</td>
+<td>Deny unauthorised persons access to processing equipment</td>
+</tr>
+<tr>
+<td>Data media control</td>
+<td>Prevent unauthorised reading, copying, modification, or erasure of data media</td>
+</tr>
+<tr>
+<td>Storage control</td>
+<td>Prevent unauthorised input, inspection, modification, or deletion of stored personal data</td>
+</tr>
+<tr>
+<td>User control</td>
+<td>Prevent use of automated processing systems by unauthorised persons</td>
+</tr>
+<tr>
+<td>Data access control</td>
+<td>Ensure authorised users access only personal data covered by their authorisation</td>
+</tr>
+<tr>
+<td>Input control</td>
+<td>Verify and establish who input personal data, and when</td>
+</tr>
+<tr>
+<td>Transport control</td>
+<td>Ensure confidentiality and integrity during transfer of personal data</td>
+</tr>
+<tr>
+<td>Recovery</td>
+<td>Ensure installed systems can be restored in case of interruption</td>
+</tr>
+<tr>
+<td>Reliability</td>
+<td>Ensure all system functions perform and faults are reported</td>
+</tr>
+<tr>
+<td>Integrity</td>
+<td>Ensure stored personal data cannot be corrupted by system malfunction</td>
+</tr>
+<tr>
+<td>Processing control</td>
+<td>Ensure personal data processed on behalf of controller is processed only per controller instructions</td>
+</tr>
+<tr>
+<td>Availability control</td>
+<td>Ensure personal data is protected against loss and destruction</td>
+</tr>
+<tr>
+<td>Separability</td>
+<td>Ensure personal data collected for different purposes can be processed separately</td>
+</tr>
+</tbody>
+</table>
+<h3 id="37-mandatory-audit-logging-section-76-bdsg">3.7 Mandatory Audit Logging (Section 76 BDSG)</h3>
+<p>Controllers and processors must provide logs for at minimum the following operations in automated processing systems:
+1. Collection
+2. Alteration
+3. Consultation
+4. Disclosure (including transfers)
+5. Combination
+6. Erasure</p>
+<p>Logs of consultation and disclosure must record: justification; date and time; and, as far as possible, the identity of the person consulting or disclosing data and the identity of recipients.</p>
+<p><strong>Permitted uses (Section 76 BDSG):</strong> Logs may only be used by the DPO, BfDI, or data subject to verify lawfulness of processing.</p>
+<p><strong>Retention:</strong> Log data must be erased at the end of the year following the year in which they were generated.</p>
+<h3 id="38-enforcement-and-penalties">3.8 Enforcement and Penalties</h3>
+<p><strong>Section 42 BDSG:</strong> Deliberate, unauthorised transfer of personal data of large numbers of people for commercial purposes — <strong>up to three years' imprisonment</strong> or a fine.</p>
+<p><strong>Section 43 BDSG:</strong> Administrative fines of up to <strong>€50,000</strong> for specific BDSG violations. These are in addition to GDPR Article 83 fines (up to €20 million or 4% of global annual turnover for GDPR violations).</p>
+<p><strong>Section 83 BDSG:</strong> Compensation liability for data subjects where personal data is processed in violation of BDSG or applicable law.</p>
+<p><strong>Supervisory authority (Sections 8-9, 40 BDSG):</strong> BfDI supervises federal public bodies and certain private bodies. The Landesbehörden (state data protection authorities) supervise private bodies. If Pickles GmbH is headquartered in Germany, the competent Landesbehörde is the primary supervisory authority for GDPR purposes (one-stop-shop mechanism).</p>
+<hr />
+<h2 id="4-edpb-guidelines-052020-consent-under-gdpr">4. EDPB Guidelines 05/2020 — Consent Under GDPR</h2>
+<p><strong>Source:</strong> EDPB Guidelines 05/2020 on Consent under Regulation 2016/679 (v1.1, adopted 4 May 2020), as read from <code>_input/EDPB-Guidelines-05-2020-consent.pdf</code></p>
+<p><strong>Scope clarification:</strong> These Guidelines address <strong>consent as a lawful basis for data processing</strong> under GDPR Article 4(11) and Article 7. They are <strong>not</strong> guidance on automated decision-making. The project specification references "EDPB Guidelines 05/2020 implications for automated decision-making in legal context" — however, the document in <code>_input/</code> is exclusively about consent. The dedicated guidelines on automated decision-making are WP29 Guidelines on Automated Decision-Making and Profiling (WP251 rev.01, October 2017), which are referenced within Guidelines 05/2020 (Paragraph 92) but were <strong>not included in <code>_input/</code></strong>. [UNVERIFIED — WP251 provisions not confirmed from source documents.]</p>
+<p>The following consent provisions are relevant to Pickles GmbH.</p>
+<h3 id="41-requirements-for-valid-consent">4.1 Requirements for Valid Consent</h3>
+<p>Where Pickles GmbH or its lawyer clients rely on <strong>consent</strong> as a lawful basis for any processing, consent must meet all four requirements:</p>
+<p><strong>Freely given (Paragraphs 13-24):</strong>
+- Real choice and control for the data subject
+- Power imbalances create a presumption that consent is not freely given (Para. 16)
+- Consent bundled with service terms is presumptively invalid unless separate consent is also offered (Para. 26-31)</p>
+<p><strong>Specific (Paragraphs 55-61):</strong>
+- Must relate to one or more specific, identified purposes
+- Separate consent required for each distinct purpose; granularity is required (Para. 42-45)
+- Purpose must be described in clear, plain language — not technical jargon (Para. 56)</p>
+<p><strong>Informed (Paragraphs 62-74):</strong>
+Minimum information required at the point of consent (Paragraph 64):
+- (i) Identity of the controller
+- (ii) Purpose of each processing operation
+- (iii) Types of data collected and used
+- (iv) Right to withdraw consent
+- <strong>(v) Information about the use of data for automated decision-making, including profiling, in accordance with Article 22(2)(c) — where relevant</strong>
+- (vi) Risks of data transfers to third countries due to absence of adequacy decision or safeguards</p>
+<p><strong>Unambiguous (Paragraphs 75-90):</strong>
+- Must be by a statement or clear affirmative action (Para. 76)
+- Pre-ticked opt-in boxes = <strong>not valid</strong> consent (Para. 81)
+- Silence, inactivity, scrolling, or swiping = <strong>not valid</strong> consent (Para. 86)
+- Consent must be given <strong>before</strong> processing begins (Para. 90)</p>
+<h3 id="42-demonstrating-and-managing-consent">4.2 Demonstrating and Managing Consent</h3>
+<p><strong>Demonstrability (Article 7(1); Paragraphs 104-111):</strong> Controllers must <strong>prove</strong> that valid consent was obtained. Documentary records of consent statements and the consent workflow must be maintained. Records must be linked to the specific processing activity.</p>
+<p><strong>Withdrawal (Article 7(3); Paragraphs 112-120):</strong> Consent must be withdrawable <strong>as easily as it was given</strong>. Withdrawal does not affect the lawfulness of prior processing. If processing is to continue after withdrawal, another lawful basis must be identified in advance.</p>
+<p><strong>Lawful basis switching (Paragraphs 121-123):</strong> Controllers <strong>cannot switch</strong> from consent to another lawful basis after consent is withdrawn.</p>
+<h3 id="43-implications-for-legal-ai">4.3 Implications for Legal AI</h3>
+<ul>
+<li>If consent is used as the lawful basis for any AI processing, all of the above standards must be met</li>
+<li>Disclosure of automated decision-making (Para. 64(v)) is mandatory in consent notices where processing involves Article 22 profiling or automated decisions</li>
+<li>GDPR Article 5 data protection principles apply even where consent is validly obtained</li>
+</ul>
+<hr />
+<h2 id="5-brak-position-paper-ai-in-legal-practice">5. BRAK Position Paper — AI in Legal Practice</h2>
+<p><strong>Source:</strong> BRAK, "Notes on the Use of Artificial Intelligence in Legal Practice" (December 2024), as read from <code>_input/BRAK-AI-position-paper en-GB.pdf</code></p>
+<h3 id="51-braks-overall-position">5.1 BRAK's Overall Position</h3>
+<p>BRAK acknowledges efficiency gains from legal AI tools but establishes that "the use of AI does not release lawyers from their duty to provide legal advice to clients and represent their interests independently and on their own responsibility."</p>
+<p><strong>Core principle:</strong> "AI systems should only be used to support a solicitor's work and must not replace it." (BRAK Position Paper, Section 2.1)</p>
+<p>These obligations bind <strong>lawyers using</strong> Pickles GmbH's tools. As the tool provider, Pickles GmbH must design its systems to support — not undermine — compliance with these obligations.</p>
+<h3 id="52-professional-duty-obligations">5.2 Professional Duty Obligations</h3>
+<p><strong>Mandatory independent review (Section 2.1; Section 43(1) BRAO):</strong>
+"In any case, independent review and final inspection of AI results by the solicitor is required." This applies to all AI outputs: drafting, research, analysis, and summarisation. [ASSUMPTION — A-001]</p>
+<p><strong>No replacement of lawyer judgment (Section 2.1):</strong>
+AI systems must support the lawyer's professional judgment. Systems that imply legal review is unnecessary are non-compliant with professional conduct rules.</p>
+<p><strong>Heightened duty of care for client-facing use (Section 2.2):</strong>
+Where AI is used in client-facing interactions — chatbots, auto-responders, client intake automation — "a higher standard of due diligence applies." It "must not be implied that legal review and advice are not necessary in individual cases."</p>
+<p><strong>No mandatory obligation to use AI (Section 2.3):</strong>
+BRAO and BORA do not currently require lawyers to use AI tools, though the law firm obligation under Section 5 BORA (maintaining necessary organisational resources) may require AI use for mass proceedings.</p>
+<h3 id="53-attorney-client-privilege-anwaltgeheimnis">5.3 Attorney-Client Privilege — Anwaltgeheimnis</h3>
+<p><strong>Legal basis (Section 43a(2) BRAO):</strong>
+Attorney-client privilege covers <strong>all</strong> information obtained in the course of a mandate, including client identity and the fact that a mandate has been granted. Post-mandate obligations continue under Section 2(1) BORA. Unauthorised disclosure is a criminal offence under Section 203(1)(3) StGB.</p>
+<p><strong>Scope:</strong> "Since, in principle, 'everything' from a mandate is covered, the names of clients and the fact that a mandate has been granted at all are also covered by the duty of confidentiality." (Section 3, BRAK Position Paper)</p>
+<p><strong>Practical obligations for legal AI use (Sections 3.1-3.2):</strong>
+- Only abstract prompts that do not allow identification of a specific mandate should be used where possible
+- Documents uploaded must be fully anonymised before upload where possible
+- Removing names and addresses alone is <strong>insufficient</strong> if client identity can be inferred from context</p>
+<p><strong>Criminal liability threshold (Section 3.2):</strong>
+"For the offence of accessing client secrets, it is irrelevant whether the AI providers actually take note of the information. It is sufficient that they have the opportunity to do so."</p>
+<blockquote>
+<p>[LEGAL REVIEW REQUIRED] This threshold creates significant risk for any legal AI product that receives unredacted client data, even if that data is not stored or accessed by the provider. Legal advice is required on the design of data handling and anonymisation workflows.</p>
+</blockquote>
+<h3 id="54-it-outsourcing-requirements-section-43e-brao">5.4 IT Outsourcing Requirements — Section 43e BRAO</h3>
+<p><strong>Need-to-know principle:</strong> Lawyers may only grant AI providers access to confidential information where <strong>strictly necessary</strong> for the service. Unnecessary access violates Section 43e BRAO.</p>
+<p><strong>Written service agreements (Sections 43e(2) and (3) BRAO — mandatory minimum content):</strong>
+- Obligation to maintain confidentiality, with explicit warning of criminal consequences for breach
+- Obligation to adhere to the purpose limitation principle</p>
+<p><strong>Termination obligation:</strong> If these standards are not (or no longer) guaranteed, the cooperation must be terminated immediately (Section 43e(2)).</p>
+<p><strong>Foreign providers (Section 43e(4) BRAO):</strong>
+Where AI providers are established outside Germany, confidentiality protection must be comparable to German standards. US-based providers require specific assessment against current adequacy frameworks. Providers in countries without equivalent data protection standards (cited examples: China, India) require Standard Contractual Clauses or equivalent protective measures.</p>
+<p>[ASSUMPTION — A-004] This provision is directly relevant if Pickles GmbH uses third-party foundation model providers. Pickles GmbH's ability to offer legally compliant service agreements to lawyer clients depends on the provenance and contractual arrangements of any underlying AI models in use.</p>
+<h3 id="55-transparency-and-ai-output-labelling">5.5 Transparency and AI Output Labelling</h3>
+<p><strong>Current position (December 2024):</strong> No mandatory professional obligation under BRAO or BORA to inform clients about AI use. However, transparency obligations may arise from contract law or the Unfair Competition Act (UWG).</p>
+<p><strong>Best practice recommendation (Section 4):</strong> "It is advisable to use AI tools transparently and, in case of doubt, to include a contractual provision with clients."</p>
+<p><strong>EU AI Act transparency obligations for operators (Article 50 — effective 2 August 2026):</strong>
+- Lawyers as operators must disclose where AI-generated text is published to inform the public about matters of public interest
+- <strong>Safe harbour:</strong> No disclosure obligation "if the content generated by AI has been subject to human review or editorial control and if a natural or legal person is editorially responsible for the publication"</p>
+<p><strong>Pickles GmbH as provider (Article 50(1), (2), (5)):</strong>
+- Must inform users that they are interacting with AI (applicable to legal chatbots)
+- Must label AI-generated content so users know it is machine-generated</p>
+<h3 id="56-liability-framework">5.6 Liability Framework</h3>
+<p><strong>Lawyers retain full professional liability</strong> for all AI-generated outputs they rely on. They cannot delegate responsibility to Pickles GmbH or to any underlying AI model provider.</p>
+<p><strong>Additional risk areas for lawyers using AI (Section 6):</strong>
+- <strong>Tax law:</strong> Above a certain degree of automation, legal activity may be reclassified as commercial activity, affecting tax status
+- <strong>Insurance:</strong> Professional liability insurance may refuse coverage if AI use falls outside scope of "legal activity"
+- <strong>Copyright:</strong> AI-generated text is not protected by copyright but may infringe third-party copyrights — the lawyer using the tool bears this liability</p>
+<h3 id="57-regulatory-coexistence">5.7 Regulatory Coexistence</h3>
+<p>"The use of an AI system that complies with the AI Regulation may nevertheless violate professional regulations. Conversely, a violation of certain provisions of the AI Regulation, such as Art. 4 (AI competence) or Art. 50 (transparency), may also be relevant under professional law." (Section 5.4, BRAK Position Paper)</p>
+<p><strong>Compliance with the EU AI Act does not ensure BRAK compliance.</strong> The governance framework must address both independently.</p>
+<h3 id="58-ongoing-monitoring">5.8 Ongoing Monitoring</h3>
+<p>"As the professional law discussion on the use of AI tools is highly dynamic, these notes are only a snapshot." (Section 8, BRAK Position Paper)</p>
+<p>The governance framework must include a mechanism for monitoring BRAK guidance updates, as further notes from BRAK are expected.</p>
+<hr />
+<h2 id="6-isoiec-42001-ai-management-system-standard">6. ISO/IEC 42001 — AI Management System Standard</h2>
+<p><strong>Source:</strong> ISO/IEC 42001 Overview Summary, as read from <code>_input/ISO-42001-overview-summary.pdf</code></p>
+<h3 id="61-scope">6.1 Scope</h3>
+<p>ISO/IEC 42001 is a sector-specific AI management system standard specifying requirements for organisations providing or using AI systems to <strong>establish, implement, maintain, and continually improve</strong> an AI Management System (AIMS) for responsible AI. It follows the ISO High-Level Structure (HLS) common to ISO 9001, ISO 27001, and ISO 22000.</p>
+<h3 id="62-key-clauses">6.2 Key Clauses</h3>
+<table>
+<thead>
+<tr>
+<th>Clause</th>
+<th>Focus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clause 4</td>
+<td>Context: organisational context, interested parties, AIMS scope</td>
+</tr>
+<tr>
+<td>Clause 5</td>
+<td>Leadership: AI policy, roles, responsibilities, authority</td>
+</tr>
+<tr>
+<td>Clause 6</td>
+<td>Planning: risk and opportunity identification, AI objectives</td>
+</tr>
+<tr>
+<td>Clause 7</td>
+<td>Support: resources, competence, awareness, communication, documented information</td>
+</tr>
+<tr>
+<td>Clause 8.2</td>
+<td><strong>AI Risk Assessment</strong> — mandatory for all AI systems</td>
+</tr>
+<tr>
+<td>Clause 8.3</td>
+<td><strong>AI Risk Treatment</strong> — define and implement controls</td>
+</tr>
+<tr>
+<td>Clause 8.4</td>
+<td><strong>AI System Impact Assessment</strong> — impact on individuals and society</td>
+</tr>
+<tr>
+<td>Clause 9</td>
+<td>Performance evaluation: monitoring, measurement, internal audit, management review</td>
+</tr>
+<tr>
+<td>Clause 10</td>
+<td>Continual improvement: nonconformity, corrective action</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Annex A Controls (10 categories):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Focus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A.2</td>
+<td>AI policies — organisational AI policy alignment and review</td>
+</tr>
+<tr>
+<td>A.3</td>
+<td>Internal organisation — AI roles, responsibilities, reporting</td>
+</tr>
+<tr>
+<td>A.4</td>
+<td>Resources for AI systems — documentation, data, tooling, human resources</td>
+</tr>
+<tr>
+<td>A.5</td>
+<td>Assessing impacts — impact assessment process, societal impact</td>
+</tr>
+<tr>
+<td>A.6</td>
+<td><strong>AI system lifecycle</strong> — development objectives, design, requirements, documentation, verification, validation, deployment, operation, monitoring, technical documentation, event logging</td>
+</tr>
+<tr>
+<td>A.7</td>
+<td>Data for AI systems — acquisition, quality, provenance, preparation</td>
+</tr>
+<tr>
+<td>A.8</td>
+<td>Information for interested parties — system documentation, external reporting, incident communication</td>
+</tr>
+<tr>
+<td>A.9</td>
+<td>Responsible use of AI systems — intended use, objectives, responsible use processes</td>
+</tr>
+<tr>
+<td>A.10</td>
+<td>Third-party and customer relationships — responsibility allocation, supplier management</td>
+</tr>
+</tbody>
+</table>
+<h3 id="63-risk-management-integration">6.3 Risk Management Integration</h3>
+<p><strong>Clause 8.2 (AI Risk Assessment):</strong> Risk assessments must address impact to: the organisation; individuals (e.g., lawyers and their clients); and society. Integrates with ISO/IEC 23894:2023 (AI Risk Management).</p>
+<p><strong>Clause 8.4 (AI System Impact Assessment):</strong> Formal assessment of potential impacts on individuals and society. Results shared with organisational leadership.</p>
+<h3 id="64-relevance-to-pickles-gmbh">6.4 Relevance to Pickles GmbH</h3>
+<p>ISO/IEC 42001 is directly applicable to Pickles GmbH as an AI system provider. Key areas of relevance:</p>
+<ul>
+<li><strong>Clause A.6:</strong> Full lifecycle documentation — design, development, deployment, monitoring — aligns with EU AI Act Article 11 technical documentation requirements</li>
+<li><strong>Clause A.7:</strong> Data governance for AI training and validation data — aligns with EU AI Act Article 10</li>
+<li><strong>Clause A.9:</strong> Responsible use documentation — aligns with BRAK human oversight requirements</li>
+<li><strong>Clause A.10:</strong> Third-party model provider management — aligns with GDPR Article 28 sub-processor obligations and BRAK Section 43e BRAO requirements</li>
+<li><strong>Clauses 9-10:</strong> Post-deployment monitoring and continual improvement — aligns with EU AI Act Article 72 post-market monitoring</li>
+</ul>
+<h3 id="65-certification-pathway">6.5 Certification Pathway</h3>
+<table>
+<thead>
+<tr>
+<th>Pathway</th>
+<th>Standard</th>
+<th>Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Management system certification</td>
+<td>ISO/IEC 17021</td>
+<td>Clauses 4-10 — organisational AIMS</td>
+</tr>
+<tr>
+<td>Product/service certification</td>
+<td>ISO/IEC 17065</td>
+<td>Annex A controls — AI system-level conformance</td>
+</tr>
+</tbody>
+</table>
+<p>ISO/IEC 42001 certification may be used as evidence of governance maturity for enterprise legal clients and may support demonstration of EU AI Act quality management system requirements.</p>
+<hr />
+<h2 id="7-enisa-ai-cybersecurity-guidelines">7. ENISA AI Cybersecurity Guidelines</h2>
+<p><strong>Source:</strong> ENISA, "Threat Landscape for Artificial Intelligence" (December 2020), as read from <code>_input/ENISA-AI-cybersecurity-guidelines.pdf</code></p>
+<h3 id="71-scope">7.1 Scope</h3>
+<p>This document maps <strong>cybersecurity threats to AI systems</strong> across the AI lifecycle. Its primary relevance to this framework is as a threat intelligence source to inform security controls under GDPR Article 32 and EU AI Act Article 9 (risk management).</p>
+<p>Three dimensions of AI cybersecurity:
+1. <strong>Cybersecurity for AI:</strong> Protecting AI systems against attack
+2. <strong>AI to support cybersecurity:</strong> Using AI as a defensive tool
+3. <strong>Malicious use of AI:</strong> AI-powered attacks (deepfakes, social engineering, AI-powered malware)</p>
+<h3 id="72-ai-lifecycle-phases-threat-surface">7.2 AI Lifecycle Phases — Threat Surface</h3>
+<p>ENISA identifies 12 lifecycle phases across three groups:</p>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Phases</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Design and development</td>
+<td>Business goal definition, data ingestion, data exploration, data pre-processing, feature selection, model selection/building</td>
+</tr>
+<tr>
+<td>Training and tuning</td>
+<td>Model training, model tuning</td>
+</tr>
+<tr>
+<td>Deployment and operations</td>
+<td>Transfer learning, model deployment, model maintenance, business understanding</td>
+</tr>
+</tbody>
+</table>
+<h3 id="73-key-ai-threat-categories">7.3 Key AI Threat Categories</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Data threats</strong></td>
+<td>Data poisoning during ingestion; data quality failures; privacy violations during collection; data injection attacks</td>
+</tr>
+<tr>
+<td><strong>Model threats</strong></td>
+<td>Adversarial inference (input perturbations); model manipulation/evasion; model extraction; model inversion; backdoor and trojan attacks; membership inference</td>
+</tr>
+<tr>
+<td><strong>Infrastructure and supply chain threats</strong></td>
+<td>Compromised dependencies/libraries; third-party provider security failures; software supply chain integrity issues; hardware vulnerabilities</td>
+</tr>
+<tr>
+<td><strong>Operational threats</strong></td>
+<td>Insufficient logging and monitoring; lack of audit trails; model drift during deployment; retraining vulnerabilities; insufficient incident response</td>
+</tr>
+</tbody>
+</table>
+<h3 id="74-supply-chain-and-third-party-ai-provider-risks">7.4 Supply Chain and Third-Party AI Provider Risks</h3>
+<p>[ASSUMPTION — A-004] If Pickles GmbH uses third-party foundation model providers, the following risks apply:</p>
+<p><strong>Data providers:</strong> May collect data without user awareness; responsibility and liability for data mishandling must be allocated by contract; GDPR Article 28 DPA compliance must be verified.</p>
+<p><strong>Model providers:</strong> Responsibility for certification and operational monitoring must be documented; logging obligations must be assigned to a specific party in the supply chain; pre-trained model security must be assessed before integration.</p>
+<p><strong>Cloud providers:</strong> Data residency and transfer risk; multi-tenancy isolation; hardware vulnerabilities must be assessed.</p>
+<h3 id="75-implied-controls-for-legal-ai">7.5 Implied Controls for Legal AI</h3>
+<table>
+<thead>
+<tr>
+<th>Risk Area</th>
+<th>Required Control</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Training data integrity</td>
+<td>Validation of training, validation, and test data; data provenance tracking</td>
+</tr>
+<tr>
+<td>Model robustness</td>
+<td>Adversarial robustness testing; anomaly detection on outputs</td>
+</tr>
+<tr>
+<td>Post-deployment monitoring</td>
+<td>Event logging and audit trails; model drift detection; incident response protocols</td>
+</tr>
+<tr>
+<td>Supply chain security</td>
+<td>Vendor/provider security assessments; software dependency scanning; DPA and contractual coverage</td>
+</tr>
+</tbody>
+</table>
+<h3 id="76-alignment-with-gdpr">7.6 Alignment with GDPR</h3>
+<p>ENISA explicitly notes that AI security obligations align with GDPR Article 32 security requirements and that appropriate security measures "should be introduced at the <strong>design phase</strong> of new applications" in line with GDPR Article 25 (data protection by design). This confirms that security and data protection design must be concurrent, not sequential.</p>
+<hr />
+<h2 id="8-concluding-regulatory-obligations-checklist">8. Concluding Regulatory Obligations Checklist</h2>
+<p>Based on the source documents above, the governance framework for Pickles GmbH must address the following regulatory obligations. This checklist structures the work for Stages 2-5.</p>
+<h3 id="81-eu-ai-act">8.1 EU AI Act</h3>
+<table>
+<thead>
+<tr>
+<th>Ref</th>
+<th>Obligation</th>
+<th>Regulatory Basis</th>
+<th>Target Stage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EU-1</td>
+<td>Determine risk classification (high-risk / limited-risk / minimal) for each AI system</td>
+<td>Art. 6, Annex III, Recitals 53 and 61</td>
+<td>Stage 2</td>
+</tr>
+<tr>
+<td>EU-2</td>
+<td>Produce technical documentation for all high-risk systems</td>
+<td>Art. 11</td>
+<td>Stage 3</td>
+</tr>
+<tr>
+<td>EU-3</td>
+<td>Implement continuous AI risk management system across full lifecycle</td>
+<td>Art. 9</td>
+<td>Stage 2/3</td>
+</tr>
+<tr>
+<td>EU-4</td>
+<td>Implement data quality and governance controls for training, validation, and test datasets</td>
+<td>Art. 10</td>
+<td>Stage 3</td>
+</tr>
+<tr>
+<td>EU-5</td>
+<td>Design and operationalise human oversight for all high-risk systems; prohibit fully automated legal decisions</td>
+<td>Art. 14</td>
+<td>Stage 2</td>
+</tr>
+<tr>
+<td>EU-6</td>
+<td>Implement automatic event logging for all high-risk systems</td>
+<td>Art. 12</td>
+<td>Stage 3/4</td>
+</tr>
+<tr>
+<td>EU-7</td>
+<td>Produce clear instructions for use covering characteristics, capabilities, and limitations</td>
+<td>Art. 13</td>
+<td>Stage 3</td>
+</tr>
+<tr>
+<td>EU-8</td>
+<td>Implement AI-human interaction disclosure (users informed they are interacting with AI)</td>
+<td>Art. 50</td>
+<td>Stage 3</td>
+</tr>
+<tr>
+<td>EU-9</td>
+<td>Implement AI-generated content labelling obligations (from 2 August 2026)</td>
+<td>Art. 50</td>
+<td>Stage 3/5</td>
+</tr>
+<tr>
+<td>EU-10</td>
+<td>Perform conformity assessment and draw up Declaration of Conformity for high-risk systems</td>
+<td>Arts. 16-23</td>
+<td>Stage 3</td>
+</tr>
+<tr>
+<td>EU-11</td>
+<td>Establish post-market monitoring system; report serious incidents</td>
+<td>Art. 72</td>
+<td>Stage 4</td>
+</tr>
+<tr>
+<td>EU-12</td>
+<td>Establish substantial modification tracking and re-assessment process</td>
+<td>Art. 3</td>
+<td>Stage 4</td>
+</tr>
+<tr>
+<td>EU-13</td>
+<td>Implement AI competence measures for all staff involved in AI system operation</td>
+<td>Art. 4 (in force from 2 Feb 2025)</td>
+<td>Stage 2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-gdpr">8.2 GDPR</h3>
+<table>
+<thead>
+<tr>
+<th>Ref</th>
+<th>Obligation</th>
+<th>Regulatory Basis</th>
+<th>Target Stage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GDPR-1</td>
+<td>Execute GDPR-compliant Data Processing Agreements (DPAs) with all lawyer clients</td>
+<td>Art. 28</td>
+<td>Stage 3/5</td>
+</tr>
+<tr>
+<td>GDPR-2</td>
+<td>Conduct DPIA for all systems processing personal data at high risk</td>
+<td>Art. 35</td>
+<td>Stage 3</td>
+</tr>
+<tr>
+<td>GDPR-3</td>
+<td>Implement prior consultation with supervisory authority where DPIA shows high residual risk</td>
+<td>Art. 36</td>
+<td>Stage 3</td>
+</tr>
+<tr>
+<td>GDPR-4</td>
+<td>Implement data subject rights handling procedures (access, erasure, portability, etc.)</td>
+<td>Arts. 12-22</td>
+<td>Stage 2/3</td>
+</tr>
+<tr>
+<td>GDPR-5</td>
+<td>Prohibit fully automated decisions with legal effects without appropriate human intervention safeguards</td>
+<td>Art. 22</td>
+<td>Stage 2</td>
+</tr>
+<tr>
+<td>GDPR-6</td>
+<td>Implement data protection by design and by default across all product development</td>
+<td>Art. 25</td>
+<td>Stage 2/3</td>
+</tr>
+<tr>
+<td>GDPR-7</td>
+<td>Implement appropriate security measures including encryption, resilience, and regular testing</td>
+<td>Art. 32</td>
+<td>Stage 3/4</td>
+</tr>
+<tr>
+<td>GDPR-8</td>
+<td>Establish data breach detection, notification procedures (72-hour rule), and documentation</td>
+<td>Art. 33</td>
+<td>Stage 4</td>
+</tr>
+<tr>
+<td>GDPR-9</td>
+<td>Identify and implement appropriate mechanism for all international data transfers</td>
+<td>Arts. 44-49</td>
+<td>Stage 3</td>
+</tr>
+<tr>
+<td>GDPR-10</td>
+<td>Disclose existence of automated decision-making in transparency notices</td>
+<td>Arts. 13(2)(f), 14(2)(g)</td>
+<td>Stage 3</td>
+</tr>
+<tr>
+<td>GDPR-11</td>
+<td>Implement consent management system if consent is used as legal basis for any processing</td>
+<td>Arts. 7, 17; EDPB Guidelines 05/2020</td>
+<td>Stage 3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="83-bdsg-german-law">8.3 BDSG (German Law)</h3>
+<table>
+<thead>
+<tr>
+<th>Ref</th>
+<th>Obligation</th>
+<th>Regulatory Basis</th>
+<th>Target Stage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BDSG-1</td>
+<td>Designate DPO if 20+ staff perform automated personal data processing (or if DPIA is undertaken)</td>
+<td>BDSG Section 38</td>
+<td>Stage 2</td>
+</tr>
+<tr>
+<td>BDSG-2</td>
+<td>Conduct BDSG DPIA for all new AI systems processing personal data with substantial risk</td>
+<td>BDSG Section 67</td>
+<td>Stage 3</td>
+</tr>
+<tr>
+<td>BDSG-3</td>
+<td>Prior consultation with BfDI where BDSG DPIA indicates substantial residual risk</td>
+<td>BDSG Section 69</td>
+<td>Stage 3</td>
+</tr>
+<tr>
+<td>BDSG-4</td>
+<td>Implement Section 64 BDSG technical controls for all automated processing systems</td>
+<td>BDSG Section 64</td>
+<td>Stage 3/4</td>
+</tr>
+<tr>
+<td>BDSG-5</td>
+<td>Implement mandatory audit logging of all CRUD operations in automated systems; 1-year retention</td>
+<td>BDSG Section 76</td>
+<td>Stage 3/4</td>
+</tr>
+<tr>
+<td>BDSG-6</td>
+<td>Apply Section 29 BDSG professional confidentiality restrictions on data subject rights responses</td>
+<td>BDSG Section 29</td>
+<td>Stage 3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="84-brak-professional-conduct">8.4 BRAK / Professional Conduct</h3>
+<table>
+<thead>
+<tr>
+<th>Ref</th>
+<th>Obligation</th>
+<th>Regulatory Basis</th>
+<th>Target Stage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BRAK-1</td>
+<td>Design all AI systems to require human review — never to replace lawyer judgment</td>
+<td>BRAK Position Paper, Section 2.1; Section 43(1) BRAO</td>
+<td>Stage 2</td>
+</tr>
+<tr>
+<td>BRAK-2</td>
+<td>Ensure AI systems never imply legal review by the lawyer is unnecessary</td>
+<td>BRAK Position Paper, Section 2.2</td>
+<td>Stage 3</td>
+</tr>
+<tr>
+<td>BRAK-3</td>
+<td>Design and document data handling workflows supporting client document anonymisation before upload</td>
+<td>BRAK Position Paper, Section 3.1; Section 43a(2) BRAO</td>
+<td>Stage 3</td>
+</tr>
+<tr>
+<td>BRAK-4</td>
+<td>Provide Section 43e BRAO-compliant service agreements covering confidentiality obligations and purpose limitation</td>
+<td>Section 43e(2), (3) BRAO</td>
+<td>Stage 3/5</td>
+</tr>
+<tr>
+<td>BRAK-5</td>
+<td>Assess and document confidentiality-equivalent protection for all third-country AI model providers</td>
+<td>Section 43e(4) BRAO</td>
+<td>Stage 3</td>
+</tr>
+<tr>
+<td>BRAK-6</td>
+<td>Implement AI output labelling requirements (EU AI Act Article 50 — from 2 August 2026)</td>
+<td>Art. 50 EU AI Act; BRAK Position Paper, Section 5.2</td>
+<td>Stage 3/5</td>
+</tr>
+<tr>
+<td>BRAK-7</td>
+<td>Provide client training and documentation materials supporting lawyer AI competence obligations</td>
+<td>Art. 4 EU AI Act; BRAK Position Paper, Section 5.1</td>
+<td>Stage 5</td>
+</tr>
+<tr>
+<td>BRAK-8</td>
+<td>Establish monitoring process for BRAK guidance updates (guidance is explicitly flagged as a "snapshot")</td>
+<td>BRAK Position Paper, Section 8</td>
+<td>Stage 4</td>
+</tr>
+</tbody>
+</table>
+<h3 id="85-isoiec-42001-and-enisa">8.5 ISO/IEC 42001 and ENISA</h3>
+<table>
+<thead>
+<tr>
+<th>Ref</th>
+<th>Obligation</th>
+<th>Regulatory Basis</th>
+<th>Target Stage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ISO-1</td>
+<td>Establish AI Management System aligned with ISO/IEC 42001 Clauses 4-10</td>
+<td>ISO/IEC 42001</td>
+<td>Stage 2</td>
+</tr>
+<tr>
+<td>ISO-2</td>
+<td>Conduct formal AI system impact assessments per Clause 8.4</td>
+<td>ISO/IEC 42001, Clause 8.4</td>
+<td>Stage 3</td>
+</tr>
+<tr>
+<td>ISO-3</td>
+<td>Implement AI lifecycle documentation and controls per Annex A Clause A.6</td>
+<td>ISO/IEC 42001, Annex A</td>
+<td>Stage 2/3</td>
+</tr>
+<tr>
+<td>ISO-4</td>
+<td>Manage third-party AI model provider relationships per Clause A.10</td>
+<td>ISO/IEC 42001, Annex A</td>
+<td>Stage 3</td>
+</tr>
+<tr>
+<td>ENISA-1</td>
+<td>Conduct supply chain security assessment for all AI model providers and cloud infrastructure</td>
+<td>ENISA Threat Landscape, Section 2.2 (AI Lifecycle Actors)</td>
+<td>Stage 3</td>
+</tr>
+<tr>
+<td>ENISA-2</td>
+<td>Implement adversarial robustness testing as part of model validation</td>
+<td>ENISA Threat Landscape, threat taxonomy</td>
+<td>Stage 3/4</td>
+</tr>
+<tr>
+<td>ENISA-3</td>
+<td>Implement comprehensive event logging and audit trails across full AI lifecycle</td>
+<td>ENISA Threat Landscape, threat taxonomy (Annex B, Operational threats)</td>
+<td>Stage 3/4</td>
+</tr>
+<tr>
+<td>ENISA-4</td>
+<td>Implement model drift monitoring and post-deployment performance review</td>
+<td>ENISA Threat Landscape, Section 2.3, Phase 11 (Model Maintenance)</td>
+<td>Stage 4</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="appendix-regulatory-assumptions-flagged-in-this-document">Appendix: Regulatory Assumptions Flagged in This Document</h2>
+<p>The following assumptions are flagged for verification. All are marked [ASSUMPTION] in the document body. The governance framework is built on these until they are confirmed against real Pickles GmbH data.</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Assumption</th>
+<th>Status</th>
+<th>Key Sections</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A-001</td>
+<td>Pickles GmbH provides legal AI covering drafting, research, summarisation, analysis</td>
+<td>🔴 Unverified</td>
+<td>1.2, 2.4, 5.2</td>
+</tr>
+<tr>
+<td>A-002</td>
+<td>Clients are German legal professionals or in-house legal departments</td>
+<td>🔴 Unverified</td>
+<td>5 (BRAK) throughout</td>
+</tr>
+<tr>
+<td>A-003</td>
+<td>Pickles GmbH operates under EU AI Act, GDPR, BDSG, and BRAK standards</td>
+<td>🔴 Unverified</td>
+<td>Opening</td>
+</tr>
+<tr>
+<td>A-004</td>
+<td>Third-party AI model providers may be in use</td>
+<td>🔴 Unverified</td>
+<td>2.8, 5.4, 7.4</td>
+</tr>
+<tr>
+<td>A-005</td>
+<td>Hosting is EU-based</td>
+<td>🔴 Unverified</td>
+<td>2.8</td>
+</tr>
+<tr>
+<td>A-006</td>
+<td>Pickles GmbH's products include client-facing AI interaction interfaces</td>
+<td>🔴 Unverified</td>
+<td>1.4</td>
+</tr>
+<tr>
+<td>A-007</td>
+<td>Pickles GmbH acts as data processor for lawyer clients (not joint controller or independent controller)</td>
+<td>🔴 Unverified</td>
+<td>2.2, 2.4</td>
+</tr>
+<tr>
+<td>A-008</td>
+<td>Pickles GmbH employs 20+ staff with automated data processing roles</td>
+<td>🔴 Unverified</td>
+<td>3.2</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<blockquote>
+<p><em>This document is a proposal. It is not a legal compliance certification. All regulatory conclusions are drawn from source documents in <code>_input/</code> as of 2026-02-22. Before any part of this document is used as the basis for operational decisions, it must be reviewed by a qualified German lawyer with expertise in data protection law, AI regulation, and professional conduct regulation.</em></p>
+<p>[LEGAL REVIEW REQUIRED] — This document as a whole requires professional legal review before operational use.</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

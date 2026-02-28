@@ -1,0 +1,3303 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An open-source AI governance framework for German legal AI providers. Built under EU AI Act, GDPR, BDSG, and BRAK professional standards. A speculative demonstration piece — not a legal compliance certification.
+">
+      
+      
+        <meta name="author" content="David Cockson">
+      
+      
+      
+        <link rel="prev" href="../P2-Worked-Example-EU-AI-Act-Mapping-v1/">
+      
+      
+        <link rel="next" href="../P2-Worked-Example-Monitoring-Entry-v1/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>Technical Documentation - Pickles GmbH — AI Governance Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#p2-worked-example-technical-documentation-v1md" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Pickles GmbH — AI Governance Framework" class="md-header__button md-logo" aria-label="Pickles GmbH — AI Governance Framework" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Pickles GmbH — AI Governance Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Technical Documentation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/davidcockson-compliance/pickles-gmbh-ai-governance-framework" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pickles-gmbh-ai-governance-framework
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../DISCLAIMER/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Disclaimer
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ASSUMPTIONS-LOG/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Assumptions Log
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../stage-1-regulatory-orientation/STAGE1-Regulatory-Orientation-Note-v1/" class="md-tabs__link">
+          
+  
+  
+  Stage 1 — Regulatory Orientation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../stage-2-governance-foundation/L1-3.1-AI-System-Inventory-v1/" class="md-tabs__link">
+          
+  
+  
+  Stage 2 — Governance Foundation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../stage-3-regulatory-alignment/L2-4.1-EU-AI-Act-Risk-Mapping-Matrix-v1/" class="md-tabs__link">
+          
+  
+  
+  Stage 3 — Regulatory Alignment
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../stage-4-monitoring-controls/L3-6.1-AI-Monitoring-Framework-v1/" class="md-tabs__link">
+          
+  
+  
+  Stage 4 — Monitoring & Controls
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../stage-5-commercial-packaging/L4-7.1-AI-Governance-Information-Pack-v1/" class="md-tabs__link">
+          
+  
+  
+  Stage 5 — Commercial Packaging
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../P2-Worked-Example-System-Profile-v1/" class="md-tabs__link">
+          
+  
+  
+  Phase 2 — Worked Example
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Pickles GmbH — AI Governance Framework" class="md-nav__button md-logo" aria-label="Pickles GmbH — AI Governance Framework" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Pickles GmbH — AI Governance Framework
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/davidcockson-compliance/pickles-gmbh-ai-governance-framework" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pickles-gmbh-ai-governance-framework
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DISCLAIMER/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disclaimer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ASSUMPTIONS-LOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assumptions Log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 1 — Regulatory Orientation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 1 — Regulatory Orientation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-1-regulatory-orientation/STAGE1-Regulatory-Orientation-Note-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orientation Note
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 2 — Governance Foundation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 2 — Governance Foundation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-3.1-AI-System-Inventory-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI System Inventory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-3.2-Risk-Classification-Framework-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risk Classification Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-3.3-AI-Intake-Approval-Workflow-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intake & Approval Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-3.4-Human-Oversight-Policy-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Human Oversight Policy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 3 — Regulatory Alignment
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 3 — Regulatory Alignment
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-4.1-EU-AI-Act-Risk-Mapping-Matrix-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EU AI Act Risk Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-4.2-Technical-Documentation-Pack-Template-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical Documentation Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-4.3-Transparency-Disclosure-Framework-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transparency & Disclosure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-5.1-Data-Flow-Map-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Flow Map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-5.2-DPIA-Assessment-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DPIA Assessment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-5.3-Vendor-Model-Risk-Assessment-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vendor & Model Risk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 4 — Monitoring & Controls
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 4 — Monitoring & Controls
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-4-monitoring-controls/L3-6.1-AI-Monitoring-Framework-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monitoring Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-4-monitoring-controls/L3-6.2-Incident-Response-Playbook-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Incident Response Playbook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-4-monitoring-controls/L3-6.3-Model-Change-Management-Protocol-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Model Change Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 5 — Commercial Packaging
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 5 — Commercial Packaging
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-5-commercial-packaging/L4-7.1-AI-Governance-Information-Pack-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governance Information Pack
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-5-commercial-packaging/L4-7.2-Enterprise-Sales-Enablement-Kit-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sales Enablement Kit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Phase 2 — Worked Example
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Phase 2 — Worked Example
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../P2-Worked-Example-System-Profile-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Profile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../P2-Worked-Example-Risk-Classification-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risk Classification Walkthrough
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../P2-Worked-Example-EU-AI-Act-Mapping-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EU AI Act Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical Documentation
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#document-purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Document Purpose
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-1-system-description-and-intended-purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 1 — System Description and Intended Purpose
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 1 — System Description and Intended Purpose">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-system-name-and-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 System Name and Version
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-intended-purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Intended Purpose
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-what-the-system-is-not-intended-to-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 What the System Is Not Intended To Do
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-2-model-architecture-and-technical-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 2 — Model Architecture and Technical Design
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 2 — Model Architecture and Technical Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-architecture-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Architecture Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-model-provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Model Provider
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-rag-knowledge-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 RAG Knowledge Base
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-hosting-and-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Hosting and Infrastructure
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-3-training-data-and-knowledge-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 3 — Training Data and Knowledge Base
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 3 — Training Data and Knowledge Base">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-base-model-training-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Base Model Training Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-rag-knowledge-base-provenance-and-curation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 RAG Knowledge Base — Provenance and Curation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-known-data-gaps-and-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Known Data Gaps and Limitations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-4-testing-and-validation-methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 4 — Testing and Validation Methodology
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 4 — Testing and Validation Methodology">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-pre-deployment-testing-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Pre-Deployment Testing Requirements
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 Pre-Deployment Testing Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#functional-accuracy-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Functional Accuracy Testing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adversarial-and-edge-case-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adversarial and Edge Case Testing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#human-review-bypass-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Human Review Bypass Testing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-ongoing-quality-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Ongoing Quality Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-model-change-retesting-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Model Change Retesting Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-5-known-limitations-and-risk-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 5 — Known Limitations and Risk Controls
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 5 — Known Limitations and Risk Controls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-known-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Known Limitations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-hallucination-risk-specific-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Hallucination Risk — Specific Controls
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-professional-liability-boundary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Professional Liability Boundary
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-6-human-oversight-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 6 — Human Oversight Design
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 6 — Human Oversight Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-oversight-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Oversight Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-mandatory-review-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Mandatory Review Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-user-qualification-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 User Qualification Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-7-logging-and-traceability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 7 — Logging and Traceability
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 7 — Logging and Traceability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-audit-log-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Audit Log Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-what-is-not-logged" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 What Is Not Logged
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-traceability-for-output-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Traceability for Output Review
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-8-gdpr-and-data-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 8 — GDPR and Data Handling
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 8 — GDPR and Data Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-personal-data-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 Personal Data Processing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-sub-processor-anthropic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Sub-Processor: Anthropic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-law-firm-as-data-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 Law Firm as Data Controller
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-9-assumptions-register-this-document" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 9 — Assumptions Register (This Document)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-10-document-control-and-review-schedule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 10 — Document Control and Review Schedule
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../P2-Worked-Example-Monitoring-Entry-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monitoring Entry
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../P2-Reflection-Note-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reflection Note
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#document-purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Document Purpose
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-1-system-description-and-intended-purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 1 — System Description and Intended Purpose
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 1 — System Description and Intended Purpose">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-system-name-and-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 System Name and Version
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-intended-purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Intended Purpose
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-what-the-system-is-not-intended-to-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 What the System Is Not Intended To Do
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-2-model-architecture-and-technical-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 2 — Model Architecture and Technical Design
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 2 — Model Architecture and Technical Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-architecture-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Architecture Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-model-provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Model Provider
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-rag-knowledge-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 RAG Knowledge Base
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-hosting-and-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Hosting and Infrastructure
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-3-training-data-and-knowledge-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 3 — Training Data and Knowledge Base
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 3 — Training Data and Knowledge Base">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-base-model-training-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Base Model Training Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-rag-knowledge-base-provenance-and-curation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 RAG Knowledge Base — Provenance and Curation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-known-data-gaps-and-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Known Data Gaps and Limitations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-4-testing-and-validation-methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 4 — Testing and Validation Methodology
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 4 — Testing and Validation Methodology">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-pre-deployment-testing-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Pre-Deployment Testing Requirements
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 Pre-Deployment Testing Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#functional-accuracy-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Functional Accuracy Testing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adversarial-and-edge-case-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adversarial and Edge Case Testing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#human-review-bypass-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Human Review Bypass Testing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-ongoing-quality-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Ongoing Quality Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-model-change-retesting-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Model Change Retesting Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-5-known-limitations-and-risk-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 5 — Known Limitations and Risk Controls
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 5 — Known Limitations and Risk Controls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-known-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Known Limitations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-hallucination-risk-specific-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Hallucination Risk — Specific Controls
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-professional-liability-boundary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Professional Liability Boundary
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-6-human-oversight-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 6 — Human Oversight Design
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 6 — Human Oversight Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-oversight-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Oversight Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-mandatory-review-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Mandatory Review Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-user-qualification-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 User Qualification Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-7-logging-and-traceability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 7 — Logging and Traceability
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 7 — Logging and Traceability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-audit-log-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Audit Log Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-what-is-not-logged" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 What Is Not Logged
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-traceability-for-output-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Traceability for Output Review
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-8-gdpr-and-data-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 8 — GDPR and Data Handling
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 8 — GDPR and Data Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-personal-data-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 Personal Data Processing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-sub-processor-anthropic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Sub-Processor: Anthropic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-law-firm-as-data-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 Law Firm as Data Controller
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-9-assumptions-register-this-document" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 9 — Assumptions Register (This Document)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-10-document-control-and-review-schedule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 10 — Document Control and Review Schedule
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/davidcockson-compliance/pickles-gmbh-ai-governance-framework/edit/main/phase-2-worked-example/P2-Worked-Example-Technical-Documentation-v1.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="p2-worked-example-technical-documentation-v1md">P2-Worked-Example-Technical-Documentation-v1.md</h1>
+<p><strong>Project:</strong> Pickles GmbH — AI Governance Framework
+<strong>Stage:</strong> Phase 2 — Worked Example
+<strong>Document type:</strong> Technical Documentation Pack (EU AI Act Article 11 / Annex IV)
+<strong>System:</strong> Vertrag.AI — Contract Review Assistant
+<strong>Status:</strong> Draft
+<strong>Version:</strong> v1
+<strong>Date:</strong> 2026-02-28
+<strong>Assumptions:</strong> Built on Phase 2 worked example assumptions — Vertrag.AI is a fictional system. All technical parameters are illustrative. Requires population with real system data before operational use.</p>
+<hr />
+<h2 id="document-purpose">Document Purpose</h2>
+<p>This document constitutes the Technical Documentation Pack for Vertrag.AI, prepared in accordance with the obligations framework established in <code>P2-Worked-Example-EU-AI-Act-Mapping-v1.md</code>.</p>
+<p>Vertrag.AI is classified as <strong>limited risk</strong> under the EU AI Act (Article 52 transparency obligations apply) with an <strong>internal classification of Medium-High</strong> due to professional liability exposure in the German legal market. This documentation pack is maintained as a proportionate governance control aligned with that internal classification, and as preparation for potential reclassification if the system's scope or capabilities expand.</p>
+<p>The structure follows the Annex IV template from the EU AI Act, adapted for a limited-risk system. Sections are populated with realistic illustrative content. Where real system data would be required, this is explicitly flagged.</p>
+<blockquote>
+<p><strong>Note for implementers:</strong> If Vertrag.AI or an equivalent system were classified as high risk under Annex III, this document would become a mandatory compliance artefact. At limited-risk classification, it is a voluntary governance control. The decision to maintain it regardless reflects the professional liability context of the German legal market and the internal Medium-High risk rating.</p>
+</blockquote>
+<hr />
+<h2 id="section-1-system-description-and-intended-purpose">Section 1 — System Description and Intended Purpose</h2>
+<h3 id="11-system-name-and-version">1.1 System Name and Version</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>System name</td>
+<td>Vertrag.AI</td>
+</tr>
+<tr>
+<td>Current version</td>
+<td>v1.0 (illustrative)</td>
+</tr>
+<tr>
+<td>Deployment type</td>
+<td>B2B SaaS — cloud-hosted, multi-tenant</td>
+</tr>
+<tr>
+<td>System owner</td>
+<td>[Product Lead — to be confirmed]</td>
+</tr>
+<tr>
+<td>Technical owner</td>
+<td>[Head of Engineering — to be confirmed]</td>
+</tr>
+<tr>
+<td>Documentation maintained by</td>
+<td>Compliance function</td>
+</tr>
+<tr>
+<td>Last reviewed</td>
+<td>2026-02-28</td>
+</tr>
+</tbody>
+</table>
+<h3 id="12-intended-purpose">1.2 Intended Purpose</h3>
+<p>Vertrag.AI is a contract review assistant designed for use by qualified lawyers at German law firms. The system assists with the review of commercial contracts, identifying potentially problematic clauses and producing a redlined version of the contract document.</p>
+<p><strong>Primary use case:</strong> Pre-signature review of commercial contracts on behalf of a law firm's clients. The system analyses a contract uploaded by a lawyer, identifies clauses that warrant attention (non-standard terms, missing provisions, unfavourable risk allocation), and produces a redlined DOCX output. The lawyer reviews and accepts or rejects redline suggestions before any output is used or shared.</p>
+<p><strong>Secondary use case:</strong> Post-signature contract analysis — reviewing executed contracts to identify obligations, deadlines, and renewal triggers.</p>
+<p><strong>Intended user population:</strong> Qualified German lawyers (<em>Rechtsanwälte</em>) operating within German law firms. The system is not intended for use by non-lawyers, legal assistants without lawyer supervision, or clients directly.</p>
+<p><strong>Intended use context:</strong> The system operates as a professional support tool. It does not provide legal advice. All outputs require mandatory lawyer review before use. The responsible lawyer retains full professional responsibility for any advice given to the client.</p>
+<h3 id="13-what-the-system-is-not-intended-to-do">1.3 What the System Is Not Intended To Do</h3>
+<ul>
+<li>Provide legal advice directly to clients</li>
+<li>Generate final client-deliverable documents without lawyer review</li>
+<li>Make autonomous decisions about contract acceptability</li>
+<li>Replace the professional judgment of the reviewing lawyer</li>
+<li>Operate without a qualified lawyer in the review loop</li>
+</ul>
+<hr />
+<h2 id="section-2-model-architecture-and-technical-design">Section 2 — Model Architecture and Technical Design</h2>
+<h3 id="21-architecture-overview">2.1 Architecture Overview</h3>
+<p>Vertrag.AI is built on a retrieval-augmented generation (RAG) architecture combining a commercial large language model API with a curated legal knowledge base.</p>
+<pre><code>[Lawyer uploads contract DOCX]
+        |
+        v
+[Document Parser — extract text, structure, clause segmentation]
+        |
+        v
+[RAG Retrieval Layer — query German legal corpus for relevant standards/precedents]
+        |
+        v
+[Prompt Construction — system prompt + contract text + retrieved context]
+        |
+        v
+[LLM API Call — Claude claude-sonnet-4-20250514 via Anthropic API]
+        |
+        v
+[Output Parser — structure redline suggestions, assign clause references]
+        |
+        v
+[DOCX Generator — produce redlined contract document]
+        |
+        v
+[Lawyer review interface — accept / reject / modify each suggestion]
+        |
+        v
+[Final DOCX export — accepted changes only]
+</code></pre>
+<p><strong>Assumption:</strong> Architecture is illustrative based on Anthropic's legal productivity GitHub examples adapted for German law context. Real system architecture to be confirmed and documented.</p>
+<h3 id="22-model-provider">2.2 Model Provider</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Model provider</td>
+<td>Anthropic</td>
+</tr>
+<tr>
+<td>Model</td>
+<td>Claude (claude-sonnet-4-20250514 or equivalent at time of deployment)</td>
+</tr>
+<tr>
+<td>Access method</td>
+<td>Anthropic API</td>
+</tr>
+<tr>
+<td>Fine-tuning applied</td>
+<td>No — base model with structured prompting</td>
+</tr>
+<tr>
+<td>System prompt</td>
+<td>Yes — governs output format, task framing, and professional context</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Assumption:</strong> Anthropic is the model provider. Data Processing Agreement with Anthropic required — flagged as Compliance Gap 6 in the EU AI Act Mapping document. Model selection and versioning policy to be confirmed.</p>
+<h3 id="23-rag-knowledge-base">2.3 RAG Knowledge Base</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Knowledge base content</td>
+<td>German civil law standards, standard commercial contract terms, BGB provisions, common clause formulations</td>
+</tr>
+<tr>
+<td>Knowledge base format</td>
+<td>Indexed vector store</td>
+</tr>
+<tr>
+<td>Update frequency</td>
+<td>[To be confirmed — assumed quarterly]</td>
+</tr>
+<tr>
+<td>Curation responsibility</td>
+<td>[Legal content team — to be confirmed]</td>
+</tr>
+<tr>
+<td>Version control</td>
+<td>[To be confirmed]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Assumption:</strong> The RAG knowledge base is maintained by Pickles GmbH. Its composition, update cadence, and quality controls require documentation. This is a significant governance gap — knowledge base quality directly affects output accuracy.</p>
+<h3 id="24-hosting-and-infrastructure">2.4 Hosting and Infrastructure</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hosting provider</td>
+<td>[EU-based cloud provider — to be confirmed]</td>
+</tr>
+<tr>
+<td>Hosting region</td>
+<td>[EU — assumed, unconfirmed]</td>
+</tr>
+<tr>
+<td>Data residency</td>
+<td>[EU — assumed, unconfirmed]</td>
+</tr>
+<tr>
+<td>Multi-tenancy model</td>
+<td>Logical separation — dedicated data store per client organisation</td>
+</tr>
+<tr>
+<td>Authentication</td>
+<td>[SSO / MFA — to be confirmed]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Assumption:</strong> EU hosting assumed. This affects GDPR adequacy position and client data handling obligations. Must be confirmed before client-facing documentation is finalised.</p>
+<hr />
+<h2 id="section-3-training-data-and-knowledge-base">Section 3 — Training Data and Knowledge Base</h2>
+<h3 id="31-base-model-training-data">3.1 Base Model Training Data</h3>
+<p>Vertrag.AI uses the Anthropic Claude base model without fine-tuning. Anthropic's model training data documentation governs this component. Pickles GmbH does not have direct visibility into base model training data composition.</p>
+<p><strong>Implication:</strong> Pickles GmbH should maintain reference to Anthropic's published model cards and usage policies as part of its vendor documentation. Any changes to the underlying model (version updates, architecture changes) should trigger review under the Model Change Management Protocol.</p>
+<h3 id="32-rag-knowledge-base-provenance-and-curation">3.2 RAG Knowledge Base — Provenance and Curation</h3>
+<p>The RAG knowledge base constitutes the primary domain-specific knowledge layer of the system. Its quality directly determines the relevance and accuracy of retrieved context used in generating redline suggestions.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content categories</td>
+<td>BGB statutory text, standard AGB formulations, BRAK professional guidance, sector-specific contract templates</td>
+</tr>
+<tr>
+<td>Source types</td>
+<td>Official German legal publications, publicly available legal standards, internally curated precedent library</td>
+</tr>
+<tr>
+<td>Language</td>
+<td>German (primary), English (secondary for international contract review)</td>
+</tr>
+<tr>
+<td>Coverage scope</td>
+<td>Commercial contracts — M&amp;A, service agreements, supply chain, employment, real estate</td>
+</tr>
+<tr>
+<td>Exclusions</td>
+<td>Consumer contracts, regulatory matters, court filings</td>
+</tr>
+<tr>
+<td>Curation process</td>
+<td>[To be defined — legal content review before indexing]</td>
+</tr>
+<tr>
+<td>Quality controls</td>
+<td>[To be defined]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Assumption:</strong> Knowledge base composition is assumed. Formal curation policy, source documentation, and version control for the knowledge base are required governance artefacts. These do not currently exist (assumed).</p>
+<h3 id="33-known-data-gaps-and-limitations">3.3 Known Data Gaps and Limitations</h3>
+<p>The following limitations are assumed to apply and should be confirmed and documented:</p>
+<ul>
+<li>Coverage of highly specialist contract types (e.g. joint ventures, complex financial instruments) may be incomplete</li>
+<li>Knowledge base reflects a point-in-time view — recently enacted legislation or case law may not be indexed</li>
+<li>English-language contracts may receive less accurate review due to German-corpus bias</li>
+<li>Non-standard contract structures may not retrieve well from the vector index</li>
+</ul>
+<hr />
+<h2 id="section-4-testing-and-validation-methodology">Section 4 — Testing and Validation Methodology</h2>
+<h3 id="41-pre-deployment-testing-requirements">4.1 Pre-Deployment Testing Requirements</h3>
+<p>The following testing categories are required before any new version of Vertrag.AI is deployed to production. This section documents the required methodology; actual test results should be maintained as a separate test log.</p>
+<p><strong>Assumption:</strong> Testing methodology described here is proposed. Actual test protocols to be designed and confirmed by the engineering team.</p>
+<h4 id="functional-accuracy-testing">Functional Accuracy Testing</h4>
+<table>
+<thead>
+<tr>
+<th>Test type</th>
+<th>Description</th>
+<th>Pass criterion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clause identification accuracy</td>
+<td>Sample contracts with known issues reviewed; system output compared to lawyer-prepared baseline</td>
+<td>≥85% of known issues identified</td>
+</tr>
+<tr>
+<td>False positive rate</td>
+<td>Clean contracts reviewed; count of spurious redline suggestions</td>
+<td>≤15% of suggestions flagged as spurious by reviewing lawyers</td>
+</tr>
+<tr>
+<td>Citation accuracy</td>
+<td>BGB and legal standard references in system output checked against source texts</td>
+<td>100% of cited provisions must exist and be correctly described</td>
+</tr>
+<tr>
+<td>Output format validation</td>
+<td>Redlined DOCX output verified for structural integrity</td>
+<td>100% of outputs open correctly in Microsoft Word and LibreOffice</td>
+</tr>
+</tbody>
+</table>
+<h4 id="adversarial-and-edge-case-testing">Adversarial and Edge Case Testing</h4>
+<table>
+<thead>
+<tr>
+<th>Test type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unusual contract structures</td>
+<td>Non-standard formatting, missing clause headings, very long documents</td>
+</tr>
+<tr>
+<td>Mixed language contracts</td>
+<td>German/English bilingual contracts</td>
+</tr>
+<tr>
+<td>Contracts with deliberate errors</td>
+<td>Test whether system identifies genuine issues or generates noise</td>
+</tr>
+<tr>
+<td>Empty or corrupt inputs</td>
+<td>System behaviour on invalid file uploads</td>
+</tr>
+</tbody>
+</table>
+<h4 id="human-review-bypass-testing">Human Review Bypass Testing</h4>
+<p>Verify that the system architecture does not permit output to reach a client without passing through the lawyer review interface. This is a hard requirement — any pathway that bypasses mandatory review is a critical defect.</p>
+<h3 id="42-ongoing-quality-monitoring">4.2 Ongoing Quality Monitoring</h3>
+<p>See <code>P2-Worked-Example-Monitoring-Entry-v1.md</code> for the live monitoring framework. Testing and monitoring should be treated as connected — monitoring data from production use should feed back into test case development.</p>
+<h3 id="43-model-change-retesting-requirements">4.3 Model Change Retesting Requirements</h3>
+<p>When the underlying model version changes (e.g. Anthropic releases a new Claude version), the following minimum retesting is required before deployment:</p>
+<ul>
+<li>Full functional accuracy test suite</li>
+<li>Citation accuracy test</li>
+<li>Output format validation</li>
+<li>Sample comparison between old and new model output on the same test contracts</li>
+</ul>
+<hr />
+<h2 id="section-5-known-limitations-and-risk-controls">Section 5 — Known Limitations and Risk Controls</h2>
+<h3 id="51-known-limitations">5.1 Known Limitations</h3>
+<p>The following limitations are inherent to the system design and must be disclosed to users as part of onboarding and within the product interface.</p>
+<table>
+<thead>
+<tr>
+<th>Limitation</th>
+<th>Description</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Not legal advice</td>
+<td>System output is analytical assistance, not legal advice</td>
+<td>Mandatory disclosure in UI and terms of service</td>
+</tr>
+<tr>
+<td>Knowledge base currency</td>
+<td>RAG corpus reflects point-in-time legal landscape</td>
+<td>Knowledge base update cadence and version disclosure</td>
+</tr>
+<tr>
+<td>Hallucination risk</td>
+<td>LLM may generate plausible but incorrect legal references</td>
+<td>Mandatory lawyer review; citation spot-check functionality</td>
+</tr>
+<tr>
+<td>Coverage gaps</td>
+<td>Some specialist contract types underserved</td>
+<td>Scope disclosure in product documentation</td>
+</tr>
+<tr>
+<td>Language limitations</td>
+<td>German-primary; English and other languages less accurate</td>
+<td>Language scope disclosure</td>
+</tr>
+<tr>
+<td>No autonomous action</td>
+<td>System cannot execute, sign, or submit any document</td>
+<td>Architectural control — output is DOCX only</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-hallucination-risk-specific-controls">5.2 Hallucination Risk — Specific Controls</h3>
+<p>Hallucination (generation of false but plausible legal references) is the highest-consequence output risk for Vertrag.AI. The following controls apply:</p>
+<ul>
+<li><strong>Mandatory lawyer review:</strong> Every output requires a qualified lawyer to review before any use. This is the primary control and must never be removed or made optional.</li>
+<li><strong>Citation flagging:</strong> Where the system cites a specific BGB article, AGB standard, or other provision, the UI should provide a mechanism to verify the citation. Implementation of this feature is a compliance priority (Compliance Gap 5 from EU AI Act Mapping).</li>
+<li><strong>Confidence indicators:</strong> Where the system has lower retrieval confidence, this should be surfaced to the reviewing lawyer. Implementation status: to be confirmed.</li>
+<li><strong>User training:</strong> All firm users must complete onboarding covering hallucination risk and how to spot unreliable outputs.</li>
+</ul>
+<h3 id="53-professional-liability-boundary">5.3 Professional Liability Boundary</h3>
+<p>Vertrag.AI operates in an environment where the reviewing lawyer retains full professional responsibility under BRAK rules and German professional liability law. The system does not assume, transfer, or share professional responsibility.</p>
+<p>This boundary must be maintained clearly in:
+- Terms of service with law firm clients
+- User interface disclosures
+- Training materials
+- Any client-facing documentation about the system</p>
+<hr />
+<h2 id="section-6-human-oversight-design">Section 6 — Human Oversight Design</h2>
+<h3 id="61-oversight-architecture">6.1 Oversight Architecture</h3>
+<p>Human oversight is structural, not procedural — it is built into the system architecture so that lawyer review cannot be bypassed.</p>
+<pre><code>AI output → Staging layer (not client-deliverable)
+                    |
+                    v
+         Lawyer review interface
+         [Accept / Reject / Modify each suggestion]
+                    |
+                    v
+         Accepted output only → DOCX export
+                    |
+                    v
+         Lawyer applies professional judgment
+         before any client use
+</code></pre>
+<p>There is no pathway from AI output to client-deliverable document that does not pass through the lawyer review step.</p>
+<h3 id="62-mandatory-review-requirements">6.2 Mandatory Review Requirements</h3>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>All suggestions must be individually reviewed</td>
+<td>Review interface requires explicit accept/reject/modify for each flagged clause</td>
+</tr>
+<tr>
+<td>Bulk acceptance without review is not permitted</td>
+<td>[To be confirmed — UI design requirement]</td>
+</tr>
+<tr>
+<td>Export requires review completion</td>
+<td>[To be confirmed — system gate before DOCX export]</td>
+</tr>
+<tr>
+<td>Reviewer identity is logged</td>
+<td>Audit log records which user reviewed and when</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Assumption:</strong> UI design requirements listed here are intended design specifications. Confirmation of implementation required from engineering team.</p>
+<h3 id="63-user-qualification-requirements">6.3 User Qualification Requirements</h3>
+<p>The system is restricted to qualified lawyers (<em>Rechtsanwälte</em>). Access controls should enforce this:</p>
+<ul>
+<li>Firm-level onboarding confirms all users are qualified lawyers or supervised trainees with lawyer oversight</li>
+<li>User terms require disclosure if access is shared with unqualified personnel</li>
+<li>Account provisioning is via firm administrators, not individual sign-up</li>
+</ul>
+<p><strong>Assumption:</strong> Access control model is assumed. Implementation details to be confirmed.</p>
+<hr />
+<h2 id="section-7-logging-and-traceability">Section 7 — Logging and Traceability</h2>
+<h3 id="71-audit-log-requirements">7.1 Audit Log Requirements</h3>
+<p>The following events must be logged to support incident investigation, quality monitoring, and regulatory enquiry response.</p>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Log content</th>
+<th>Retention</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Contract upload</td>
+<td>Session ID, user ID, firm ID, file hash (not file content), timestamp</td>
+<td>24 months</td>
+</tr>
+<tr>
+<td>System query</td>
+<td>Session ID, timestamp, model version, RAG retrieval summary (not full prompt)</td>
+<td>24 months</td>
+</tr>
+<tr>
+<td>Review action</td>
+<td>Session ID, user ID, each accept/reject/modify action, timestamp</td>
+<td>24 months</td>
+</tr>
+<tr>
+<td>Export</td>
+<td>Session ID, user ID, timestamp, output file hash</td>
+<td>24 months</td>
+</tr>
+<tr>
+<td>Error or exception</td>
+<td>Session ID, error type, timestamp</td>
+<td>24 months</td>
+</tr>
+<tr>
+<td>Model version change</td>
+<td>Old version, new version, deployment timestamp, authorising user</td>
+<td>Indefinite</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Assumption:</strong> Retention period of 24 months assumed as proportionate. GDPR Article 5(1)(e) storage limitation principle applies — retention must be justified by legitimate purpose. Legal review of retention periods recommended.</p>
+<h3 id="72-what-is-not-logged">7.2 What Is Not Logged</h3>
+<p>The following must not be captured in system logs to comply with GDPR and confidentiality obligations:</p>
+<ul>
+<li>Full contract text uploaded by users</li>
+<li>Full system prompt content passed to the model</li>
+<li>Client names or matter details</li>
+<li>Any personal data beyond user ID and firm ID</li>
+<li>Legally privileged communications</li>
+</ul>
+<p><strong>Note:</strong> This creates a tension with incident investigation capability. If a quality incident occurs, the absence of full prompt/contract logs limits root cause analysis. This tension is inherent to the GDPR/confidentiality constraints of the legal market and must be acknowledged in the incident response playbook.</p>
+<h3 id="73-traceability-for-output-review">7.3 Traceability for Output Review</h3>
+<p>Each redline suggestion in the lawyer review interface should carry:
+- Reference to the retrieved RAG source(s) that informed the suggestion (at minimum: knowledge base category and retrieval score)
+- The specific contract clause to which the suggestion applies
+- The model version that generated the suggestion</p>
+<p>This supports lawyer review quality and provides traceability if a suggestion is later challenged.</p>
+<hr />
+<h2 id="section-8-gdpr-and-data-handling">Section 8 — GDPR and Data Handling</h2>
+<h3 id="81-personal-data-processing">8.1 Personal Data Processing</h3>
+<p>Vertrag.AI processes the following categories of data:</p>
+<table>
+<thead>
+<tr>
+<th>Data category</th>
+<th>Nature</th>
+<th>Legal basis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User account data</td>
+<td>Name, email, firm affiliation</td>
+<td>Contract (Article 6(1)(b) GDPR)</td>
+</tr>
+<tr>
+<td>Usage metadata</td>
+<td>Session logs, review actions</td>
+<td>Legitimate interests (Article 6(1)(f) GDPR) — subject to balancing test</td>
+</tr>
+<tr>
+<td>Uploaded contract content</td>
+<td>Potentially contains personal data about third parties</td>
+<td>Processor role — law firm is controller</td>
+</tr>
+<tr>
+<td>AI-generated output</td>
+<td>Redline suggestions — no personal data</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Assumption:</strong> Legal basis analysis is indicative. GDPR data protection impact assessment (DPIA) required given processing of potentially sensitive legal documents. Flagged as Compliance Gap 3 in EU AI Act Mapping.</p>
+<h3 id="82-sub-processor-anthropic">8.2 Sub-Processor: Anthropic</h3>
+<p>All prompts sent to the Claude API are processed by Anthropic as a sub-processor. This has significant implications:</p>
+<ul>
+<li>Data Processing Agreement with Anthropic is required under GDPR Article 28</li>
+<li>Data transfer mechanisms for any processing outside the EU must be confirmed</li>
+<li>Anthropic's data retention and training data policies must be reviewed and documented</li>
+<li>Client-facing DPA with law firms must disclose Anthropic as a sub-processor</li>
+</ul>
+<p><strong>Assumption:</strong> Anthropic sub-processor relationship assumed based on API usage. DPA status unconfirmed. This is Compliance Gap 6 in the EU AI Act Mapping — high priority.</p>
+<h3 id="83-law-firm-as-data-controller">8.3 Law Firm as Data Controller</h3>
+<p>When a law firm uses Vertrag.AI to review contracts on behalf of its clients, the law firm is the data controller for any personal data within those contracts. Pickles GmbH acts as data processor.</p>
+<p>Implications:
+- Client contract (DPA) must be in place before any law firm can upload contracts
+- Law firms must have obtained appropriate authority from their clients to process contract data in a cloud AI system
+- Confidentiality obligations under BRAK rules apply to the law firm — Pickles GmbH's infrastructure must support confidentiality compliance</p>
+<hr />
+<h2 id="section-9-assumptions-register-this-document">Section 9 — Assumptions Register (This Document)</h2>
+<p>The following assumptions are embedded in this document and require validation before this documentation is used operationally.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Assumption</th>
+<th>Section</th>
+<th>Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TD-A-01</td>
+<td>Anthropic Claude is the model provider</td>
+<td>2.2</td>
+<td>High</td>
+</tr>
+<tr>
+<td>TD-A-02</td>
+<td>RAG architecture as described</td>
+<td>2.1</td>
+<td>High</td>
+</tr>
+<tr>
+<td>TD-A-03</td>
+<td>EU-based hosting</td>
+<td>2.4</td>
+<td>High</td>
+</tr>
+<tr>
+<td>TD-A-04</td>
+<td>No fine-tuning applied to base model</td>
+<td>2.2</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>TD-A-05</td>
+<td>Knowledge base composition as described</td>
+<td>3.2</td>
+<td>High</td>
+</tr>
+<tr>
+<td>TD-A-06</td>
+<td>Quarterly knowledge base update cadence</td>
+<td>3.2</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>TD-A-07</td>
+<td>Functional accuracy testing not yet conducted</td>
+<td>4.1</td>
+<td>High</td>
+</tr>
+<tr>
+<td>TD-A-08</td>
+<td>Lawyer review UI prevents bulk acceptance</td>
+<td>6.2</td>
+<td>High</td>
+</tr>
+<tr>
+<td>TD-A-09</td>
+<td>GDPR retention periods as specified</td>
+<td>7.1</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>TD-A-10</td>
+<td>No DPA with Anthropic currently in place</td>
+<td>8.2</td>
+<td>High</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="section-10-document-control-and-review-schedule">Section 10 — Document Control and Review Schedule</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Document owner</td>
+<td>Compliance function</td>
+</tr>
+<tr>
+<td>Technical reviewer</td>
+<td>Head of Engineering</td>
+</tr>
+<tr>
+<td>Legal reviewer</td>
+<td>General Counsel / external German legal counsel</td>
+</tr>
+<tr>
+<td>Review trigger events</td>
+<td>Model version change; material architecture change; new use case; annual scheduled review</td>
+</tr>
+<tr>
+<td>Annual review date</td>
+<td>[Set on first deployment]</td>
+</tr>
+<tr>
+<td>Version history</td>
+<td>v1 — initial draft (2026-02-28)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> This document requires review by a qualified German lawyer and a data protection specialist before it is used as a compliance artefact. The current draft is a governance framework demonstration and contains assumptions throughout.</p>
+<hr />
+<p><em>End of P2-Worked-Example-Technical-Documentation-v1.md</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
