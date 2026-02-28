@@ -7,7 +7,7 @@ site_author: David Cockson
 repo_url: https://github.com/davidcockson-compliance/pickles-gmbh-ai-governance-framework
 repo_name: pickles-gmbh-ai-governance-framework
 edit_uri: edit/main/
-docs_dir: .
+docs_dir: docs
 
 theme:
   name: material
