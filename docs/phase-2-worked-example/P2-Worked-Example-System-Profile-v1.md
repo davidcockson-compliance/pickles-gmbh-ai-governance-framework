@@ -193,8 +193,8 @@ The following factors elevate Vertrag.AI's internal risk rating above low:
 | Framework | Relevance | Cross-Reference Document |
 |---|---|---|
 | EU AI Act (Regulation (EU) 2024/1689) | Transparency obligations (Article 50) — Pickles GmbH as provider of Vertrag.AI (Article 3(3)); law firm clients as deployers (Article 3(4)); provider obligations (Article 16 if high-risk classification confirmed) | P2-Worked-Example-EU-AI-Act-Mapping-v1.md |
-| GDPR (Regulation (EU) 2016/679) | Personal data in contracts; sub-processor relationship with Anthropic; data subject rights | L2-5.1-GDPR-Alignment-Framework-v1.md |
-| BDSG (Bundesdatenschutzgesetz) | German national data protection overlay | L2-5.1-GDPR-Alignment-Framework-v1.md |
+| GDPR (Regulation (EU) 2016/679) | Personal data in contracts; sub-processor relationship with Anthropic; data subject rights | L2-5.1-Data-Flow-Map-v1.md |
+| BDSG (Bundesdatenschutzgesetz) | German national data protection overlay | L2-5.1-Data-Flow-Map-v1.md |
 | BRAK professional standards | Lawyer obligations when using AI tools; client confidentiality | L2-4.3-Transparency-Disclosure-Framework-v1.md |
 | Technical Documentation (EU AI Act Article 11) | Required if high-risk classification applies or is confirmed on review | P2-Worked-Example-Technical-Documentation-v1.md |
 
@@ -206,14 +206,14 @@ The following assumptions are embedded in this document and must be validated ag
 
 | # | Assumption | Section | Validation Required From |
 |---|---|---|---|
-| A-001 | EU hosting confirmed; specific cloud provider not named | 3.4 | CTO / Head of Engineering |
-| A-002 | Anthropic DPA in place; prompts not used for model training | 3.4 | Legal Counsel / CTO |
-| A-003 | No fine-tuning applied to base model | 3.1 | Head of Engineering |
-| A-004 | RAG corpus quarterly review cycle | 3.3 | Head of Product / Engineering |
-| A-005 | Output labelling and UI disclaimer behaviour | 6 | Head of Product |
-| A-006 | Audit trail logging per session | 6 | Head of Engineering |
-| A-007 | EU AI Act classification confirmed as limited risk | 5.1 | Qualified German lawyer |
-| A-008 | BRAK obligations assessed and addressed in product design | 5.2, 6 | Legal Counsel |
+| A-006 | EU hosting confirmed; specific cloud provider not named | 3.4 | CTO / Head of Engineering |
+| A-007 | Anthropic DPA in place; prompts not used for model training | 3.4 | Legal Counsel / CTO |
+| A-008 | No fine-tuning applied to base model | 3.1 | Head of Engineering |
+| A-009 | RAG corpus quarterly review cycle | 3.3 | Head of Product / Engineering |
+| A-010 | Output labelling and UI disclaimer behaviour | 6 | Head of Product |
+| A-011 | Audit trail logging per session | 6 | Head of Engineering |
+| A-012 | EU AI Act classification confirmed as limited risk | 5.1 | Qualified German lawyer |
+| A-013 | BRAK obligations assessed and addressed in product design | 5.2, 6 | Legal Counsel |
 
 ---
 
