@@ -127,7 +127,7 @@ For high-risk AI systems, providers must:
 
 ### 1.6 AI Competence Obligation (Article 4 — Effective 2 February 2025)
 
-Providers and operators must take measures to ensure staff involved in the operation and use of AI systems have **sufficient AI competence**, taking into account technical knowledge, experience, education, and training in context. This obligation has been in force since 2 February 2025.
+Providers and deployers must take measures to ensure staff involved in the operation and use of AI systems have **sufficient AI competence**, taking into account technical knowledge, experience, education, and training in context. This obligation has been in force since 2 February 2025.
 
 ---
 

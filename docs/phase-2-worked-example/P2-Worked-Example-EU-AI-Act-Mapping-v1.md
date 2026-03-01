@@ -32,7 +32,7 @@ All article references are to Regulation (EU) 2024/1689 as published in the Offi
 | **System ID** | PKL-SYS-003 |
 | **EU AI Act classification** | Limited risk (Article 50 transparency obligations) |
 | **Pickles GmbH internal tier** | Medium-High |
-| **Pickles GmbH role** | Provider of Vertrag.AI (Article 3(3)) |
+| **Pickles GmbH role** | Provider of Vertrag.AI (Article 3(3)); downstream deployer of Claude API (Article 3(4)) |
 | **Law firm customer role** | Deployer of Vertrag.AI (Article 3(4)) |
 | **Anthropic role** | Provider of upstream GPAI model (Claude API) — Articles 51–55 |
 | **Classification source document** | P2-Worked-Example-Risk-Classification-v1.md |
@@ -80,19 +80,22 @@ Article 16 sets out obligations for providers of high-risk AI systems. Vertrag.A
 
 ---
 
-### 2.4 Obligations Applicable to Deployers Generally (Article 26)
+### 2.4 Article 26 — High-Risk Deployer Obligations (Not Currently Triggered for Vertrag.AI)
 
-Article 26 sets out obligations for deployers of AI systems. As provider of Vertrag.AI, Pickles GmbH is not subject to Article 26 directly — these obligations apply to law firm clients who deploy Vertrag.AI. Pickles GmbH's responsibility as provider is to document the information and controls that enable law firm deployers to fulfil their Article 26 obligations. Pickles GmbH's own obligations as provider flow from Article 16 (see Section 2.3 above).
+Article 26 sets out obligations for deployers of high-risk AI systems, not deployers generally. Vertrag.AI is currently classified as limited risk, so Article 26 is not currently triggered for law firm clients in the present worked example. This section is retained as a forward-looking reference point in case later legal review or product change causes Vertrag.AI to be reclassified as high-risk. Pickles GmbH's current responsibility is to provide documentation, instructions for use, and governance controls that would support deployer compliance if a future high-risk classification were triggered.
 
-| Article 26 Sub-provision | Obligation | Status | Notes |
+| Article 26 reference | Official obligation | Applicability to Vertrag.AI | Notes |
 |---|---|---|---|
-| Article 26(1) | Deployers must use AI systems in accordance with the instructions for use provided by the provider | Partially addressed | [ASSUMPTION] Anthropic's API terms of service and usage policies govern permitted use of the Claude model. Pickles GmbH must ensure Vertrag.AI's use case is within permitted scope. Flag for Legal Counsel to confirm. |
-| Article 26(2) | Deployers must assign human oversight to a natural person with the competence, training and authority to oversee the AI system | Partially addressed | System owner role assigned (Head of Product). Competence and training requirements not yet formally documented. |
-| Article 26(3) | Deployers must ensure input data is relevant and sufficiently representative | Partially addressed | Contract documents uploaded by law firm users constitute the input data. Pickles GmbH does not control input quality directly; guidance to users on appropriate use is required. |
-| Article 26(4) | Where the deployer is aware the AI system presents risk, they must notify the provider | Not yet formally addressed | Incident response pathway to Anthropic not yet documented. Flag for Incident Response Playbook (L3-6.2). |
-| Article 26(5) | Deployers of high-risk AI systems must conduct a fundamental rights impact assessment before deployment | Not applicable at current classification | Would apply if classification is revised to high-risk. |
-| Article 26(6) | Deployers must keep logs for the period specified by the provider, minimum 6 months | Partially addressed | [ASSUMPTION] Log retention period not confirmed. Flag for CTO to confirm retention policy against this requirement. |
-| Article 26(7) | Deployers that are public authorities must register in the EU database | Not applicable | Pickles GmbH is a private company |
+| Article 26(1) | Deployers of high-risk AI systems must use the system in accordance with the provider's instructions for use | Not currently triggered | Vertrag.AI is currently classified as limited risk, so Article 26 does not currently apply. If reclassified as high-risk, law firm deployers would need clear instructions for use from Pickles GmbH. |
+| Article 26(2) | Deployers of high-risk AI systems must assign human oversight to natural persons with the necessary competence, training and authority, and the necessary support | Not currently triggered | If reclassified as high-risk, law firm deployers would need formally designated human reviewers with documented competence and escalation authority. |
+| Article 26(3) | Paragraphs 1 and 2 are without prejudice to other deployer obligations under Union or national law and to deployer freedom to organise resources and activities | Not currently triggered | This paragraph does not create a standalone operational control, but clarifies that Article 26 sits alongside other legal obligations. |
+| Article 26(4) | To the extent the deployer controls the input data, the deployer must ensure that input data is relevant and sufficiently representative in view of the intended purpose | Not currently triggered | If high-risk classification were triggered, law firm deployers would need guidance on appropriate source-document quality and intended-purpose boundaries. |
+| Article 26(5) | Deployers must monitor operation in line with the instructions for use and, where relevant, inform providers in accordance with Article 72; if they have reason to consider the system presents a risk, they must inform the provider/distributor and relevant authority and suspend use | Not currently triggered | If high-risk classification were triggered, Pickles GmbH would need a formal deployer notification pathway and suspension/escalation guidance. |
+| Article 26(6) | Deployers must keep automatically generated logs, to the extent under their control, for an appropriate period of at least six months unless otherwise required by law | Not currently triggered | If high-risk classification were triggered, retention periods and log-access responsibilities would need to be specified contractually and operationally. |
+| Article 26(7) | Employer-deployers must inform workers' representatives and affected workers before putting the system into service or using it at the workplace | Not currently triggered | Relevant only where the deployer is an employer using a high-risk system in the workplace. |
+| Article 26(8) | Public-authority deployers must comply with Article 49 registration obligations and must not use an unregistered high-risk system | Not currently triggered | Not applicable to Pickles GmbH; would only matter for public-sector deployers using a high-risk system. |
+| Article 26(9) | Deployers must use Article 13 information where applicable to comply with DPIA obligations under GDPR Article 35 / LED Article 27 | Not currently triggered | Relevant only if the system becomes high-risk and personal-data processing triggers DPIA obligations. |
+| Article 26(10)–(12) | Special rules for post-remote biometric identification, Annex III decision contexts, and cooperation with authorities | Not currently triggered | Not relevant to the current Vertrag.AI use case. |
 
 ---
 
@@ -103,7 +106,7 @@ Vertrag.AI deploys the Claude API, which is a General Purpose AI (GPAI) model pr
 | Obligation Area | Article Reference | Assessment |
 |---|---|---|
 | GPAI provider obligations | Articles 53–54 | Held by Anthropic, not Pickles GmbH. Pickles GmbH should obtain and retain a copy of Anthropic's GPAI model compliance documentation (summary or transparency report) as evidence that the upstream provider obligations are being met. |
-| Downstream deployer — using GPAI for specific purpose | Article 28(2) | Where a deployer uses a GPAI model for a specific purpose (here: contract review), and makes the system available to downstream users (law firms), the deployer takes on obligations proportionate to the specific use case. Pickles GmbH's Article 50 transparency obligations and Article 16 provider obligations are the primary expression of this at the product layer. |
+| Downstream integration of an upstream GPAI model | Article 3 definitions; Article 53(1)(b) | Pickles GmbH integrates an upstream GPAI model into a downstream AI system made available under its own name. At the product layer, Pickles GmbH is the provider of Vertrag.AI and must assess its own obligations by reference to the characteristics and risk classification of the downstream system. As an upstream GPAI provider, Anthropic must provide sufficient technical documentation and information to enable downstream providers to understand the capabilities and limitations of the model and support compliance at the integrated-system layer. |
 | GPAI systemic risk | Article 55 | Applies to GPAI models with systemic risk (above the compute threshold). Pickles GmbH should confirm with Anthropic whether the deployed Claude model version is designated as a systemic risk model, and what (if any) downstream obligations this creates. [Flag for Legal Counsel / Anthropic account review.] |
 
 ---
@@ -116,11 +119,11 @@ These provisions were assessed in the risk classification walkthrough (P2-Worked
 |---|---|
 | Article 5 — Prohibited AI practices | Vertrag.AI does not employ subliminal manipulation, biometric surveillance, social scoring, or any other prohibited practice |
 | Chapter III Section 2 — High-risk AI system obligations (Articles 8–15) | Vertrag.AI is classified as limited risk; Annex III high-risk categories do not apply in the current design |
-| Article 49 — CE marking | CE marking applies to high-risk AI systems only |
+| Article 48 — CE marking | CE marking applies to high-risk AI systems only |
 | Article 49 — Registration in the EU database referred to in Article 71 (provider) | Registration in the EU database applies to providers of high-risk AI systems (Article 49) and certain GPAI models; Vertrag.AI is classified as limited risk and this obligation does not currently apply. Would apply if classification is revised to high-risk. |
-| Article 26(5) — Fundamental rights impact assessment | Applies to deployers of high-risk AI systems only |
+| Article 27 — Fundamental rights impact assessment | Applies only to specified deployers of certain high-risk AI systems (including bodies governed by public law, private entities providing public services, and deployers of certain Annex III point 5 systems). Vertrag.AI is currently classified as limited risk, so Article 27 is not currently triggered. |
 
-> **Conditional note:** If a product change increases automation level, or if legal review concludes that Annex III Category 5 or 8 applies, Vertrag.AI would become a high-risk AI system. At that point, all Chapter III Section 2 obligations would apply, including: conformity assessment (Article 43), technical documentation to Annex IV standard (Article 11), EU database registration (Article 49), and fundamental rights impact assessment (Article 26(5)). This document would require a full revision.
+> **Conditional note:** If a product change increases automation level, or if legal review concludes that Annex III Category 5 or 8 applies, Vertrag.AI would become a high-risk AI system. At that point, all Chapter III Section 2 obligations would apply, including: conformity assessment (Article 43), technical documentation to Annex IV standard (Article 11), EU database registration (Article 49), and where the deployer falls within the categories covered by Article 27, a fundamental rights impact assessment. This document would require a full revision.
 
 ---
 
@@ -133,11 +136,11 @@ Summary of gaps identified in Section 2, with priority and ownership.
 | GAP-001 | Machine-readable labelling of AI-generated text output not yet addressed | Article 50(2) | High | Head of Engineering / Head of Product | Assess technical feasibility in DOCX output; obtain legal view on scope of obligation |
 | GAP-002 | Article 50(4) deployer disclosure form not legally reviewed; law firm guidance not produced | Article 50(4) | High | Legal Counsel | Review current product UI labelling against Article 50(4) requirements; confirm whether mandatory lawyer review constitutes editorial control for the safe harbour; document guidance for law firm deployers |
 | GAP-003 | AI literacy training programme not confirmed | Article 4 | Medium | Head of Product / HR | Document and deliver AI literacy training for all staff interacting with Vertrag.AI; record completion |
-| GAP-004 | Incident notification pathway to Anthropic not documented | Article 26(4) | Medium | Legal Counsel / Head of Engineering | Add Anthropic notification pathway to Incident Response Playbook (L3-6.2) |
+| GAP-004 | Incident notification pathway to Anthropic not documented | Article 26(5) (forward-looking — not currently triggered; Article 26 applies to high-risk AI systems only) | Medium | Legal Counsel / Head of Engineering | Add Anthropic notification pathway to Incident Response Playbook (L3-6.2); note this becomes mandatory if Vertrag.AI is reclassified as high-risk |
 | GAP-005 | Log retention period not confirmed against 6-month minimum | Article 26(6) | Medium | CTO / Head of Engineering | Confirm retention policy; update infrastructure documentation |
 | GAP-006 | Human oversight competence and training requirements not formally documented | Article 26(2) | Medium | Head of Product | Document competence requirements for the system owner role; link to training records |
 | GAP-007 | Anthropic GPAI compliance documentation not yet obtained | Articles 51–55 | Low | Legal Counsel | Request Anthropic's GPAI transparency documentation or model card; retain on file |
-| GAP-008 | User guidance on appropriate input data not yet produced | Article 26(3) | Low | Head of Product | Produce and publish guidance for law firm users on appropriate contract document inputs |
+| GAP-008 | User guidance on appropriate input data not yet produced | Article 26(4) (forward-looking — not currently triggered; Article 26 applies to high-risk AI systems only) | Low | Head of Product | Produce and publish guidance for law firm users on appropriate contract document inputs; note this becomes mandatory for high-risk deployers if Vertrag.AI is reclassified |
 
 ---
 
