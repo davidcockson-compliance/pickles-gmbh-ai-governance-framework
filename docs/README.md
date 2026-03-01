@@ -121,3 +121,9 @@ The `ASSUMPTIONS-LOG.md` lists every unverified assumption across the framework.
 Built by [David Cockson](https://www.linkedin.com/in/david-cockson) — compliance and governance professional with a background in financial services and igaming RegTech.
 
 *Pickles GmbH does not exist. All company characteristics, systems, and scenarios in this framework are fictional and produced for educational and demonstration purposes only.*
+
+---
+
+## Related
+
+- [Sable AI Ltd AI Governance Framework](https://github.com/davidcockson-compliance/sable-ai-governance-framework) — UK jurisdiction equivalent covering UK GDPR, Data (Use and Access) Act 2025, Equality Act 2010, and ICO AI in Recruitment guidance. Built for a fictional UK HR/recruitment AI startup.
