@@ -1,62 +1,90 @@
 # Pickles GmbH — AI Governance Framework
 
-An open-source AI governance framework for German legal AI providers,
-covering EU AI Act, GDPR, BDSG, and BRAK professional standards.
+<p class="dc-sub">An open-source AI governance framework for German legal AI providers. Built for <strong>Pickles GmbH</strong>, a fictional German legal-tech company whose product, <strong>Vertrag.AI</strong>, is an AI contract review tool — and walked through the complete framework end to end.</p>
 
-**Full documentation:** [Documentation site](https://davidcockson-compliance.github.io/pickles-gmbh-ai-governance-framework/)
+<span class="dc-pill">EU AI Act</span><span class="dc-pill">GDPR</span><span class="dc-pill">BDSG</span><span class="dc-pill">BRAK professional standards</span><span class="dc-pill">CC BY 4.0</span>
 
-This framework exists because there weren't clear worked examples of
-what EU AI Act compliance documentation looks like in practice for a
-legal AI company. Rather than write documents manually, I designed a
-multi-agent system to produce them — with regulatory research, assumption
-tracking, and quality controls built into the generation process.
+!!! warning "Framework proposal — not a certification"
 
-The result is 22 documents across five stages, a worked example showing
-a fictional contract review tool walked through the complete framework,
-and a reusable methodology that other organisations can adapt.
+    This framework is an educational resource and demonstration piece. It is
+    **not a legal compliance certification**, and qualified legal review is
+    required before any operational use. Every unverified assumption is
+    flagged inline and logged. Read the [Disclaimer](DISCLAIMER.md) and the
+    [Assumptions Log](ASSUMPTIONS-LOG.md) before use.
 
-**Licence:** CC BY 4.0 — use and adapt freely, attribution required.
-**Status:** Framework proposal. Not a legal compliance certification.
-**Legal review:** Required before operational use.
+[Start with Stage 1](stage-1-regulatory-orientation/STAGE1-Regulatory-Orientation-Note-v1.md){ .md-button .md-button--primary }
+[Worked example](phase-2-worked-example/P2-Worked-Example-System-Profile-v1.md){ .md-button }
 
 ---
 
-## Contents
+## Why This Exists
 
-| Stage | First document | Count |
-|---|---|---|
-| 1 — Regulatory Orientation | [Regulatory Orientation Note](stage-1-regulatory-orientation/STAGE1-Regulatory-Orientation-Note-v1.md) | 1 |
-| 2 — Governance Foundation | [AI System Inventory](stage-2-governance-foundation/L1-3.1-AI-System-Inventory-v1.md) | 4 |
-| 3 — Regulatory Alignment | [EU AI Act Risk Mapping](stage-3-regulatory-alignment/L2-4.1-EU-AI-Act-Risk-Mapping-Matrix-v1.md) | 6 |
-| 4 — Monitoring & Controls | [AI Monitoring Framework](stage-4-monitoring-controls/L3-6.1-AI-Monitoring-Framework-v1.md) | 3 |
-| 5 — Commercial Packaging | [Governance Information Pack](stage-5-commercial-packaging/L4-7.1-AI-Governance-Information-Pack-v1.md) | 2 |
-| Worked Example (Phase 2) | [System Profile — Vertrag.AI](phase-2-worked-example/P2-Worked-Example-System-Profile-v1.md) | 6 |
+There weren't clear worked examples of what EU AI Act compliance documentation looks like in practice for a legal AI company. Rather than write documents manually, I designed a multi-agent system to produce them — with regulatory research, assumption tracking, and quality controls built into the generation process.
 
-See [`ASSUMPTIONS-LOG.md`](ASSUMPTIONS-LOG.md) for all unverified assumptions embedded in the framework.
-See [`DISCLAIMER.md`](DISCLAIMER.md) for full scope and limitations notice.
+The result is 22 documents across five stages, a worked example showing a fictional contract review tool walked through the complete framework, and a reusable methodology that other organisations can adapt.
 
 ---
 
-## Framework Architecture
+## Framework Structure
 
-The framework is organised across four governance layers:
+<div class="grid cards" markdown>
 
-| Layer | Coverage |
-|---|---|
-| AI System Foundation | System inventory, risk classification, intake workflow, human oversight policy |
-| EU AI Act & Regulatory Alignment | Risk mapping, technical documentation, transparency, GDPR/DPIA, vendor risk |
-| Monitoring & Operational Controls | Monitoring framework, incident response, model change management |
-| Client-Facing Assurance | Governance information pack, enterprise sales enablement |
+-   :material-compass-outline: **Stage 1 — Regulatory Orientation**
 
-### Stage dependency map
+    ---
 
-```
-Stage 0 ──▶ Stage 1 ──▶ Stage 2 ──▶ Stage 3 ──▶ Stage 4 ──▶ Phase 2
- Setup       Reg.         Gov.         Reg.              │    Worked
-             Orient.      Found.       Align.            │    Example
-                                                    Stage 5
-                                               (parallel with 4)
-```
+    Situates Vertrag.AI within EU and German law: EU AI Act, GDPR, BDSG,
+    and BRAK professional standards.
+
+    [:octicons-arrow-right-24: Orientation Note](stage-1-regulatory-orientation/STAGE1-Regulatory-Orientation-Note-v1.md)
+
+-   :material-office-building-cog-outline: **Stage 2 — Governance Foundation**
+
+    ---
+
+    AI system inventory, risk classification framework, intake and approval
+    workflow, and human oversight policy.
+
+    [:octicons-arrow-right-24: AI System Inventory](stage-2-governance-foundation/L1-3.1-AI-System-Inventory-v1.md)
+
+-   :material-scale-balance: **Stage 3 — Regulatory Alignment**
+
+    ---
+
+    EU AI Act risk mapping, Article 11 technical documentation template,
+    transparency framework, data flow map, DPIA, and vendor/model risk.
+
+    [:octicons-arrow-right-24: EU AI Act Risk Mapping](stage-3-regulatory-alignment/L2-4.1-EU-AI-Act-Risk-Mapping-Matrix-v1.md)
+
+-   :material-monitor-eye: **Stage 4 — Monitoring & Controls**
+
+    ---
+
+    AI monitoring framework, incident response playbook, and model change
+    management protocol.
+
+    [:octicons-arrow-right-24: Monitoring Framework](stage-4-monitoring-controls/L3-6.1-AI-Monitoring-Framework-v1.md)
+
+-   :material-handshake-outline: **Stage 5 — Commercial Packaging**
+
+    ---
+
+    Client-facing governance information pack and enterprise sales
+    enablement kit.
+
+    [:octicons-arrow-right-24: Governance Information Pack](stage-5-commercial-packaging/L4-7.1-AI-Governance-Information-Pack-v1.md)
+
+-   :material-test-tube: **Phase 2 — Worked Example**
+
+    ---
+
+    Vertrag.AI walked through the complete framework: system profile, risk
+    classification, EU AI Act mapping, technical documentation, monitoring
+    entry, and a reflection note.
+
+    [:octicons-arrow-right-24: System Profile](phase-2-worked-example/P2-Worked-Example-System-Profile-v1.md)
+
+</div>
 
 ---
 
@@ -65,6 +93,7 @@ Stage 0 ──▶ Stage 1 ──▶ Stage 2 ──▶ Stage 3 ──▶ Stage 4 
 Phase 2 takes a fictional contract review tool, Vertrag.AI, through the complete framework end to end. Every key template is populated with realistic content, and the risk classification reasoning is made explicit at each decision gate.
 
 The worked example demonstrates:
+
 - How the risk classification decision tree produces traceable, defensible outputs
 - Why the EU Act classification (limited risk) and the internal classification (Medium-High) diverge, and why that gap matters
 - What the human oversight gate looks like in a professional-liability context
@@ -106,7 +135,7 @@ This framework is designed to be adapted, not copied verbatim. Before operationa
 3. Have the framework reviewed by a qualified lawyer in your jurisdiction
 4. Update regulatory references if the EU AI Act or related guidance has been updated since this was produced
 
-The `ASSUMPTIONS-LOG.md` lists every unverified assumption across the framework. Start there.
+The [Assumptions Log](ASSUMPTIONS-LOG.md) lists every unverified assumption across the framework. Start there.
 
 ---
 
@@ -118,7 +147,7 @@ The `ASSUMPTIONS-LOG.md` lists every unverified assumption across the framework.
 
 ## Author
 
-Built by [David Cockson](https://www.linkedin.com/in/david-cockson) — compliance and governance professional with a background in financial services and igaming RegTech.
+Built by [David Cockson](https://davidcockson.com) — compliance and governance professional with a background in financial services and igaming RegTech.
 
 *Pickles GmbH does not exist. All company characteristics, systems, and scenarios in this framework are fictional and produced for educational and demonstration purposes only.*
 
