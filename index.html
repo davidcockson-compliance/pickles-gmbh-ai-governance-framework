@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -44,13 +44,9 @@
     
     
       
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-      
     
+    
+      <link rel="stylesheet" href="assets/extra.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -63,12 +59,10 @@
   
     
     
-      
     
     
     
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -96,7 +90,7 @@
     <a href="." title="Pickles GmbH — AI Governance Framework" class="md-header__button md-logo" aria-label="Pickles GmbH — AI Governance Framework" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3c-1.27 0-2.4.8-2.82 2H3v2h1.95L2 14c-.47 2 1 3 3.5 3s4.06-1 3.5-3L6.05 7h3.12c.33.85.98 1.5 1.83 1.83V20H2v2h20v-2h-9V8.82c.85-.32 1.5-.97 1.82-1.82h3.13L15 14c-.47 2 1 3 3.5 3s4.06-1 3.5-3l-2.95-7H21V5h-6.17C14.4 3.8 13.27 3 12 3m0 2a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1m-6.5 5.25L7 14H4zm13 0L20 14h-3z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -121,33 +115,7 @@
     </div>
     
       
-        <form class="md-header__option" data-md-component="palette">
-  
     
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
-      </label>
-    
-  
-</form>
-      
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -198,7 +166,7 @@
         <a href="https://github.com/davidcockson-compliance/pickles-gmbh-ai-governance-framework" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     pickles-gmbh-ai-governance-framework
@@ -234,7 +202,7 @@
     <a href="." title="Pickles GmbH — AI Governance Framework" class="md-nav__button md-logo" aria-label="Pickles GmbH — AI Governance Framework" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3c-1.27 0-2.4.8-2.82 2H3v2h1.95L2 14c-.47 2 1 3 3.5 3s4.06-1 3.5-3L6.05 7h3.12c.33.85.98 1.5 1.83 1.83V20H2v2h20v-2h-9V8.82c.85-.32 1.5-.97 1.82-1.82h3.13L15 14c-.47 2 1 3 3.5 3s4.06-1 3.5-3l-2.95-7H21V5h-6.17C14.4 3.8 13.27 3 12 3m0 2a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1m-6.5 5.25L7 14H4zm13 0L20 14h-3z"/></svg>
 
     </a>
     Pickles GmbH — AI Governance Framework
@@ -244,7 +212,7 @@
       <a href="https://github.com/davidcockson-compliance/pickles-gmbh-ai-governance-framework" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
   </div>
   <div class="md-source__repository">
     pickles-gmbh-ai-governance-framework
@@ -321,10 +289,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#contents" class="md-nav__link">
+  <a href="#why-this-exists" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Contents
+        Why This Exists
       
     </span>
   </a>
@@ -332,30 +300,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#framework-architecture" class="md-nav__link">
+  <a href="#framework-structure" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Framework Architecture
+        Framework Structure
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Framework Architecture">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#stage-dependency-map" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Stage dependency map
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1507,10 +1458,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#contents" class="md-nav__link">
+  <a href="#why-this-exists" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Contents
+        Why This Exists
       
     </span>
   </a>
@@ -1518,30 +1469,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#framework-architecture" class="md-nav__link">
+  <a href="#framework-structure" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Framework Architecture
+        Framework Structure
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Framework Architecture">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#stage-dependency-map" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Stage dependency map
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1650,119 +1584,92 @@
   
 
 
-<h1 id="pickles-gmbh-ai-governance-framework">Pickles GmbH — AI Governance Framework</h1>
-<p>An open-source AI governance framework for German legal AI providers,
-covering EU AI Act, GDPR, BDSG, and BRAK professional standards.</p>
-<p><strong>Full documentation:</strong> <a href="https://davidcockson-compliance.github.io/pickles-gmbh-ai-governance-framework/">Documentation site</a></p>
-<p>This framework exists because there weren't clear worked examples of
-what EU AI Act compliance documentation looks like in practice for a
-legal AI company. Rather than write documents manually, I designed a
-multi-agent system to produce them — with regulatory research, assumption
-tracking, and quality controls built into the generation process.</p>
-<p>The result is 22 documents across five stages, a worked example showing
-a fictional contract review tool walked through the complete framework,
-and a reusable methodology that other organisations can adapt.</p>
-<p><strong>Licence:</strong> CC BY 4.0 — use and adapt freely, attribution required.
-<strong>Status:</strong> Framework proposal. Not a legal compliance certification.
-<strong>Legal review:</strong> Required before operational use.</p>
+<h1 id="pickles-gmbh-ai-governance-framework">Pickles GmbH — AI Governance Framework<a class="headerlink" href="#pickles-gmbh-ai-governance-framework" title="Permanent link">&para;</a></h1>
+<p class="dc-sub">An open-source AI governance framework for German legal AI providers. Built for <strong>Pickles GmbH</strong>, a fictional German legal-tech company whose product, <strong>Vertrag.AI</strong>, is an AI contract review tool — and walked through the complete framework end to end.</p>
+
+<p><span class="dc-pill">EU AI Act</span><span class="dc-pill">GDPR</span><span class="dc-pill">BDSG</span><span class="dc-pill">BRAK professional standards</span><span class="dc-pill">CC BY 4.0</span></p>
+<div class="admonition warning">
+<p class="admonition-title">Framework proposal — not a certification</p>
+<p>This framework is an educational resource and demonstration piece. It is
+<strong>not a legal compliance certification</strong>, and qualified legal review is
+required before any operational use. Every unverified assumption is
+flagged inline and logged. Read the <a href="DISCLAIMER/">Disclaimer</a> and the
+<a href="ASSUMPTIONS-LOG/">Assumptions Log</a> before use.</p>
+</div>
+<p><a class="md-button md-button--primary" href="stage-1-regulatory-orientation/STAGE1-Regulatory-Orientation-Note-v1/">Start with Stage 1</a>
+<a class="md-button" href="phase-2-worked-example/P2-Worked-Example-System-Profile-v1/">Worked example</a></p>
 <hr />
-<h2 id="contents">Contents</h2>
-<table>
-<thead>
-<tr>
-<th>Stage</th>
-<th>First document</th>
-<th>Count</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1 — Regulatory Orientation</td>
-<td><a href="stage-1-regulatory-orientation/STAGE1-Regulatory-Orientation-Note-v1/">Regulatory Orientation Note</a></td>
-<td>1</td>
-</tr>
-<tr>
-<td>2 — Governance Foundation</td>
-<td><a href="stage-2-governance-foundation/L1-3.1-AI-System-Inventory-v1/">AI System Inventory</a></td>
-<td>4</td>
-</tr>
-<tr>
-<td>3 — Regulatory Alignment</td>
-<td><a href="stage-3-regulatory-alignment/L2-4.1-EU-AI-Act-Risk-Mapping-Matrix-v1/">EU AI Act Risk Mapping</a></td>
-<td>6</td>
-</tr>
-<tr>
-<td>4 — Monitoring &amp; Controls</td>
-<td><a href="stage-4-monitoring-controls/L3-6.1-AI-Monitoring-Framework-v1/">AI Monitoring Framework</a></td>
-<td>3</td>
-</tr>
-<tr>
-<td>5 — Commercial Packaging</td>
-<td><a href="stage-5-commercial-packaging/L4-7.1-AI-Governance-Information-Pack-v1/">Governance Information Pack</a></td>
-<td>2</td>
-</tr>
-<tr>
-<td>Worked Example (Phase 2)</td>
-<td><a href="phase-2-worked-example/P2-Worked-Example-System-Profile-v1/">System Profile — Vertrag.AI</a></td>
-<td>6</td>
-</tr>
-</tbody>
-</table>
-<p>See <a href="ASSUMPTIONS-LOG/"><code>ASSUMPTIONS-LOG.md</code></a> for all unverified assumptions embedded in the framework.
-See <a href="DISCLAIMER/"><code>DISCLAIMER.md</code></a> for full scope and limitations notice.</p>
+<h2 id="why-this-exists">Why This Exists<a class="headerlink" href="#why-this-exists" title="Permanent link">&para;</a></h2>
+<p>There weren't clear worked examples of what EU AI Act compliance documentation looks like in practice for a legal AI company. Rather than write documents manually, I designed a multi-agent system to produce them — with regulatory research, assumption tracking, and quality controls built into the generation process.</p>
+<p>The result is 22 documents across five stages, a worked example showing a fictional contract review tool walked through the complete framework, and a reusable methodology that other organisations can adapt.</p>
 <hr />
-<h2 id="framework-architecture">Framework Architecture</h2>
-<p>The framework is organised across four governance layers:</p>
-<table>
-<thead>
-<tr>
-<th>Layer</th>
-<th>Coverage</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>AI System Foundation</td>
-<td>System inventory, risk classification, intake workflow, human oversight policy</td>
-</tr>
-<tr>
-<td>EU AI Act &amp; Regulatory Alignment</td>
-<td>Risk mapping, technical documentation, transparency, GDPR/DPIA, vendor risk</td>
-</tr>
-<tr>
-<td>Monitoring &amp; Operational Controls</td>
-<td>Monitoring framework, incident response, model change management</td>
-</tr>
-<tr>
-<td>Client-Facing Assurance</td>
-<td>Governance information pack, enterprise sales enablement</td>
-</tr>
-</tbody>
-</table>
-<h3 id="stage-dependency-map">Stage dependency map</h3>
-<pre><code>Stage 0 ──▶ Stage 1 ──▶ Stage 2 ──▶ Stage 3 ──▶ Stage 4 ──▶ Phase 2
- Setup       Reg.         Gov.         Reg.              │    Worked
-             Orient.      Found.       Align.            │    Example
-                                                    Stage 5
-                                               (parallel with 4)
-</code></pre>
+<h2 id="framework-structure">Framework Structure<a class="headerlink" href="#framework-structure" title="Permanent link">&para;</a></h2>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m7 17 3.2-6.8L17 7l-3.2 6.8zm5-5.9a.9.9 0 0 0-.9.9.9.9 0 0 0 .9.9.9.9 0 0 0 .9-.9.9.9 0 0 0-.9-.9M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 2a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8"/></svg></span> <strong>Stage 1 — Regulatory Orientation</strong></p>
 <hr />
-<h2 id="worked-example-vertragai">Worked Example — Vertrag.AI</h2>
+<p>Situates Vertrag.AI within EU and German law: EU AI Act, GDPR, BDSG,
+and BRAK professional standards.</p>
+<p><a href="stage-1-regulatory-orientation/STAGE1-Regulatory-Orientation-Note-v1/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Orientation Note</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 13a.26.26 0 0 0-.26.21l-.19 1.32c-.3.13-.59.29-.85.47l-1.24-.5c-.11 0-.24 0-.31.13l-1 1.73c-.06.11-.04.24.06.32l1.06.82a4.2 4.2 0 0 0 0 1l-1.06.82a.26.26 0 0 0-.06.32l1 1.73c.06.13.19.13.31.13l1.24-.5c.26.18.54.35.85.47l.19 1.32c.02.12.12.21.26.21h2c.11 0 .22-.09.24-.21l.19-1.32c.3-.13.57-.29.84-.47l1.23.5c.13 0 .26 0 .33-.13l1-1.73a.26.26 0 0 0-.06-.32l-1.07-.82c.02-.17.04-.33.04-.5s-.01-.33-.04-.5l1.06-.82a.26.26 0 0 0 .06-.32l-1-1.73c-.06-.13-.19-.13-.32-.13l-1.23.5c-.27-.18-.54-.35-.85-.47l-.19-1.32A.236.236 0 0 0 19 13zm1 3.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5c-.84 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5M10 5h2v2h-2zm6 2h-2V5h2zm-2 2h2v2h-2zm-4 0h2v2h-2zm3.11 14H2V1h18v10.29c-.63-.18-1.3-.29-2-.29V3H4v18h6v-3.5h1.03c-.03.17-.03.33-.03.5 0 1.96.81 3.73 2.11 5M8 15H6v-2h2zm0-4H6V9h2zm0-4H6V5h2zM6 17h2v2H6zm4-4h2v1.41c-.11.19-.22.39-.32.59H10z"/></svg></span> <strong>Stage 2 — Governance Foundation</strong></p>
+<hr />
+<p>AI system inventory, risk classification framework, intake and approval
+workflow, and human oversight policy.</p>
+<p><a href="stage-2-governance-foundation/L1-3.1-AI-System-Inventory-v1/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> AI System Inventory</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3c-1.27 0-2.4.8-2.82 2H3v2h1.95L2 14c-.47 2 1 3 3.5 3s4.06-1 3.5-3L6.05 7h3.12c.33.85.98 1.5 1.83 1.83V20H2v2h20v-2h-9V8.82c.85-.32 1.5-.97 1.82-1.82h3.13L15 14c-.47 2 1 3 3.5 3s4.06-1 3.5-3l-2.95-7H21V5h-6.17C14.4 3.8 13.27 3 12 3m0 2a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1m-6.5 5.25L7 14H4zm13 0L20 14h-3z"/></svg></span> <strong>Stage 3 — Regulatory Alignment</strong></p>
+<hr />
+<p>EU AI Act risk mapping, Article 11 technical documentation template,
+transparency framework, data flow map, DPIA, and vendor/model risk.</p>
+<p><a href="stage-3-regulatory-alignment/L2-4.1-EU-AI-Act-Risk-Mapping-Matrix-v1/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> EU AI Act Risk Mapping</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 4v12h18V4zm0-2h18a2 2 0 0 1 2 2v12c0 .53-.21 1.04-.59 1.41-.37.38-.88.59-1.41.59h-7v2h2v2H8v-2h2v-2H3c-.53 0-1.04-.21-1.41-.59C1.21 17.04 1 16.53 1 16V4c0-1.11.89-2 2-2m7.84 6.93c.31-.3.73-.48 1.16-.48.43.01.85.18 1.16.49.3.3.48.72.48 1.15 0 .44-.18.85-.48 1.16-.31.31-.73.48-1.16.48s-.85-.18-1.16-.48c-.3-.31-.48-.72-.48-1.16 0-.43.18-.85.48-1.16M10.07 12a2.68 2.68 0 0 0 3.86 0c.51-.5.8-1.19.8-1.91s-.29-1.42-.8-1.93-1.21-.8-1.93-.8-1.42.29-1.93.8-.8 1.21-.8 1.93.29 1.41.8 1.91M6 10.09A6.45 6.45 0 0 1 12 6c2.73 0 5.06 1.7 6 4.09a6.42 6.42 0 0 1-6 4.09c-2.73 0-5.06-1.68-6-4.09"/></svg></span> <strong>Stage 4 — Monitoring &amp; Controls</strong></p>
+<hr />
+<p>AI monitoring framework, incident response playbook, and model change
+management protocol.</p>
+<p><a href="stage-4-monitoring-controls/L3-6.1-AI-Monitoring-Framework-v1/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Monitoring Framework</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.71 8.71c1.25-1.25.68-2.71 0-3.42l-3-3c-1.26-1.25-2.71-.68-3.42 0L13.59 4H11C9.1 4 8 5 7.44 6.15L3 10.59v4l-.71.7c-1.25 1.26-.68 2.71 0 3.42l3 3c.54.54 1.12.74 1.67.74.71 0 1.36-.35 1.75-.74l2.7-2.71H15c1.7 0 2.56-1.06 2.87-2.1 1.13-.3 1.75-1.16 2-2C21.42 14.5 22 13.03 22 12V9h-.59zM20 12c0 .45-.19 1-1 1h-1v1c0 .45-.19 1-1 1h-1v1c0 .45-.19 1-1 1h-4.41l-3.28 3.28c-.31.29-.49.12-.6.01l-2.99-2.98c-.29-.31-.12-.49-.01-.6L5 15.41v-4l2-2V11c0 1.21.8 3 3 3s3-1.79 3-3h7zm.29-4.71L18.59 9H11v2c0 .45-.19 1-1 1s-1-.55-1-1V8c0-.46.17-2 2-2h3.41l2.28-2.28c.31-.29.49-.12.6-.01l2.99 2.98c.29.31.12.49.01.6"/></svg></span> <strong>Stage 5 — Commercial Packaging</strong></p>
+<hr />
+<p>Client-facing governance information pack and enterprise sales
+enablement kit.</p>
+<p><a href="stage-5-commercial-packaging/L4-7.1-AI-Governance-Information-Pack-v1/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Governance Information Pack</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 2v2h1v14a4 4 0 0 0 4 4 4 4 0 0 0 4-4V4h1V2zm4 14c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1m2-4c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1m1-5h-4V4h4z"/></svg></span> <strong>Phase 2 — Worked Example</strong></p>
+<hr />
+<p>Vertrag.AI walked through the complete framework: system profile, risk
+classification, EU AI Act mapping, technical documentation, monitoring
+entry, and a reflection note.</p>
+<p><a href="phase-2-worked-example/P2-Worked-Example-System-Profile-v1/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> System Profile</a></p>
+</li>
+</ul>
+</div>
+<hr />
+<h2 id="worked-example-vertragai">Worked Example — Vertrag.AI<a class="headerlink" href="#worked-example-vertragai" title="Permanent link">&para;</a></h2>
 <p>Phase 2 takes a fictional contract review tool, Vertrag.AI, through the complete framework end to end. Every key template is populated with realistic content, and the risk classification reasoning is made explicit at each decision gate.</p>
-<p>The worked example demonstrates:
-- How the risk classification decision tree produces traceable, defensible outputs
-- Why the EU Act classification (limited risk) and the internal classification (Medium-High) diverge, and why that gap matters
-- What the human oversight gate looks like in a professional-liability context
-- How the monitoring framework handles legally privileged material</p>
+<p>The worked example demonstrates:</p>
+<ul>
+<li>How the risk classification decision tree produces traceable, defensible outputs</li>
+<li>Why the EU Act classification (limited risk) and the internal classification (Medium-High) diverge, and why that gap matters</li>
+<li>What the human oversight gate looks like in a professional-liability context</li>
+<li>How the monitoring framework handles legally privileged material</li>
+</ul>
 <p>See the <a href="phase-2-worked-example/P2-Worked-Example-System-Profile-v1/">System Profile</a> and the <a href="phase-2-worked-example/P2-Reflection-Note-v1/">Reflection Note</a> for the full worked example and a first-person account of what the exercise revealed about the framework's design.</p>
 <hr />
-<h2 id="methodology">Methodology</h2>
+<h2 id="methodology">Methodology<a class="headerlink" href="#methodology" title="Permanent link">&para;</a></h2>
 <p>The framework was produced by a multi-agent Claude Code system with five defined agent roles: Orchestrator, Research Reader, Document Drafter, Assumptions Tracker, and Run Summariser. The system runs autonomously from regulatory source documents placed in an input folder, producing audit-ready Markdown documentation with explicit assumption flagging throughout.</p>
 <p>The documents are the output. The system design is the methodology.</p>
 <p>The next stage is testing whether this approach transfers to a different jurisdiction and regulatory architecture.</p>
 <p><strong>Estimated build cost for Phase 1 (16 documents):</strong> $4–10 USD using Claude Sonnet with prompt caching.</p>
 <hr />
-<h2 id="regulatory-coverage">Regulatory Coverage</h2>
+<h2 id="regulatory-coverage">Regulatory Coverage<a class="headerlink" href="#regulatory-coverage" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -1790,7 +1697,7 @@ See <a href="DISCLAIMER/"><code>DISCLAIMER.md</code></a> for full scope and limi
 </tbody>
 </table>
 <hr />
-<h2 id="using-this-framework">Using This Framework</h2>
+<h2 id="using-this-framework">Using This Framework<a class="headerlink" href="#using-this-framework" title="Permanent link">&para;</a></h2>
 <p>This framework is designed to be adapted, not copied verbatim. Before operational use:</p>
 <ol>
 <li>Replace all fictional Pickles GmbH / Vertrag.AI content with your actual system data</li>
@@ -1798,16 +1705,16 @@ See <a href="DISCLAIMER/"><code>DISCLAIMER.md</code></a> for full scope and limi
 <li>Have the framework reviewed by a qualified lawyer in your jurisdiction</li>
 <li>Update regulatory references if the EU AI Act or related guidance has been updated since this was produced</li>
 </ol>
-<p>The <code>ASSUMPTIONS-LOG.md</code> lists every unverified assumption across the framework. Start there.</p>
+<p>The <a href="ASSUMPTIONS-LOG/">Assumptions Log</a> lists every unverified assumption across the framework. Start there.</p>
 <hr />
-<h2 id="licence">Licence</h2>
+<h2 id="licence">Licence<a class="headerlink" href="#licence" title="Permanent link">&para;</a></h2>
 <p><a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> — you are free to use, adapt, and distribute this framework, including commercially, provided you give appropriate credit.</p>
 <hr />
-<h2 id="author">Author</h2>
-<p>Built by <a href="https://www.linkedin.com/in/david-cockson">David Cockson</a> — compliance and governance professional with a background in financial services and igaming RegTech.</p>
+<h2 id="author">Author<a class="headerlink" href="#author" title="Permanent link">&para;</a></h2>
+<p>Built by <a href="https://davidcockson.com">David Cockson</a> — compliance and governance professional with a background in financial services and igaming RegTech.</p>
 <p><em>Pickles GmbH does not exist. All company characteristics, systems, and scenarios in this framework are fictional and produced for educational and demonstration purposes only.</em></p>
 <hr />
-<h2 id="related">Related</h2>
+<h2 id="related">Related<a class="headerlink" href="#related" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/davidcockson-compliance/sable-ai-governance-framework">Sable AI Ltd AI Governance Framework</a> — UK jurisdiction equivalent covering UK GDPR, Data (Use and Access) Act 2025, Equality Act 2010, and ICO AI in Recruitment guidance. Built for a fictional UK HR/recruitment AI startup.</li>
 </ul>
@@ -1831,19 +1738,44 @@ See <a href="DISCLAIMER/"><code>DISCLAIMER.md</code></a> for full scope and limi
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
       </main>
       
         <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+        
+          
+          <a href="DISCLAIMER/" class="md-footer__link md-footer__link--next" aria-label="Next: Disclaimer">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Disclaimer
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
   
 </div>
       
@@ -1860,7 +1792,7 @@ See <a href="DISCLAIMER/"><code>DISCLAIMER.md</code></a> for full scope and limi
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.expand", "navigation.path", "toc.follow", "search.suggest", "search.highlight"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.expand", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
